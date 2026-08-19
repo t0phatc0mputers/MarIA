@@ -1,0 +1,42 @@
+PLAN_FERME 1
+
+RECT id=1 parent=0
+  nom=Serre 1
+  type=Chapelle
+  etat=Compost
+  culture=
+  x=65.0
+  y=135.0
+  largeur=40.0
+  hauteur=100.0
+
+RECT id=2 parent=0
+  nom=Serre 2
+  type=Chapelle
+  etat=Compost
+  culture=
+  x=115.0
+  y=135.0
+  largeur=40.0
+  hauteur=100.0
+
+RECT id=3 parent=0
+  nom=Serre 3
+  type=Chapelle
+  etat=Compost
+  culture=
+  x=165.0
+  y=135.0
+  largeur=40.0
+  hauteur=100.0
+
+RECT id=4 parent=0
+  nom=Serre 4
+  type=Chapelle
+  etat=Compost
+  culture=
+  x=215.0
+  y=135.0
+  largeur=40.0
+  hauteur=100.0
+

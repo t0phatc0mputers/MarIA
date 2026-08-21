@@ -1,0 +1,1477 @@
+culture;conduite;variete_n;action;semaine_debut;semaine_fin;mois_debut;mois_fin;commentaire
+Ail d'automne sec;PC;1;Conservation;1;9;janvier;février;
+Ail d'automne sec;PC;1;Récolte;24;28;juin;juillet;
+Ail d'automne sec;PC;1;Conservation;30;39;juillet;septembre;
+Ail d'automne sec;PC;1;Plantation;39;44;septembre;octobre;
+Ail d'automne sec;PC;1;Conservation;44;52;octobre;décembre;
+Ail d'automne sec;PC;2;Conservation;1;9;janvier;février;
+Ail d'automne sec;PC;2;Récolte;26;30;juin;juillet;
+Ail d'automne sec;PC;2;Conservation;32;44;août;octobre;
+Ail d'automne sec;PC;2;Plantation;44;48;octobre;novembre;
+Ail d'automne sec;PC;2;Conservation;48;52;novembre;décembre;
+Ail d'automne vert;PC;1;Récolte;15;22;avril;mai;
+Ail d'automne vert;PC;1;Plantation;44;48;octobre;novembre;
+Ail d'automne vert;SA;1;Récolte;11;17;mars;avril;
+Ail d'automne vert;SA;1;Plantation;44;48;octobre;novembre;
+Ail de printemps sec;PC;1;Conservation;1;2;janvier;janvier;
+Ail de printemps sec;PC;1;Plantation;2;7;janvier;février;
+Ail de printemps sec;PC;1;Conservation;7;9;février;février;
+Ail de printemps sec;PC;1;Récolte;28;33;juillet;août;
+Ail de printemps sec;PC;1;Conservation;35;52;août;décembre;
+Ail de printemps vert;PC;1;Plantation;2;7;janvier;février;
+Ail de printemps vert;PC;1;Récolte;19;24;mai;juin;
+Ail de printemps vert;SA;1;Plantation;2;7;janvier;février;
+Ail de printemps vert;SA;1;Récolte;17;22;avril;mai;
+Aubergine;PC;1;Semis en pot/plant;7;9;février;février;
+Aubergine;PC;1;Plantation;17;19;avril;mai;
+Aubergine;PC;1;Récolte;30;42;juillet;octobre;
+Aubergine;PC;2;Semis en pot/plant;9;11;février;mars;
+Aubergine;PC;2;Plantation;19;21;mai;mai;
+Aubergine;PC;2;Récolte;32;42;août;octobre;
+Aubergine;SA;1;Semis en pot/plant;3;5;janvier;janvier;Porte greffe recquis
+Aubergine;SA;1;Plantation;13;15;mars;avril;Porte greffe recquis
+Aubergine;SA;1;Récolte;24;42;juin;octobre;Porte greffe recquis
+Aubergine;SA;2;Semis en pot/plant;5;7;janvier;février;
+Aubergine;SA;2;Plantation;15;17;avril;avril;
+Aubergine;SA;2;Récolte;26;42;juin;octobre;
+Aubergine;SA;3;Semis en pot/plant;7;9;février;février;
+Aubergine;SA;3;Plantation;17;19;avril;mai;
+Aubergine;SA;3;Récolte;28;42;juillet;octobre;
+Basilic;SA;1;Semis en pot/plant;11;13;mars;mars;Variétés de vigueurs différentes pour étaler les récoltes
+Basilic;SA;1;Plantation;15;17;avril;avril;Variétés de vigueurs différentes pour étaler les récoltes
+Basilic;SA;1;Récolte;22;24;mai;juin;Variétés de vigueurs différentes pour étaler les récoltes
+Basilic;SA;1;Récolte;26;28;juin;juillet;Variétés de vigueurs différentes pour étaler les récoltes
+Basilic;SA;1;Récolte;30;32;juillet;août;Variétés de vigueurs différentes pour étaler les récoltes
+Basilic;SA;2;Semis en pot/plant;13;15;mars;avril;Récolter ou tailler toutes les 4 semaines pour avoir plusieurs récoltes
+Basilic;SA;2;Plantation;17;19;avril;mai;Récolter ou tailler toutes les 4 semaines pour avoir plusieurs récoltes
+Basilic;SA;2;Récolte;24;26;juin;juin;Récolter ou tailler toutes les 4 semaines pour avoir plusieurs récoltes
+Basilic;SA;2;Récolte;28;30;juillet;juillet;Récolter ou tailler toutes les 4 semaines pour avoir plusieurs récoltes
+Basilic;SA;2;Récolte;32;34;août;août;Récolter ou tailler toutes les 4 semaines pour avoir plusieurs récoltes
+Basilic;SA;3;Semis en pot/plant;17;19;avril;mai;
+Basilic;SA;3;Plantation;20;22;mai;mai;
+Basilic;SA;3;Récolte;26;28;juin;juillet;
+Basilic;SA;3;Récolte;30;32;juillet;août;
+Basilic;SA;3;Récolte;34;36;août;septembre;
+Basilic;SA;4;Semis en pot/plant;19;21;mai;mai;
+Basilic;SA;4;Plantation;22;24;mai;juin;
+Basilic;SA;4;Récolte;28;30;juillet;juillet;
+Basilic;SA;4;Récolte;32;34;août;août;
+Basilic;SA;4;Récolte;36;38;septembre;septembre;
+Basilic;SA;5;Semis en pot/plant;21;23;mai;juin;
+Basilic;SA;5;Plantation;24;26;juin;juin;
+Basilic;SA;5;Récolte;30;32;juillet;août;
+Basilic;SA;5;Récolte;34;36;août;septembre;
+Basilic;SA;5;Récolte;38;40;septembre;octobre;
+Basilic;SA;6;Semis en pot/plant;23;25;juin;juin;
+Basilic;SA;6;Plantation;26;28;juin;juillet;
+Basilic;SA;6;Récolte;32;34;août;août;
+Basilic;SA;6;Récolte;36;38;septembre;septembre;
+Basilic;SA;6;Récolte;40;42;octobre;octobre;
+Basilic;SA;7;Semis en pot/plant;25;27;juin;juillet;
+Basilic;SA;7;Plantation;28;30;juillet;juillet;
+Basilic;SA;7;Récolte;34;36;août;septembre;
+Basilic;SA;7;Récolte;38;40;septembre;octobre;
+Basilic;SA;7;Récolte;42;44;octobre;octobre;
+Betterave botte;PC;1;Semis en pot/plant;8;10;février;mars;Variétés précoces
+Betterave botte;PC;1;Plantation;11;13;mars;mars;Variétés précoces
+Betterave botte;PC;1;Récolte;22;26;mai;juin;Variétés précoces
+Betterave botte;PC;2;Semis en pot/plant;10;12;mars;mars;Variétés précoces
+Betterave botte;PC;2;Plantation;13;15;mars;avril;Variétés précoces
+Betterave botte;PC;2;Récolte;23;27;juin;juillet;Variétés précoces
+Betterave botte;PC;3;Semis en pot/plant;12;14;mars;avril;Variétés précoces, de saison et tardives
+Betterave botte;PC;3;Plantation;15;17;avril;avril;Variétés précoces, de saison et tardives
+Betterave botte;PC;3;Récolte;25;31;juin;juillet;Variétés précoces, de saison et tardives
+Betterave botte;PC;4;Semis en pot/plant;14;16;avril;avril;Variétés précoces, de saison et tardives
+Betterave botte;PC;4;Plantation;17;19;avril;mai;Variétés précoces, de saison et tardives
+Betterave botte;PC;4;Récolte;27;33;juillet;août;Variétés précoces, de saison et tardives
+Betterave botte;PC;4;Conservation;35;46;août;novembre;Variétés précoces, de saison et tardives
+Betterave botte;PC;5;Semis direct;18;20;avril;mai;Variétés précoces, de saison et tardives
+Betterave botte;PC;5;Plantation;20;22;mai;mai;Variétés précoces, de saison et tardives
+Betterave botte;PC;5;Récolte;30;36;juillet;septembre;Variétés précoces, de saison et tardives
+Betterave botte;PC;5;Conservation;38;48;septembre;novembre;Variétés précoces, de saison et tardives
+Betterave botte;PC;6;Semis direct;20;22;mai;mai;Variétés précoces, de saison et tardives
+Betterave botte;PC;6;Plantation;22;24;mai;juin;Variétés précoces, de saison et tardives
+Betterave botte;PC;6;Récolte;32;38;août;septembre;Variétés précoces, de saison et tardives
+Betterave botte;PC;6;Conservation;40;50;octobre;décembre;Variétés précoces, de saison et tardives
+Betterave botte;SA;1;Plantation;1;2;janvier;janvier;Variétés précoces résistantes à la montaison
+Betterave botte;SA;1;Récolte;16;20;avril;mai;Variétés précoces résistantes à la montaison
+Betterave botte;SA;1;Semis en pot/plant;47;49;novembre;décembre;Variétés précoces résistantes à la montaison
+Betterave botte;SA;2;Semis en pot/plant;1;2;janvier;janvier;Variétés précoces
+Betterave botte;SA;2;Plantation;5;7;janvier;février;Variétés précoces
+Betterave botte;SA;2;Récolte;17;21;avril;mai;Variétés précoces
+Betterave botte;SA;3;Semis en pot/plant;2;4;janvier;janvier;Variétés précoces
+Betterave botte;SA;3;Plantation;7;9;février;février;Variétés précoces
+Betterave botte;SA;3;Récolte;18;22;avril;mai;Variétés précoces
+Betterave botte;SA;4;Semis en pot/plant;5;7;janvier;février;Variétés précoces
+Betterave botte;SA;4;Plantation;9;11;février;mars;Variétés précoces
+Betterave botte;SA;4;Récolte;20;24;mai;juin;Variétés précoces
+Betterave botte;SA;5;Semis en pot/plant;8;10;février;mars;Variétés précoces
+Betterave botte;SA;5;Plantation;11;13;mars;mars;Variétés précoces
+Betterave botte;SA;5;Récolte;21;25;mai;juin;Variétés précoces
+Betterave de conservation;PC;1;Conservation;1;13;janvier;mars;Variétés précoces 100-110 jours
+Betterave de conservation;PC;1;Semis direct;20;22;mai;mai;Variétés précoces 100-110 jours
+Betterave de conservation;PC;1;Récolte;35;38;août;septembre;Variétés précoces 100-110 jours
+Betterave de conservation;PC;1;Conservation;40;52;octobre;décembre;Variétés précoces 100-110 jours
+Betterave de conservation;PC;2;Conservation;1;13;janvier;mars;Variétés de saison 110-120 jours
+Betterave de conservation;PC;2;Semis direct;20;22;mai;mai;Variétés de saison 110-120 jours
+Betterave de conservation;PC;2;Récolte;36;39;septembre;septembre;Variétés de saison 110-120 jours
+Betterave de conservation;PC;2;Conservation;41;52;octobre;décembre;Variétés de saison 110-120 jours
+Betterave de conservation;PC;3;Conservation;1;13;janvier;mars;Variétés de saison 120-150 jours
+Betterave de conservation;PC;3;Semis direct;20;22;mai;mai;Variétés de saison 120-150 jours
+Betterave de conservation;PC;3;Récolte;38;41;septembre;octobre;Variétés de saison 120-150 jours
+Betterave de conservation;PC;3;Conservation;43;52;octobre;décembre;Variétés de saison 120-150 jours
+Betterave de conservation;PC;4;Conservation;1;13;janvier;mars;Variétés précoces 100-110 jours
+Betterave de conservation;PC;4;Semis direct;22;24;mai;juin;Variétés précoces 100-110 jours
+Betterave de conservation;PC;4;Récolte;37;40;septembre;octobre;Variétés précoces 100-110 jours
+Betterave de conservation;PC;4;Conservation;42;52;octobre;décembre;Variétés précoces 100-110 jours
+Betterave de conservation;PC;5;Conservation;1;13;janvier;mars;Variétés de saison 110-120 jours
+Betterave de conservation;PC;5;Semis direct;22;24;mai;juin;Variétés de saison 110-120 jours
+Betterave de conservation;PC;5;Récolte;38;41;septembre;octobre;Variétés de saison 110-120 jours
+Betterave de conservation;PC;5;Conservation;43;52;octobre;décembre;Variétés de saison 110-120 jours
+Betterave de conservation;PC;6;Conservation;1;13;janvier;mars;Variétés de saison 120-150 jours
+Betterave de conservation;PC;6;Semis direct;22;24;mai;juin;Variétés de saison 120-150 jours
+Betterave de conservation;PC;6;Récolte;40;43;octobre;octobre;Variétés de saison 120-150 jours
+Betterave de conservation;PC;6;Conservation;45;52;novembre;décembre;Variétés de saison 120-150 jours
+Betterave de conservation;PC;7;Conservation;1;13;janvier;mars;Variétés précoces 100-110 jours
+Betterave de conservation;PC;7;Semis direct;24;26;juin;juin;Variétés précoces 100-110 jours
+Betterave de conservation;PC;7;Récolte;39;42;septembre;octobre;Variétés précoces 100-110 jours
+Betterave de conservation;PC;7;Conservation;44;52;octobre;décembre;Variétés précoces 100-110 jours
+Betterave de conservation;PC;8;Conservation;1;13;janvier;mars;Variétés de saison 110-120 jours
+Betterave de conservation;PC;8;Semis direct;24;26;juin;juin;Variétés de saison 110-120 jours
+Betterave de conservation;PC;8;Récolte;40;43;octobre;octobre;Variétés de saison 110-120 jours
+Betterave de conservation;PC;8;Conservation;45;52;novembre;décembre;Variétés de saison 110-120 jours
+Betterave de conservation;PC;9;Conservation;1;13;janvier;mars;Variétés précoces 100-110 jours
+Betterave de conservation;PC;9;Semis direct;26;28;juin;juillet;Variétés précoces 100-110 jours
+Betterave de conservation;PC;9;Récolte;41;44;octobre;octobre;Variétés précoces 100-110 jours
+Betterave de conservation;PC;9;Conservation;46;52;novembre;décembre;Variétés précoces 100-110 jours
+Blette;PC;1;Semis en pot/plant;11;13;mars;mars;Variétés compactes, à feuilles, ou cardes
+Blette;PC;1;Plantation;15;17;avril;avril;Variétés compactes, à feuilles, ou cardes
+Blette;PC;1;Récolte;24;35;juin;août;Variétés compactes, à feuilles, ou cardes
+Blette;PC;2;Semis en pot/plant;14;16;avril;avril;Variétés compactes, à feuilles, ou cardes
+Blette;PC;2;Plantation;17;19;avril;mai;Variétés compactes, à feuilles, ou cardes
+Blette;PC;2;Récolte;26;37;juin;septembre;Variétés compactes, à feuilles, ou cardes
+Blette;PC;3;Semis en pot/plant;19;21;mai;mai;Variétés compactes, à feuilles, ou cardes
+Blette;PC;3;Plantation;22;24;mai;juin;Variétés compactes, à feuilles, ou cardes
+Blette;PC;3;Récolte;31;39;juillet;septembre;Variétés compactes, à feuilles, ou cardes
+Blette;PC;4;Semis en pot/plant;23;25;juin;juin;Variétés compactes, à feuilles, ou cardes
+Blette;PC;4;Plantation;26;28;juin;juillet;Variétés compactes, à feuilles, ou cardes
+Blette;PC;4;Récolte;35;42;août;octobre;Variétés compactes, à feuilles, ou cardes
+Blette;PC;5;Semis en pot/plant;27;29;juillet;juillet;Variétés compactes, à feuilles, ou cardes
+Blette;PC;5;Plantation;30;32;juillet;août;Variétés compactes, à feuilles, ou cardes
+Blette;PC;5;Récolte;39;44;septembre;octobre;Variétés compactes, à feuilles, ou cardes
+Blette;SA;1;Récolte;1;15;janvier;avril;Variétés à cardes
+Blette;SA;1;Semis en pot/plant;32;34;août;août;Variétés à cardes
+Blette;SA;1;Plantation;35;37;août;septembre;Variétés à cardes
+Blette;SA;1;Récolte;46;52;novembre;décembre;Variétés à cardes
+Blette;SA;2;Semis en pot/plant;5;7;janvier;février;Variétés compactes, à feuilles, ou cardes
+Blette;SA;2;Plantation;9;11;février;mars;Variétés compactes, à feuilles, ou cardes
+Blette;SA;2;Récolte;20;26;mai;juin;Variétés compactes, à feuilles, ou cardes
+Carotte botte;PC;1;Semis direct;9;11;février;mars;Variétés précoces 90-105 jours
+Carotte botte;PC;1;Récolte;26;30;juin;juillet;Variétés précoces 90-105 jours
+Carotte botte;PC;2;Semis direct;11;13;mars;mars;Variétés précoces et de saison 90-120 jours
+Carotte botte;PC;2;Récolte;27;31;juillet;juillet;Variétés précoces et de saison 90-120 jours
+Carotte botte;PC;3;Semis direct;13;15;mars;avril;Variétés précoces et de saison 90-120 jours
+Carotte botte;PC;3;Récolte;28;32;juillet;août;Variétés précoces et de saison 90-120 jours
+Carotte botte;PC;4;Semis direct;15;17;avril;avril;Variétés précoces et de saison 90-120 jours
+Carotte botte;PC;4;Récolte;30;34;juillet;août;Variétés précoces et de saison 90-120 jours
+Carotte botte;PC;5;Semis direct;17;19;avril;mai;Variétés précoces et de saison 90-120 jours
+Carotte botte;PC;5;Récolte;32;36;août;septembre;Variétés précoces et de saison 90-120 jours
+Carotte botte;PC;6;Semis direct;19;22;mai;mai;Variétés précoces et de saison 90-120 jours
+Carotte botte;PC;6;Récolte;33;38;août;septembre;Variétés précoces et de saison 90-120 jours
+Carotte botte;SA;1;Récolte;17;22;avril;mai;Variétés précoces résistantes à la montaison
+Carotte botte;SA;1;Semis direct;42;46;octobre;novembre;Variétés précoces résistantes à la montaison
+Carotte botte;SA;2;Semis direct;1;3;janvier;janvier;Variétés précoces 90-105 jours
+Carotte botte;SA;2;Récolte;19;24;mai;juin;Variétés précoces 90-105 jours
+Carotte botte;SA;3;Semis direct;3;5;janvier;janvier;Variétés précoces 90-105 jours
+Carotte botte;SA;3;Récolte;20;25;mai;juin;Variétés précoces 90-105 jours
+Carotte botte;SA;4;Semis direct;5;7;janvier;février;Variétés précoces 90-105 jours
+Carotte botte;SA;4;Récolte;22;27;mai;juillet;Variétés précoces 90-105 jours
+Carotte botte;SA;5;Semis direct;7;9;février;février;Variétés précoces 90-105 jours
+Carotte botte;SA;5;Récolte;24;28;juin;juillet;Variétés précoces 90-105 jours
+Carotte de conservation;PC;1;Conservation;1;13;janvier;mars;Variétés tardives 120-150 jours
+Carotte de conservation;PC;1;Semis direct;19;22;mai;mai;Variétés tardives 120-150 jours
+Carotte de conservation;PC;1;Récolte;36;41;septembre;octobre;Variétés tardives 120-150 jours
+Carotte de conservation;PC;1;Conservation;43;52;octobre;décembre;Variétés tardives 120-150 jours
+Carotte de conservation;PC;2;Conservation;1;13;janvier;mars;Variétés précoces et de saison 90-120 jours
+Carotte de conservation;PC;2;Semis direct;22;24;mai;juin;Variétés précoces et de saison 90-120 jours
+Carotte de conservation;PC;2;Récolte;36;41;septembre;octobre;Variétés précoces et de saison 90-120 jours
+Carotte de conservation;PC;2;Conservation;43;52;octobre;décembre;Variétés précoces et de saison 90-120 jours
+Carotte de conservation;PC;3;Conservation;1;15;janvier;avril;Variétés tardives 120-150 jours
+Carotte de conservation;PC;3;Semis direct;22;24;mai;juin;Variétés tardives 120-150 jours
+Carotte de conservation;PC;3;Récolte;39;44;septembre;octobre;Variétés tardives 120-150 jours
+Carotte de conservation;PC;3;Conservation;46;52;novembre;décembre;Variétés tardives 120-150 jours
+Carotte de conservation;PC;4;Conservation;1;15;janvier;avril;Variétés précoces et de saison 90-120 jours
+Carotte de conservation;PC;4;Semis direct;24;26;juin;juin;Variétés précoces et de saison 90-120 jours
+Carotte de conservation;PC;4;Récolte;39;44;septembre;octobre;Variétés précoces et de saison 90-120 jours
+Carotte de conservation;PC;4;Conservation;46;52;novembre;décembre;Variétés précoces et de saison 90-120 jours
+Carotte de conservation;PC;5;Conservation;1;17;janvier;avril;Variétés tardives 120-150 jours
+Carotte de conservation;PC;5;Semis direct;24;26;juin;juin;Variétés tardives 120-150 jours
+Carotte de conservation;PC;5;Récolte;43;48;octobre;novembre;Variétés tardives 120-150 jours
+Carotte de conservation;PC;5;Conservation;50;52;décembre;décembre;Variétés tardives 120-150 jours
+Carotte de conservation;PC;6;Conservation;1;17;janvier;avril;Variétés précoces 90-105 jours
+Carotte de conservation;PC;6;Semis direct;26;28;juin;juillet;Variétés précoces 90-105 jours
+Carotte de conservation;PC;6;Récolte;43;48;octobre;novembre;Variétés précoces 90-105 jours
+Carotte de conservation;PC;6;Conservation;50;52;décembre;décembre;Variétés précoces 90-105 jours
+Chicorée chioggia;PC;1;Récolte;1;3;janvier;janvier;Variétés tardives 130- 150 jours
+Chicorée chioggia;PC;1;Conservation;5;13;janvier;mars;Variétés tardives 130- 150 jours
+Chicorée chioggia;PC;1;Semis en pot/plant;27;29;juillet;juillet;Variétés tardives 130- 150 jours
+Chicorée chioggia;PC;1;Plantation;30;32;juillet;août;Variétés tardives 130- 150 jours
+Chicorée chioggia;PC;1;Récolte;50;52;décembre;décembre;Variétés tardives 130- 150 jours
+Chicorée pain de sucre;PC;1;Conservation;1;9;janvier;février;Variétés de saison 80-90 jours
+Chicorée pain de sucre;PC;1;Semis en pot/plant;27;29;juillet;juillet;Variétés de saison 80-90 jours
+Chicorée pain de sucre;PC;1;Plantation;30;32;juillet;août;Variétés de saison 80-90 jours
+Chicorée pain de sucre;PC;1;Récolte;44;48;octobre;novembre;Variétés de saison 80-90 jours
+Chicorée pain de sucre;PC;1;Conservation;49;52;décembre;décembre;Variétés de saison 80-90 jours
+Chicorée scarole & frisée;PC;1;Semis en pot/plant;2;4;janvier;janvier;Variétés résistantes à la montaison
+Chicorée scarole & frisée;PC;1;Plantation;7;9;février;février;Variétés résistantes à la montaison
+Chicorée scarole & frisée;PC;1;Récolte;19;22;mai;mai;Variétés résistantes à la montaison
+Chicorée scarole & frisée;PC;2;Semis en pot/plant;4;6;janvier;février;Variétés résistantes à la montaison
+Chicorée scarole & frisée;PC;2;Plantation;9;11;février;mars;Variétés résistantes à la montaison
+Chicorée scarole & frisée;PC;2;Récolte;20;23;mai;juin;Variétés résistantes à la montaison
+Chicorée scarole & frisée;PC;3;Semis en pot/plant;6;8;février;février;Variétés résistantes à la montaison
+Chicorée scarole & frisée;PC;3;Plantation;11;13;mars;mars;Variétés résistantes à la montaison
+Chicorée scarole & frisée;PC;3;Récolte;22;24;mai;juin;Variétés résistantes à la montaison
+Chicorée scarole & frisée;PC;4;Semis en pot/plant;28;30;juillet;juillet;
+Chicorée scarole & frisée;PC;4;Plantation;31;33;juillet;août;
+Chicorée scarole & frisée;PC;4;Récolte;43;47;octobre;novembre;
+Chicorée scarole & frisée;PC;5;Semis en pot/plant;30;32;juillet;août;
+Chicorée scarole & frisée;PC;5;Plantation;33;35;août;août;
+Chicorée scarole & frisée;PC;5;Récolte;47;49;novembre;décembre;
+Chicorée scarole & frisée;SA;1;Récolte;1;5;janvier;janvier;
+Chicorée scarole & frisée;SA;1;Semis en pot/plant;34;36;août;septembre;
+Chicorée scarole & frisée;SA;1;Plantation;37;39;septembre;septembre;
+Chicorée scarole & frisée;SA;1;Récolte;50;52;décembre;décembre;
+Chicorée scarole & frisée;SA;2;Récolte;4;9;janvier;février;
+Chicorée scarole & frisée;SA;2;Semis en pot/plant;35;37;août;septembre;
+Chicorée scarole & frisée;SA;2;Plantation;39;41;septembre;octobre;
+Chicorée scarole & frisée;SA;3;Récolte;8;11;février;mars;
+Chicorée scarole & frisée;SA;3;Semis en pot/plant;37;39;septembre;septembre;
+Chicorée scarole & frisée;SA;3;Plantation;41;43;octobre;octobre;
+Chicorée scarole & frisée;SA;4;Récolte;11;14;mars;avril;
+Chicorée scarole & frisée;SA;4;Semis en pot/plant;39;41;septembre;octobre;
+Chicorée scarole & frisée;SA;4;Plantation;43;45;octobre;novembre;
+Chicorée scarole & frisée;SA;5;Plantation;1;1;janvier;janvier;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;5;Récolte;13;16;mars;avril;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;5;Semis en pot/plant;47;49;novembre;décembre;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;5;Plantation;51;52;décembre;décembre;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;6;Plantation;1;3;janvier;janvier;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;6;Récolte;15;18;avril;avril;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;6;Semis en pot/plant;47;49;novembre;décembre;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;7;Plantation;3;5;janvier;janvier;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;7;Récolte;16;19;avril;mai;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;7;Semis en pot/plant;49;51;décembre;décembre;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;8;Semis en pot/plant;1;1;janvier;janvier;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;8;Plantation;5;7;janvier;février;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;8;Récolte;17;20;avril;mai;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;8;Semis en pot/plant;51;52;décembre;décembre;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;9;Semis en pot/plant;2;4;janvier;janvier;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;9;Plantation;7;9;février;février;Variétés résistantes à la montaison
+Chicorée scarole & frisée;SA;9;Récolte;18;21;avril;mai;Variétés résistantes à la montaison
+Chicorée trévise;PC;1;Semis en pot/plant;27;29;juillet;juillet;Variétés précoces 70-90 jours
+Chicorée trévise;PC;1;Plantation;30;32;juillet;août;Variétés précoces 70-90 jours
+Chicorée trévise;PC;1;Récolte;41;44;octobre;octobre;Variétés précoces 70-90 jours
+Chicorée trévise;PC;2;Semis en pot/plant;29;31;juillet;juillet;Variétés précoces 70-90 jours
+Chicorée trévise;PC;2;Plantation;32;34;août;août;Variétés précoces 70-90 jours
+Chicorée trévise;PC;2;Récolte;44;47;octobre;novembre;Variétés précoces 70-90 jours
+Chou brocoli;PC;1;Semis en pot/plant;2;4;janvier;janvier;
+Chou brocoli;PC;1;Plantation;9;11;février;mars;
+Chou brocoli;PC;1;Récolte;23;25;juin;juin;
+Chou brocoli;PC;2;Semis en pot/plant;6;8;février;février;Risque élevé de mauvaise pommaison
+Chou brocoli;PC;2;Plantation;13;15;mars;avril;Risque élevé de mauvaise pommaison
+Chou brocoli;PC;2;Récolte;26;28;juin;juillet;Risque élevé de mauvaise pommaison
+Chou brocoli;PC;3;Semis en pot/plant;11;13;mars;mars;Risque élevé de mauvaise pommaison
+Chou brocoli;PC;3;Plantation;17;19;avril;mai;Risque élevé de mauvaise pommaison
+Chou brocoli;PC;3;Récolte;29;31;juillet;juillet;Risque élevé de mauvaise pommaison
+Chou brocoli;PC;4;Semis en pot/plant;17;19;avril;mai;Risque élevé de mauvaise pommaison
+Chou brocoli;PC;4;Plantation;22;24;mai;juin;Risque élevé de mauvaise pommaison
+Chou brocoli;PC;4;Récolte;34;36;août;septembre;Risque élevé de mauvaise pommaison
+Chou brocoli;PC;5;Semis en pot/plant;21;23;mai;juin;
+Chou brocoli;PC;5;Plantation;26;28;juin;juillet;
+Chou brocoli;PC;5;Récolte;38;41;septembre;octobre;
+Chou brocoli;PC;6;Semis en pot/plant;23;25;juin;juin;
+Chou brocoli;PC;6;Plantation;28;30;juillet;juillet;
+Chou brocoli;PC;6;Récolte;41;45;octobre;novembre;
+Chou brocoli;PC;7;Semis en pot/plant;25;27;juin;juillet;Attention aux gelées précoces
+Chou brocoli;PC;7;Plantation;30;32;juillet;août;Attention aux gelées précoces
+Chou brocoli;PC;7;Récolte;43;47;octobre;novembre;Attention aux gelées précoces
+Chou brocoli;SA;1;Plantation;5;7;janvier;février;Semis en alvéoles
+Chou brocoli;SA;1;Récolte;17;19;avril;mai;Semis en alvéoles
+Chou brocoli;SA;1;Semis en pot/plant;49;51;décembre;décembre;Semis en alvéoles
+Chou brocoli;SA;2;Plantation;9;11;février;mars;Variétés de 60-80 jours après plantation
+Chou brocoli;SA;2;Récolte;20;22;mai;mai;Variétés de 60-80 jours après plantation
+Chou cabus;PC;1;Semis en pot/plant;2;4;janvier;janvier;Variétés de 75-90 jours après plantation
+Chou cabus;PC;1;Plantation;9;11;février;mars;Variétés de 75-90 jours après plantation
+Chou cabus;PC;1;Récolte;25;27;juin;juillet;Variétés de 75-90 jours après plantation
+Chou cabus;PC;2;Semis en pot/plant;6;8;février;février;Variétés de 75-90 jours après plantation
+Chou cabus;PC;2;Plantation;13;15;mars;avril;Variétés de 75-90 jours après plantation
+Chou cabus;PC;2;Récolte;28;30;juillet;juillet;Variétés de 75-90 jours après plantation
+Chou cabus;PC;3;Semis en pot/plant;15;17;avril;avril;Variétés de 75-90 jours après plantation. Risque élevé d'éclatement
+Chou cabus;PC;3;Plantation;20;22;mai;mai;Variétés de 75-90 jours après plantation. Risque élevé d'éclatement
+Chou cabus;PC;3;Récolte;35;39;août;septembre;Variétés de 75-90 jours après plantation. Risque élevé d'éclatement
+Chou cabus;PC;3;Conservation;41;45;octobre;novembre;Variétés de 75-90 jours après plantation. Risque élevé d'éclatement
+Chou cabus;PC;4;Semis en pot/plant;15;17;avril;avril;Variétés de 90-105 jours après plantation. Risque élevé d'éclatement
+Chou cabus;PC;4;Plantation;20;22;mai;mai;Variétés de 90-105 jours après plantation. Risque élevé d'éclatement
+Chou cabus;PC;4;Récolte;37;41;septembre;octobre;Variétés de 90-105 jours après plantation. Risque élevé d'éclatement
+Chou cabus;PC;4;Conservation;43;48;octobre;novembre;Variétés de 90-105 jours après plantation. Risque élevé d'éclatement
+Chou cabus;PC;5;Conservation;1;5;janvier;janvier;Variétés de 105-120 jours après plantation
+Chou cabus;PC;5;Semis en pot/plant;15;17;avril;avril;Variétés de 105-120 jours après plantation
+Chou cabus;PC;5;Plantation;20;22;mai;mai;Variétés de 105-120 jours après plantation
+Chou cabus;PC;5;Récolte;40;44;octobre;octobre;Variétés de 105-120 jours après plantation
+Chou cabus;PC;5;Conservation;46;52;novembre;décembre;Variétés de 105-120 jours après plantation
+Chou cabus;PC;6;Conservation;1;9;janvier;février;Variétés de 120-135 jours après plantation
+Chou cabus;PC;6;Semis en pot/plant;15;17;avril;avril;Variétés de 120-135 jours après plantation
+Chou cabus;PC;6;Plantation;20;22;mai;mai;Variétés de 120-135 jours après plantation
+Chou cabus;PC;6;Récolte;42;46;octobre;novembre;Variétés de 120-135 jours après plantation
+Chou cabus;PC;6;Conservation;48;52;novembre;décembre;Variétés de 120-135 jours après plantation
+Chou cabus;PC;7;Conservation;1;15;janvier;avril;Variétés de 135-150 jours après plantation
+Chou cabus;PC;7;Semis en pot/plant;15;17;avril;avril;Variétés de 135-150 jours après plantation
+Chou cabus;PC;7;Plantation;20;22;mai;mai;Variétés de 135-150 jours après plantation
+Chou cabus;PC;7;Récolte;44;48;octobre;novembre;Variétés de 135-150 jours après plantation
+Chou cabus;PC;7;Conservation;50;52;décembre;décembre;Variétés de 135-150 jours après plantation
+Chou cabus;PC;8;Conservation;1;9;janvier;février;Variétés de 105-120 jours après plantation
+Chou cabus;PC;8;Semis en pot/plant;17;19;avril;mai;Variétés de 105-120 jours après plantation
+Chou cabus;PC;8;Plantation;22;24;mai;juin;Variétés de 105-120 jours après plantation
+Chou cabus;PC;8;Récolte;42;46;octobre;novembre;Variétés de 105-120 jours après plantation
+Chou cabus;PC;8;Conservation;48;52;novembre;décembre;Variétés de 105-120 jours après plantation
+Chou cabus;PC;9;Conservation;1;5;janvier;janvier;Variétés de 90-105 jours après plantation
+Chou cabus;PC;9;Semis en pot/plant;19;21;mai;mai;Variétés de 90-105 jours après plantation
+Chou cabus;PC;9;Plantation;24;26;juin;juin;Variétés de 90-105 jours après plantation
+Chou cabus;PC;9;Récolte;42;46;octobre;novembre;Variétés de 90-105 jours après plantation
+Chou cabus;PC;9;Conservation;48;52;novembre;décembre;Variétés de 90-105 jours après plantation
+Chou cabus;PC;10;Semis en pot/plant;21;23;mai;juin;Variétés de 75-90 jours après plantation
+Chou cabus;PC;10;Plantation;26;28;juin;juillet;Variétés de 75-90 jours après plantation
+Chou cabus;PC;10;Récolte;42;46;octobre;novembre;Variétés de 75-90 jours après plantation
+Chou cabus;PC;10;Conservation;48;52;novembre;décembre;Variétés de 75-90 jours après plantation
+Chou cabus;SA;1;Récolte;14;16;avril;avril;Variétés de 75-90 jours après plantation
+Chou cabus;SA;1;Semis en pot/plant;34;36;août;septembre;Variétés de 75-90 jours après plantation
+Chou cabus;SA;1;Plantation;39;41;septembre;octobre;Variétés de 75-90 jours après plantation
+Chou cabus;SA;2;Plantation;5;7;janvier;février;Variétés de 75-90 jours après plantation
+Chou cabus;SA;2;Récolte;19;21;mai;mai;Variétés de 75-90 jours après plantation
+Chou cabus;SA;2;Semis en pot/plant;49;51;décembre;décembre;Variétés de 75-90 jours après plantation
+Chou cabus;SA;3;Semis en pot/plant;2;4;janvier;janvier;Variétés de 75-90 jours après plantation
+Chou cabus;SA;3;Plantation;9;11;février;mars;Variétés de 75-90 jours après plantation
+Chou cabus;SA;3;Récolte;22;24;mai;juin;Variétés de 75-90 jours après plantation
+Chou chinois pak choi;PC;1;Semis en pot/plant;9;11;février;mars;
+Chou chinois pak choi;PC;1;Plantation;13;15;mars;avril;
+Chou chinois pak choi;PC;1;Récolte;20;22;mai;mai;
+Chou chinois pak choi;PC;2;Semis en pot/plant;27;29;juillet;juillet;
+Chou chinois pak choi;PC;2;Plantation;30;32;juillet;août;
+Chou chinois pak choi;PC;2;Récolte;37;39;septembre;septembre;
+Chou chinois pak choi;PC;3;Semis en pot/plant;30;32;juillet;août;
+Chou chinois pak choi;PC;3;Plantation;33;35;août;août;
+Chou chinois pak choi;PC;3;Récolte;42;45;octobre;novembre;
+Chou chinois pak choi;SA;1;Récolte;9;11;février;mars;Variété résistantes à la montaison
+Chou chinois pak choi;SA;1;Semis en pot/plant;35;37;août;septembre;Variété résistantes à la montaison
+Chou chinois pak choi;SA;1;Plantation;39;41;septembre;octobre;Variété résistantes à la montaison
+Chou chinois pak choi;SA;2;Récolte;11;13;mars;mars;Variété résistantes à la montaison
+Chou chinois pak choi;SA;2;Semis en pot/plant;39;41;septembre;octobre;Variété résistantes à la montaison
+Chou chinois pak choi;SA;2;Plantation;44;46;octobre;novembre;Variété résistantes à la montaison
+Chou chinois pak choi;SA;3;Semis en pot/plant;1;2;janvier;janvier;Variété résistantes à la montaison
+Chou chinois pak choi;SA;3;Plantation;5;7;janvier;février;Variété résistantes à la montaison
+Chou chinois pak choi;SA;3;Récolte;13;15;mars;avril;Variété résistantes à la montaison
+Chou chinois pak choi;SA;4;Semis en pot/plant;4;6;janvier;février;
+Chou chinois pak choi;SA;4;Plantation;9;11;février;mars;
+Chou chinois pak choi;SA;4;Récolte;16;18;avril;avril;
+Chou chinois pak choi;SA;5;Plantation;35;37;août;septembre;
+Chou chinois pak choi;SA;5;Récolte;48;52;novembre;décembre;
+Chou chinois pe tsai;PC;1;Semis en pot/plant;9;11;février;mars;Variétés F1 résistantes à la montaison. Montaison rapide. 10-14 pl/m2
+Chou chinois pe tsai;PC;1;Plantation;13;15;mars;avril;Variétés F1 résistantes à la montaison. Montaison rapide. 10-14 pl/m2
+Chou chinois pe tsai;PC;1;Récolte;22;24;mai;juin;Variétés F1 résistantes à la montaison. Montaison rapide. 10-14 pl/m2
+Chou chinois pe tsai;PC;2;Semis en pot/plant;27;29;juillet;juillet;Variétés précoces 50-60 jours, 10-14 pl/m2
+Chou chinois pe tsai;PC;2;Plantation;30;32;juillet;août;Variétés précoces 50-60 jours, 10-14 pl/m2
+Chou chinois pe tsai;PC;2;Récolte;39;42;septembre;octobre;Variétés précoces 50-60 jours, 10-14 pl/m2
+Chou chinois pe tsai;PC;2;Conservation;43;52;octobre;décembre;Variétés précoces 50-60 jours, 10-14 pl/m2
+Chou chinois pe tsai;PC;3;Conservation;1;9;janvier;février;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;PC;3;Semis en pot/plant;27;29;juillet;juillet;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;PC;3;Plantation;30;32;juillet;août;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;PC;3;Récolte;41;46;octobre;novembre;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;PC;3;Conservation;47;52;novembre;décembre;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;PC;4;Conservation;1;5;janvier;janvier;Variétés précoces 50-60 jours, 10-14 pl/m2
+Chou chinois pe tsai;PC;4;Semis en pot/plant;30;32;juillet;août;Variétés précoces 50-60 jours, 10-14 pl/m2
+Chou chinois pe tsai;PC;4;Plantation;33;35;août;août;Variétés précoces 50-60 jours, 10-14 pl/m2
+Chou chinois pe tsai;PC;4;Récolte;44;47;octobre;novembre;Variétés précoces 50-60 jours, 10-14 pl/m2
+Chou chinois pe tsai;PC;4;Conservation;48;52;novembre;décembre;Variétés précoces 50-60 jours, 10-14 pl/m2
+Chou chinois pe tsai;PC;5;Conservation;1;9;janvier;février;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;PC;5;Semis en pot/plant;30;32;juillet;août;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;PC;5;Plantation;33;35;août;août;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;PC;5;Récolte;46;48;novembre;novembre;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;PC;5;Conservation;49;52;décembre;décembre;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;SA;1;Semis en pot/plant;1;2;janvier;janvier;Variétés F1 résistantes à la montaison. Montaison rapide. 10-14 pl/m2
+Chou chinois pe tsai;SA;1;Plantation;5;7;janvier;février;Variétés F1 résistantes à la montaison. Montaison rapide. 10-14 pl/m2
+Chou chinois pe tsai;SA;1;Récolte;15;17;avril;avril;Variétés F1 résistantes à la montaison. Montaison rapide. 10-14 pl/m2
+Chou chinois pe tsai;SA;2;Semis en pot/plant;4;6;janvier;février;Variétés F1 résistantes à la montaison. Montaison rapide. 10-14 pl/m2
+Chou chinois pe tsai;SA;2;Plantation;9;11;février;mars;Variétés F1 résistantes à la montaison. Montaison rapide. 10-14 pl/m2
+Chou chinois pe tsai;SA;2;Récolte;18;20;avril;mai;Variétés F1 résistantes à la montaison. Montaison rapide. 10-14 pl/m2
+Chou chinois pe tsai;SA;3;Récolte;1;2;janvier;janvier;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;SA;3;Conservation;5;17;janvier;avril;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;SA;3;Semis en pot/plant;32;34;août;août;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;SA;3;Plantation;35;37;août;septembre;Variétés de saison 60-70 jours, 7 pl/m2
+Chou chinois pe tsai;SA;3;Récolte;50;52;décembre;décembre;Variétés de saison 60-70 jours, 7 pl/m2
+Chou de Bruxelles;PC;1;Récolte;1;3;janvier;janvier;Variétés de 120-140 jours après plantation : Dagan F1, Divino F1 (Bejo), Abacus F1 (Syngenta)
+Chou de Bruxelles;PC;1;Semis en pot/plant;15;17;avril;avril;Variétés de 120-140 jours après plantation : Dagan F1, Divino F1 (Bejo), Abacus F1 (Syngenta)
+Chou de Bruxelles;PC;1;Plantation;20;22;mai;mai;Variétés de 120-140 jours après plantation : Dagan F1, Divino F1 (Bejo), Abacus F1 (Syngenta)
+Chou de Bruxelles;PC;1;Récolte;42;52;octobre;décembre;Variétés de 120-140 jours après plantation : Dagan F1, Divino F1 (Bejo), Abacus F1 (Syngenta)
+Chou de Bruxelles;PC;2;Récolte;1;5;janvier;janvier;Variétés de 140-160 jours après plantation : Nautic F1 (Bejo), Solidus F1, Cryptus F1 (Syngenta), Brillant F1 (Vilmorin)
+Chou de Bruxelles;PC;2;Semis en pot/plant;15;17;avril;avril;Variétés de 140-160 jours après plantation : Nautic F1 (Bejo), Solidus F1, Cryptus F1 (Syngenta), Brillant F1 (Vilmorin)
+Chou de Bruxelles;PC;2;Plantation;20;22;mai;mai;Variétés de 140-160 jours après plantation : Nautic F1 (Bejo), Solidus F1, Cryptus F1 (Syngenta), Brillant F1 (Vilmorin)
+Chou de Bruxelles;PC;2;Récolte;46;52;novembre;décembre;Variétés de 140-160 jours après plantation : Nautic F1 (Bejo), Solidus F1, Cryptus F1 (Syngenta), Brillant F1 (Vilmorin)
+Chou de Bruxelles;PC;3;Récolte;1;5;janvier;janvier;Variétés de 120-140 jours après plantation
+Chou de Bruxelles;PC;3;Semis en pot/plant;19;21;mai;mai;Variétés de 120-140 jours après plantation
+Chou de Bruxelles;PC;3;Plantation;24;26;juin;juin;Variétés de 120-140 jours après plantation
+Chou de Bruxelles;PC;3;Récolte;47;52;novembre;décembre;Variétés de 120-140 jours après plantation
+Chou de Bruxelles;PC;4;Récolte;1;7;janvier;février;Variétés de 140-160 jours après plantation
+Chou de Bruxelles;PC;4;Plantation;24;26;juin;juin;Variétés de 140-160 jours après plantation
+Chou de milan;PC;1;Semis en pot/plant;23;25;juin;juin;Variétés de 75-90 jours après plantation
+Chou de milan;PC;1;Plantation;28;30;juillet;juillet;Variétés de 75-90 jours après plantation
+Chou de milan;PC;1;Récolte;43;47;octobre;novembre;Variétés de 75-90 jours après plantation
+Chou de milan;PC;2;Semis en pot/plant;25;27;juin;juillet;Variétés de 75-90 jours après plantation
+Chou de milan;PC;2;Plantation;30;32;juillet;août;Variétés de 75-90 jours après plantation
+Chou de milan;PC;2;Récolte;45;49;novembre;décembre;Variétés de 75-90 jours après plantation
+Chou de milan;PC;3;Récolte;1;4;janvier;janvier;Variétés de 100-120 jours après plantation
+Chou de milan;PC;3;Semis en pot/plant;23;25;juin;juin;Variétés de 100-120 jours après plantation
+Chou de milan;PC;3;Plantation;28;30;juillet;juillet;Variétés de 100-120 jours après plantation
+Chou de milan;PC;3;Récolte;51;52;décembre;décembre;Variétés de 100-120 jours après plantation
+Chou de milan;PC;4;Récolte;2;7;janvier;février;Variétés de 120-140 jours après plantation
+Chou de milan;PC;4;Semis en pot/plant;23;25;juin;juin;Variétés de 120-140 jours après plantation
+Chou de milan;PC;4;Plantation;28;30;juillet;juillet;Variétés de 120-140 jours après plantation
+Chou de milan;PC;5;Récolte;6;12;février;mars;Variétés de 140-160 jours après plantation
+Chou de milan;PC;5;Semis en pot/plant;23;25;juin;juin;Variétés de 140-160 jours après plantation
+Chou de milan;PC;5;Plantation;28;30;juillet;juillet;Variétés de 140-160 jours après plantation
+Chou de milan;PC;6;Récolte;12;17;mars;avril;Variétés de >170 jours après plantation
+Chou de milan;PC;6;Semis en pot/plant;23;25;juin;juin;Variétés de >170 jours après plantation
+Chou de milan;PC;6;Plantation;28;30;juillet;juillet;Variétés de >170 jours après plantation
+Chou kale;PC;1;Semis en pot/plant;2;4;janvier;janvier;
+Chou kale;PC;1;Plantation;9;11;février;mars;
+Chou kale;PC;1;Récolte;24;35;juin;août;
+Chou kale;PC;2;Semis en pot/plant;15;17;avril;avril;
+Chou kale;PC;2;Plantation;20;22;mai;mai;
+Chou kale;PC;2;Récolte;35;50;août;décembre;
+Chou kale;PC;3;Récolte;1;9;janvier;février;
+Chou kale;PC;3;Semis en pot/plant;19;21;mai;mai;
+Chou kale;PC;3;Plantation;24;26;juin;juin;
+Chou kale;PC;3;Récolte;39;52;septembre;décembre;
+Chou kale;PC;4;Récolte;1;11;janvier;mars;
+Chou kale;PC;4;Semis en pot/plant;23;25;juin;juin;
+Chou kale;PC;4;Plantation;28;30;juillet;juillet;
+Chou kale;PC;4;Récolte;44;52;octobre;décembre;
+Chou kale;SA;1;Plantation;5;7;janvier;février;Semis en alvéoles
+Chou kale;SA;1;Récolte;19;28;mai;juillet;Semis en alvéoles
+Chou kale;SA;1;Semis en pot/plant;49;51;décembre;décembre;Semis en alvéoles
+Chou rave;PC;1;Semis en pot/plant;4;6;janvier;février;
+Chou rave;PC;1;Plantation;9;11;février;mars;
+Chou rave;PC;1;Récolte;20;22;mai;mai;
+Chou rave;PC;2;Semis en pot/plant;9;11;février;mars;
+Chou rave;PC;2;Plantation;13;15;mars;avril;
+Chou rave;PC;2;Récolte;22;24;mai;juin;
+Chou rave;PC;3;Semis en pot/plant;13;15;mars;avril;
+Chou rave;PC;3;Plantation;17;19;avril;mai;
+Chou rave;PC;3;Récolte;26;28;juin;juillet;
+Chou rave;PC;4;Semis en pot/plant;19;21;mai;mai;
+Chou rave;PC;4;Plantation;22;24;mai;juin;
+Chou rave;PC;4;Récolte;31;33;juillet;août;
+Chou rave;PC;5;Semis en pot/plant;23;25;juin;juin;
+Chou rave;PC;5;Plantation;26;28;juin;juillet;
+Chou rave;PC;5;Récolte;35;37;août;septembre;
+Chou rave;PC;6;Semis en pot/plant;27;29;juillet;juillet;
+Chou rave;PC;6;Plantation;30;32;juillet;août;
+Chou rave;PC;6;Récolte;39;43;septembre;octobre;
+Chou rave;PC;7;Semis en pot/plant;30;32;juillet;août;
+Chou rave;PC;7;Plantation;33;35;août;août;
+Chou rave;PC;7;Récolte;43;48;octobre;novembre;
+Chou rave;SA;1;Récolte;11;13;mars;mars;Variétés précoces résistantes à la montaison
+Chou rave;SA;1;Semis en pot/plant;35;37;août;septembre;Variétés précoces résistantes à la montaison
+Chou rave;SA;1;Plantation;39;41;septembre;octobre;Variétés précoces résistantes à la montaison
+Chou rave;SA;2;Récolte;13;15;mars;avril;Variétés précoces résistantes à la montaison
+Chou rave;SA;2;Semis en pot/plant;39;41;septembre;octobre;Variétés précoces résistantes à la montaison
+Chou rave;SA;2;Plantation;44;46;octobre;novembre;Variétés précoces résistantes à la montaison
+Chou rave;SA;3;Semis en pot/plant;1;2;janvier;janvier;
+Chou rave;SA;3;Plantation;5;7;janvier;février;
+Chou rave;SA;3;Récolte;15;17;avril;avril;
+Chou rave;SA;4;Semis en pot/plant;4;6;janvier;février;
+Chou rave;SA;4;Plantation;9;11;février;mars;
+Chou rave;SA;4;Récolte;18;20;avril;mai;
+Chou rave;SA;5;Semis en pot/plant;32;34;août;août;
+Chou rave;SA;5;Plantation;35;37;août;septembre;
+Chou rave;SA;5;Récolte;46;50;novembre;décembre;
+Chou rave;SA;6;Récolte;1;2;janvier;janvier;
+Chou rave;SA;6;Semis en pot/plant;34;36;août;septembre;
+Chou rave;SA;6;Plantation;37;39;septembre;septembre;
+Chou rave;SA;6;Récolte;51;52;décembre;décembre;
+Chou-fleur;PC;1;Semis en pot/plant;2;4;janvier;janvier;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;1;Plantation;9;11;février;mars;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;1;Récolte;25;27;juin;juillet;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;2;Semis en pot/plant;6;8;février;février;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;2;Plantation;13;15;mars;avril;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;2;Récolte;28;30;juillet;juillet;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;3;Semis en pot/plant;11;13;mars;mars;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;3;Plantation;17;19;avril;mai;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;3;Récolte;31;33;juillet;août;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;4;Semis en pot/plant;17;19;avril;mai;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;4;Plantation;22;24;mai;juin;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;4;Récolte;35;38;août;septembre;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;5;Semis en pot/plant;21;23;mai;juin;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;5;Plantation;26;28;juin;juillet;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;5;Récolte;39;44;septembre;octobre;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;6;Semis en pot/plant;21;23;mai;juin;Variétés de 90-100 jours après plantation
+Chou-fleur;PC;6;Plantation;26;28;juin;juillet;Variétés de 90-100 jours après plantation
+Chou-fleur;PC;6;Récolte;41;46;octobre;novembre;Variétés de 90-100 jours après plantation
+Chou-fleur;PC;7;Semis en pot/plant;23;25;juin;juin;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;7;Plantation;28;30;juillet;juillet;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;7;Récolte;41;46;octobre;novembre;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;8;Semis en pot/plant;23;25;juin;juin;Variétés de 90-100 jours après plantation
+Chou-fleur;PC;8;Plantation;28;30;juillet;juillet;Variétés de 90-100 jours après plantation
+Chou-fleur;PC;8;Récolte;44;49;octobre;décembre;Variétés de 90-100 jours après plantation
+Chou-fleur;PC;9;Semis en pot/plant;25;27;juin;juillet;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;9;Plantation;30;32;juillet;août;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;9;Récolte;45;50;novembre;décembre;Variétés de 75-90 jours après plantation
+Chou-fleur;PC;10;Récolte;1;1;janvier;janvier;Variétés de 90-100 jours après plantation
+Chou-fleur;PC;10;Semis en pot/plant;25;27;juin;juillet;Variétés de 90-100 jours après plantation
+Chou-fleur;PC;10;Plantation;30;32;juillet;août;Variétés de 90-100 jours après plantation
+Chou-fleur;PC;10;Récolte;47;52;novembre;décembre;Variétés de 90-100 jours après plantation
+Chou-fleur;PC;11;Récolte;1;4;janvier;janvier;Variétés de 100-120 jours après plantation
+Chou-fleur;PC;11;Semis en pot/plant;23;25;juin;juin;Variétés de 100-120 jours après plantation
+Chou-fleur;PC;11;Plantation;28;30;juillet;juillet;Variétés de 100-120 jours après plantation
+Chou-fleur;PC;11;Récolte;51;52;décembre;décembre;Variétés de 100-120 jours après plantation
+Chou-fleur;PC;12;Récolte;4;10;janvier;mars;Variétés de 130-150 jours après plantation
+Chou-fleur;PC;12;Semis en pot/plant;23;25;juin;juin;Variétés de 130-150 jours après plantation
+Chou-fleur;PC;12;Plantation;28;30;juillet;juillet;Variétés de 130-150 jours après plantation
+Chou-fleur;PC;13;Récolte;12;17;mars;avril;Variétés de >170 jours après plantation
+Chou-fleur;PC;13;Semis en pot/plant;23;25;juin;juin;Variétés de >170 jours après plantation
+Chou-fleur;PC;13;Plantation;28;30;juillet;juillet;Variétés de >170 jours après plantation
+Chou-fleur;SA;1;Récolte;14;16;avril;avril;Variétés de 75-90 jours après plantation
+Chou-fleur;SA;1;Semis en pot/plant;34;36;août;septembre;Variétés de 75-90 jours après plantation
+Chou-fleur;SA;1;Plantation;39;41;septembre;octobre;Variétés de 75-90 jours après plantation
+Chou-fleur;SA;2;Plantation;5;7;janvier;février;Semis en alvéoles
+Chou-fleur;SA;2;Récolte;19;21;mai;mai;Semis en alvéoles
+Chou-fleur;SA;2;Semis en pot/plant;49;51;décembre;décembre;Semis en alvéoles
+Chou-fleur;SA;3;Semis en pot/plant;2;4;janvier;janvier;Variétés de 75-90 jours après plantation
+Chou-fleur;SA;3;Plantation;9;11;février;mars;Variétés de 75-90 jours après plantation
+Chou-fleur;SA;3;Récolte;22;24;mai;juin;Variétés de 75-90 jours après plantation
+Ciboulette;PC;1;Semis en pot/plant;12;14;mars;avril;
+Ciboulette;PC;1;Plantation;17;19;avril;mai;
+Ciboulette;PC;1;Récolte;26;42;juin;octobre;
+Ciboulette;PC;2;Semis en pot/plant;3;5;janvier;janvier;
+Ciboulette;PC;2;Plantation;9;11;février;mars;
+Ciboulette;PC;2;Récolte;22;42;mai;octobre;
+Ciboulette;SA;1;Récolte;1;13;janvier;mars;
+Ciboulette;SA;1;Semis en pot/plant;31;33;juillet;août;
+Ciboulette;SA;1;Plantation;35;37;août;septembre;
+Ciboulette;SA;1;Récolte;41;52;octobre;décembre;
+Concombre;PC;1;Semis en pot/plant;16;18;avril;avril;
+Concombre;PC;1;Plantation;20;22;mai;mai;
+Concombre;PC;1;Récolte;28;35;juillet;août;
+Concombre;PC;2;Semis en pot/plant;19;21;mai;mai;
+Concombre;PC;2;Plantation;22;24;mai;juin;
+Concombre;PC;2;Récolte;30;37;juillet;septembre;
+Concombre;PC;3;Semis en pot/plant;21;23;mai;juin;
+Concombre;PC;3;Plantation;24;26;juin;juin;
+Concombre;PC;3;Récolte;32;37;août;septembre;
+Concombre;PC;4;Semis en pot/plant;23;25;juin;juin;
+Concombre;PC;4;Plantation;26;28;juin;juillet;
+Concombre;PC;4;Récolte;34;37;août;septembre;
+Concombre;SA;1;Plantation;13;15;mars;avril;Variétés greffés uniquement
+Concombre;SA;1;Récolte;22;30;mai;juillet;Variétés greffés uniquement
+Concombre;SA;2;Semis en pot/plant;10;12;mars;mars;
+Concombre;SA;2;Plantation;15;17;avril;avril;
+Concombre;SA;2;Récolte;24;32;juin;août;
+Concombre;SA;3;Semis en pot/plant;13;15;mars;avril;
+Concombre;SA;3;Plantation;17;19;avril;mai;
+Concombre;SA;3;Récolte;26;34;juin;août;
+Concombre;SA;4;Semis en pot/plant;17;19;avril;mai;
+Concombre;SA;4;Plantation;20;22;mai;mai;
+Concombre;SA;4;Récolte;28;36;juillet;septembre;
+Concombre;SA;5;Semis en pot/plant;19;21;mai;mai;
+Concombre;SA;5;Plantation;22;24;mai;juin;
+Concombre;SA;5;Récolte;30;38;juillet;septembre;
+Concombre;SA;6;Semis en pot/plant;21;23;mai;juin;
+Concombre;SA;6;Plantation;24;26;juin;juin;
+Concombre;SA;6;Récolte;32;40;août;octobre;
+Concombre;SA;7;Semis en pot/plant;23;25;juin;juin;
+Concombre;SA;7;Plantation;26;28;juin;juillet;
+Concombre;SA;7;Récolte;34;41;août;octobre;
+Coriandre;PC;1;Semis en pot/plant;6;8;février;février;
+Coriandre;PC;1;Plantation;9;11;février;mars;
+Coriandre;PC;1;Récolte;16;20;avril;mai;
+Coriandre;PC;2;Semis en pot/plant;10;12;mars;mars;
+Coriandre;PC;2;Plantation;13;15;mars;avril;
+Coriandre;PC;2;Récolte;19;22;mai;mai;
+Coriandre;PC;3;Semis en pot/plant;14;16;avril;avril;
+Coriandre;PC;3;Plantation;17;19;avril;mai;
+Coriandre;PC;3;Récolte;23;26;juin;juin;
+Coriandre;PC;4;Semis direct;19;21;mai;mai;
+Coriandre;PC;4;Plantation;22;24;mai;juin;
+Coriandre;PC;4;Récolte;27;30;juillet;juillet;
+Coriandre;PC;5;Semis direct;23;25;juin;juin;
+Coriandre;PC;5;Plantation;26;28;juin;juillet;
+Coriandre;PC;5;Récolte;31;34;juillet;août;
+Coriandre;PC;6;Semis direct;27;29;juillet;juillet;
+Coriandre;PC;6;Plantation;30;32;juillet;août;
+Coriandre;PC;6;Récolte;35;39;août;septembre;
+Coriandre;PC;7;Semis direct;30;32;juillet;août;
+Coriandre;PC;7;Plantation;33;35;août;août;
+Coriandre;PC;7;Récolte;39;41;septembre;octobre;
+Coriandre;PC;7;Récolte;43;45;octobre;novembre;
+Coriandre;SA;1;Récolte;1;3;janvier;janvier;
+Coriandre;SA;1;Récolte;9;12;février;mars;
+Coriandre;SA;1;Semis en pot/plant;34;36;août;septembre;
+Coriandre;SA;1;Plantation;37;39;septembre;septembre;
+Coriandre;SA;1;Récolte;43;46;octobre;novembre;
+Coriandre;SA;2;Récolte;5;8;janvier;février;
+Coriandre;SA;2;Récolte;11;14;mars;avril;
+Coriandre;SA;2;Semis en pot/plant;36;38;septembre;septembre;
+Coriandre;SA;2;Plantation;39;41;septembre;octobre;
+Coriandre;SA;2;Récolte;47;50;novembre;décembre;
+Coriandre;SA;3;Récolte;2;5;janvier;janvier;
+Coriandre;SA;3;Récolte;10;13;mars;mars;
+Coriandre;SA;3;Semis en pot/plant;39;41;septembre;octobre;
+Coriandre;SA;3;Plantation;42;44;octobre;octobre;
+Coriandre;SA;4;Semis en pot/plant;1;3;janvier;janvier;
+Coriandre;SA;4;Plantation;5;7;janvier;février;
+Coriandre;SA;4;Récolte;13;18;mars;avril;
+Coriandre;SA;5;Semis en pot/plant;5;7;janvier;février;
+Coriandre;SA;5;Plantation;9;11;février;mars;
+Coriandre;SA;5;Récolte;15;20;avril;mai;
+Courge 100-110 jours;PC;1;Conservation;1;9;janvier;février;
+Courge 100-110 jours;PC;1;Semis en pot/plant;16;18;avril;avril;
+Courge 100-110 jours;PC;1;Plantation;20;22;mai;mai;
+Courge 100-110 jours;PC;1;Récolte;35;37;août;septembre;
+Courge 100-110 jours;PC;1;Conservation;39;52;septembre;décembre;
+Courge 100-110 jours;PC;2;Conservation;1;9;janvier;février;
+Courge 100-110 jours;PC;2;Semis direct;18;19;avril;mai;
+Courge 100-110 jours;PC;2;Semis en pot/plant;19;21;mai;mai;
+Courge 100-110 jours;PC;2;Plantation;22;24;mai;juin;
+Courge 100-110 jours;PC;2;Récolte;37;39;septembre;septembre;
+Courge 100-110 jours;PC;2;Conservation;41;52;octobre;décembre;
+Courge 120-140 jours;PC;1;Conservation;1;13;janvier;mars;
+Courge 120-140 jours;PC;1;Semis en pot/plant;16;18;avril;avril;
+Courge 120-140 jours;PC;1;Plantation;20;22;mai;mai;
+Courge 120-140 jours;PC;1;Récolte;37;39;septembre;septembre;
+Courge 120-140 jours;PC;1;Conservation;41;52;octobre;décembre;
+Courge 90-100 jours;PC;1;Conservation;1;5;janvier;janvier;
+Courge 90-100 jours;PC;1;Semis en pot/plant;16;18;avril;avril;
+Courge 90-100 jours;PC;1;Plantation;20;22;mai;mai;
+Courge 90-100 jours;PC;1;Récolte;34;36;août;septembre;
+Courge 90-100 jours;PC;1;Conservation;38;52;septembre;décembre;
+Courge 90-100 jours;PC;2;Conservation;1;5;janvier;janvier;
+Courge 90-100 jours;PC;2;Semis direct;18;19;avril;mai;
+Courge 90-100 jours;PC;2;Semis en pot/plant;19;21;mai;mai;
+Courge 90-100 jours;PC;2;Plantation;22;24;mai;juin;
+Courge 90-100 jours;PC;2;Récolte;36;38;septembre;septembre;
+Courge 90-100 jours;PC;2;Conservation;40;52;octobre;décembre;
+Courge 90-100 jours;PC;3;Semis direct;20;21;mai;mai;
+Courge 90-100 jours;PC;3;Semis en pot/plant;21;23;mai;juin;
+Courge 90-100 jours;PC;3;Plantation;24;26;juin;juin;
+Courge 90-100 jours;PC;3;Récolte;38;40;septembre;octobre;
+Courge 90-100 jours;PC;3;Conservation;42;52;octobre;décembre;
+Courgette;PC;1;Semis en pot/plant;13;15;mars;avril;
+Courgette;PC;1;Plantation;17;19;avril;mai;
+Courgette;PC;1;Récolte;24;32;juin;août;
+Courgette;PC;2;Semis en pot/plant;16;18;avril;avril;
+Courgette;PC;2;Plantation;20;22;mai;mai;
+Courgette;PC;2;Récolte;27;35;juillet;août;
+Courgette;PC;3;Semis direct;20;21;mai;mai;
+Courgette;PC;3;Semis en pot/plant;21;23;mai;juin;
+Courgette;PC;3;Plantation;24;26;juin;juin;
+Courgette;PC;3;Récolte;31;39;juillet;septembre;
+Courgette;PC;4;Semis direct;24;25;juin;juin;
+Courgette;PC;4;Semis en pot/plant;25;27;juin;juillet;
+Courgette;PC;4;Plantation;28;30;juillet;juillet;
+Courgette;PC;4;Récolte;35;41;août;octobre;
+Courgette;SA;1;Semis en pot/plant;3;5;janvier;janvier;
+Courgette;SA;1;Plantation;9;11;février;mars;
+Courgette;SA;1;Récolte;17;25;avril;juin;
+Courgette;SA;2;Semis en pot/plant;5;7;janvier;février;
+Courgette;SA;2;Plantation;11;13;mars;mars;
+Courgette;SA;2;Récolte;19;27;mai;juillet;
+Courgette;SA;3;Semis en pot/plant;8;10;février;mars;
+Courgette;SA;3;Plantation;13;15;mars;avril;
+Courgette;SA;3;Récolte;20;28;mai;juillet;
+Courgette;SA;4;Semis en pot/plant;27;29;juillet;juillet;
+Courgette;SA;4;Plantation;30;32;juillet;août;
+Courgette;SA;4;Récolte;37;42;septembre;octobre;
+Céleri branche;PC;1;Semis en pot/plant;7;9;février;février;
+Céleri branche;PC;1;Plantation;17;19;avril;mai;
+Céleri branche;PC;1;Récolte;32;39;août;septembre;
+Céleri branche;PC;2;Semis en pot/plant;9;11;février;mars;
+Céleri branche;PC;2;Plantation;19;22;mai;mai;
+Céleri branche;PC;2;Récolte;33;39;août;septembre;
+Céleri branche;PC;3;Semis en pot/plant;12;14;mars;avril;
+Céleri branche;PC;3;Plantation;22;24;mai;juin;
+Céleri branche;PC;3;Récolte;35;39;août;septembre;
+Céleri branche;PC;4;Semis en pot/plant;14;16;avril;avril;
+Céleri branche;PC;4;Plantation;24;26;juin;juin;
+Céleri branche;PC;4;Récolte;37;39;septembre;septembre;
+Céleri branche;SA;1;Récolte;1;11;janvier;mars;
+Céleri branche;SA;1;Semis en pot/plant;20;22;mai;mai;
+Céleri branche;SA;1;Plantation;30;32;juillet;août;
+Céleri branche;SA;1;Récolte;46;52;novembre;décembre;
+Céleri branche;SA;2;Récolte;9;13;février;mars;
+Céleri branche;SA;2;Semis en pot/plant;28;30;juillet;juillet;
+Céleri branche;SA;2;Plantation;39;41;septembre;octobre;
+Céleri branche;SA;3;Plantation;5;7;janvier;février;
+Céleri branche;SA;3;Récolte;20;24;mai;juin;
+Céleri branche;SA;3;Semis en pot/plant;42;44;octobre;octobre;
+Céleri branche;SA;4;Plantation;11;13;mars;mars;
+Céleri branche;SA;4;Récolte;24;35;juin;août;
+Céleri branche;SA;4;Semis en pot/plant;50;52;décembre;décembre;
+Céleri branche;SA;5;Semis en pot/plant;3;5;janvier;janvier;
+Céleri branche;SA;5;Plantation;15;17;avril;avril;
+Céleri branche;SA;5;Récolte;28;39;juillet;septembre;
+Céleri rave;PC;1;Conservation;1;3;janvier;janvier;Variétés précoces. Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;1;Semis en pot/plant;3;5;janvier;janvier;Variétés précoces. Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;1;Plantation;15;17;avril;avril;Variétés précoces. Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;1;Récolte;33;39;août;septembre;Variétés précoces. Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;1;Conservation;41;52;octobre;décembre;Variétés précoces. Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;2;Conservation;1;7;janvier;février;Variétés précoces. Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;2;Semis en pot/plant;7;9;février;février;Variétés précoces. Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;2;Plantation;17;19;avril;mai;Variétés précoces. Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;2;Récolte;35;42;août;octobre;Variétés précoces. Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;2;Conservation;44;52;octobre;décembre;Variétés précoces. Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;3;Conservation;1;9;janvier;février;Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;3;Semis en pot/plant;9;11;février;mars;Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;3;Conservation;11;13;mars;mars;Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;3;Plantation;19;22;mai;mai;Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;3;Récolte;39;46;septembre;novembre;Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Céleri rave;PC;3;Conservation;48;52;novembre;décembre;Semis alvéoles. Si prégermé, Semis 2 semaines plus tard
+Echalote;PC;1;Conservation;1;9;janvier;février;
+Echalote;PC;1;Plantation;9;13;février;mars;
+Echalote;PC;1;Récolte;26;30;juin;juillet;
+Echalote;PC;1;Conservation;32;52;août;décembre;
+Echalote;PC;2;Conservation;1;13;janvier;mars;
+Echalote;PC;2;Plantation;13;17;mars;avril;
+Echalote;PC;2;Récolte;28;32;juillet;août;
+Echalote;PC;2;Conservation;34;52;août;décembre;
+Epinard;PC;1;Semis en pot/plant;8;10;février;mars;
+Epinard;PC;1;Plantation;11;13;mars;mars;
+Epinard;PC;1;Récolte;19;24;mai;juin;
+Epinard;PC;2;Semis direct;10;11;mars;mars;
+Epinard;PC;2;Semis en pot/plant;11;12;mars;mars;
+Epinard;PC;2;Plantation;13;15;mars;avril;
+Epinard;PC;2;Récolte;20;25;mai;juin;
+Epinard;PC;3;Semis direct;12;13;mars;mars;
+Epinard;PC;3;Semis en pot/plant;13;14;mars;avril;
+Epinard;PC;3;Plantation;15;17;avril;avril;
+Epinard;PC;3;Récolte;21;26;mai;juin;
+Epinard;PC;4;Semis direct;30;32;juillet;août;
+Epinard;PC;4;Plantation;32;34;août;août;
+Epinard;PC;4;Récolte;38;40;septembre;octobre;
+Epinard;PC;4;Récolte;43;47;octobre;novembre;
+Epinard;PC;5;Semis direct;32;34;août;août;
+Epinard;PC;5;Plantation;34;36;août;septembre;
+Epinard;PC;5;Récolte;41;43;octobre;octobre;
+Epinard;PC;5;Récolte;47;51;novembre;décembre;
+Epinard;SA;1;Récolte;1;4;janvier;janvier;Variété précoces vigoureuses uniquement
+Epinard;SA;1;Récolte;10;12;mars;mars;Variété précoces vigoureuses uniquement
+Epinard;SA;1;Semis direct;34;36;août;septembre;Variété précoces vigoureuses uniquement
+Epinard;SA;1;Plantation;36;38;septembre;septembre;Variété précoces vigoureuses uniquement
+Epinard;SA;1;Récolte;42;44;octobre;octobre;Variété précoces vigoureuses uniquement
+Epinard;SA;2;Récolte;3;7;janvier;février;Variété précoces vigoureuses uniquement
+Epinard;SA;2;Récolte;11;13;mars;mars;Variété précoces vigoureuses uniquement
+Epinard;SA;2;Semis direct;36;38;septembre;septembre;Variété précoces vigoureuses uniquement
+Epinard;SA;2;Plantation;38;40;septembre;octobre;Variété précoces vigoureuses uniquement
+Epinard;SA;2;Récolte;44;47;octobre;novembre;Variété précoces vigoureuses uniquement
+Epinard;SA;3;Récolte;6;10;février;mars;Variété précoces vigoureuses uniquement
+Epinard;SA;3;Récolte;12;14;mars;avril;Variété précoces vigoureuses uniquement
+Epinard;SA;3;Semis en pot/plant;37;39;septembre;septembre;Variété précoces vigoureuses uniquement
+Epinard;SA;3;Plantation;40;42;octobre;octobre;Variété précoces vigoureuses uniquement
+Epinard;SA;3;Récolte;47;50;novembre;décembre;Variété précoces vigoureuses uniquement
+Epinard;SA;4;Plantation;1;2;janvier;janvier;Variété précoces vigoureuses uniquement
+Epinard;SA;4;Récolte;12;17;mars;avril;Variété précoces vigoureuses uniquement
+Epinard;SA;4;Semis en pot/plant;48;50;novembre;décembre;Variété précoces vigoureuses uniquement
+Epinard;SA;5;Semis en pot/plant;1;3;janvier;janvier;Variété précoces vigoureuses uniquement
+Epinard;SA;5;Plantation;5;7;janvier;février;Variété précoces vigoureuses uniquement
+Epinard;SA;5;Récolte;14;19;avril;mai;Variété précoces vigoureuses uniquement
+Epinard;SA;6;Semis en pot/plant;3;5;janvier;janvier;Variété précoces vigoureuses uniquement
+Epinard;SA;6;Plantation;7;9;février;février;Variété précoces vigoureuses uniquement
+Epinard;SA;6;Récolte;15;20;avril;mai;Variété précoces vigoureuses uniquement
+Epinard;SA;7;Semis direct;5;6;janvier;février;Variété précoces vigoureuses uniquement
+Epinard;SA;7;Semis en pot/plant;6;7;février;février;Variété précoces vigoureuses uniquement
+Epinard;SA;7;Plantation;9;11;février;mars;Variété précoces vigoureuses uniquement
+Epinard;SA;7;Récolte;17;22;avril;mai;Variété précoces vigoureuses uniquement
+Epinard;SA;8;Semis direct;8;10;février;mars;Variété précoces vigoureuses uniquement
+Epinard;SA;8;Plantation;11;13;mars;mars;Variété précoces vigoureuses uniquement
+Epinard;SA;8;Récolte;18;23;avril;juin;Variété précoces vigoureuses uniquement
+Fenouil;PC;1;Semis en pot/plant;9;11;février;mars;Variété précoces 70-80 jours
+Fenouil;PC;1;Plantation;13;15;mars;avril;Variété précoces 70-80 jours
+Fenouil;PC;1;Récolte;25;28;juin;juillet;Variété précoces 70-80 jours
+Fenouil;PC;2;Semis en pot/plant;13;15;mars;avril;Variété précoces 70-80 jours
+Fenouil;PC;2;Plantation;17;19;avril;mai;Variété précoces 70-80 jours
+Fenouil;PC;2;Récolte;28;31;juillet;juillet;Variété précoces 70-80 jours
+Fenouil;PC;3;Semis en pot/plant;19;21;mai;mai;Variété précoces 70-80 jours
+Fenouil;PC;3;Plantation;22;24;mai;juin;Variété précoces 70-80 jours
+Fenouil;PC;3;Récolte;32;35;août;août;Variété précoces 70-80 jours
+Fenouil;PC;4;Semis en pot/plant;23;25;juin;juin;Variétés précoces et de saison 70-90 jours
+Fenouil;PC;4;Plantation;26;28;juin;juillet;Variétés précoces et de saison 70-90 jours
+Fenouil;PC;4;Récolte;36;39;septembre;septembre;Variétés précoces et de saison 70-90 jours
+Fenouil;PC;5;Semis en pot/plant;25;27;juin;juillet;Variétés précoces et de saison 70-90 jours
+Fenouil;PC;5;Plantation;28;30;juillet;juillet;Variétés précoces et de saison 70-90 jours
+Fenouil;PC;5;Récolte;38;41;septembre;octobre;Variétés précoces et de saison 70-90 jours
+Fenouil;PC;6;Semis en pot/plant;27;29;juillet;juillet;Variété précoces 70-80 jours
+Fenouil;PC;6;Plantation;30;32;juillet;août;Variété précoces 70-80 jours
+Fenouil;PC;6;Récolte;40;44;octobre;octobre;Variété précoces 70-80 jours
+Fenouil;PC;7;Semis en pot/plant;27;29;juillet;juillet;Variétés de saison 80-100 jours
+Fenouil;PC;7;Plantation;30;32;juillet;août;Variétés de saison 80-100 jours
+Fenouil;PC;7;Récolte;42;46;octobre;novembre;Variétés de saison 80-100 jours
+Fenouil;PC;8;Semis en pot/plant;27;29;juillet;juillet;Variétés tardives 100-120 jours
+Fenouil;PC;8;Plantation;30;32;juillet;août;Variétés tardives 100-120 jours
+Fenouil;PC;8;Récolte;44;48;octobre;novembre;Variétés tardives 100-120 jours
+Fenouil;SA;1;Récolte;10;13;mars;mars;Variété précoces 70-80 jours
+Fenouil;SA;1;Semis en pot/plant;33;35;août;août;Variété précoces 70-80 jours
+Fenouil;SA;1;Plantation;37;39;septembre;septembre;Variété précoces 70-80 jours
+Fenouil;SA;2;Récolte;14;16;avril;avril;Variété précoces 70-80 jours
+Fenouil;SA;2;Semis en pot/plant;38;40;septembre;octobre;Variété précoces 70-80 jours
+Fenouil;SA;2;Plantation;42;44;octobre;octobre;Variété précoces 70-80 jours
+Fenouil;SA;3;Plantation;5;7;janvier;février;Variété précoces 70-80 jours
+Fenouil;SA;3;Récolte;18;21;avril;mai;Variété précoces 70-80 jours
+Fenouil;SA;3;Semis en pot/plant;50;52;décembre;décembre;Variété précoces 70-80 jours
+Fenouil;SA;4;Semis en pot/plant;4;6;janvier;février;Variété précoces 70-80 jours
+Fenouil;SA;4;Plantation;9;11;février;mars;Variété précoces 70-80 jours
+Fenouil;SA;4;Récolte;21;24;mai;juin;Variété précoces 70-80 jours
+Fenouil;SA;5;Semis en pot/plant;31;33;juillet;août;Variétés de saison 80-100 jours
+Fenouil;SA;5;Plantation;34;36;août;septembre;Variétés de saison 80-100 jours
+Fenouil;SA;5;Récolte;46;50;novembre;décembre;Variétés de saison 80-100 jours
+Fenouil;SA;6;Récolte;1;5;janvier;janvier;Variétés tardives 100-120 jours
+Fenouil;SA;6;Semis en pot/plant;31;33;juillet;août;Variétés tardives 100-120 jours
+Fenouil;SA;6;Plantation;34;36;août;septembre;Variétés tardives 100-120 jours
+Fenouil;SA;6;Récolte;50;52;décembre;décembre;Variétés tardives 100-120 jours
+Fève;PC;1;Récolte;21;24;mai;juin;
+Fève;PC;1;Semis direct;42;46;octobre;novembre;
+Fève;PC;2;Semis direct;3;7;janvier;février;
+Fève;PC;2;Récolte;25;28;juin;juillet;
+Fève;SA;1;Récolte;17;20;avril;mai;
+Fève;SA;1;Semis direct;42;46;octobre;novembre;
+Fève;SA;2;Semis direct;1;5;janvier;janvier;
+Fève;SA;2;Récolte;21;24;mai;juin;
+Fève;SA;2;Semis direct;48;52;novembre;décembre;
+Haricot demi-sec;PC;1;Semis direct;18;20;avril;mai;
+Haricot demi-sec;PC;1;Récolte;32;35;août;août;
+Haricot demi-sec;PC;2;Semis direct;20;22;mai;mai;
+Haricot demi-sec;PC;2;Récolte;34;37;août;septembre;
+Haricot demi-sec;PC;3;Semis direct;22;24;mai;juin;
+Haricot demi-sec;PC;3;Récolte;36;39;septembre;septembre;
+Haricot demi-sec;PC;4;Semis direct;24;26;juin;juin;
+Haricot demi-sec;PC;4;Récolte;38;41;septembre;octobre;
+Haricot vert nain;PC;1;Semis direct;18;20;avril;mai;
+Haricot vert nain;PC;1;Récolte;28;31;juillet;juillet;
+Haricot vert nain;PC;2;Semis direct;20;22;mai;mai;
+Haricot vert nain;PC;2;Récolte;30;33;juillet;août;
+Haricot vert nain;PC;3;Semis direct;22;24;mai;juin;
+Haricot vert nain;PC;3;Récolte;32;35;août;août;
+Haricot vert nain;PC;4;Semis direct;24;26;juin;juin;
+Haricot vert nain;PC;4;Récolte;34;37;août;septembre;
+Haricot vert nain;PC;5;Semis direct;26;28;juin;juillet;
+Haricot vert nain;PC;5;Récolte;36;39;septembre;septembre;
+Haricot vert nain;PC;6;Semis direct;28;30;juillet;juillet;
+Haricot vert nain;PC;6;Récolte;38;41;septembre;octobre;
+Haricot vert nain;SA;1;Semis en pot/plant;9;11;février;mars;
+Haricot vert nain;SA;1;Plantation;11;13;mars;mars;
+Haricot vert nain;SA;1;Récolte;22;25;mai;juin;
+Haricot vert nain;SA;2;Semis en pot/plant;11;13;mars;mars;
+Haricot vert nain;SA;2;Plantation;13;15;mars;avril;
+Haricot vert nain;SA;2;Récolte;23;26;juin;juin;
+Haricot vert nain;SA;3;Plantation;15;17;avril;avril;
+Haricot vert nain;SA;3;Récolte;24;27;juin;juillet;
+Haricot vert nain;SA;4;Semis direct;15;17;avril;avril;
+Haricot vert nain;SA;4;Plantation;17;19;avril;mai;
+Haricot vert nain;SA;4;Récolte;25;28;juin;juillet;
+Haricot vert à rames;SA;1;Semis en pot/plant;9;11;février;mars;
+Haricot vert à rames;SA;1;Plantation;11;13;mars;mars;
+Haricot vert à rames;SA;1;Récolte;22;28;mai;juillet;
+Haricot vert à rames;SA;2;Semis en pot/plant;11;13;mars;mars;
+Haricot vert à rames;SA;2;Plantation;13;15;mars;avril;
+Haricot vert à rames;SA;2;Récolte;23;29;juin;juillet;
+Haricot vert à rames;SA;3;Semis direct;13;15;mars;avril;
+Haricot vert à rames;SA;3;Plantation;15;17;avril;avril;
+Haricot vert à rames;SA;3;Récolte;24;30;juin;juillet;
+Haricot vert à rames;SA;4;Semis direct;15;17;avril;avril;
+Haricot vert à rames;SA;4;Plantation;17;19;avril;mai;
+Haricot vert à rames;SA;4;Récolte;25;31;juin;juillet;
+Haricot vert à rames;SA;5;Semis direct;17;19;avril;mai;
+Haricot vert à rames;SA;5;Plantation;19;21;mai;mai;
+Haricot vert à rames;SA;5;Récolte;27;33;juillet;août;
+Haricot vert à rames;SA;6;Semis direct;20;22;mai;mai;
+Haricot vert à rames;SA;6;Plantation;22;24;mai;juin;
+Haricot vert à rames;SA;6;Récolte;30;36;juillet;septembre;
+Haricot vert à rames;SA;7;Semis direct;22;24;mai;juin;
+Haricot vert à rames;SA;7;Plantation;24;26;juin;juin;
+Haricot vert à rames;SA;7;Récolte;32;38;août;septembre;
+Haricot vert à rames;SA;8;Semis direct;24;26;juin;juin;
+Haricot vert à rames;SA;8;Plantation;26;28;juin;juillet;
+Haricot vert à rames;SA;8;Récolte;34;40;août;octobre;
+Mais doux;PC;1;Semis en pot/plant;15;17;avril;avril;
+Mais doux;PC;1;Plantation;17;19;avril;mai;
+Mais doux;PC;1;Récolte;31;34;juillet;août;
+Mais doux;PC;2;Semis direct;18;20;avril;mai;
+Mais doux;PC;2;Plantation;20;22;mai;mai;
+Mais doux;PC;2;Récolte;33;36;août;septembre;
+Mais doux;PC;3;Semis direct;20;22;mai;mai;
+Mais doux;PC;3;Plantation;22;24;mai;juin;
+Mais doux;PC;3;Récolte;35;38;août;septembre;
+Mais doux;PC;4;Semis direct;22;24;mai;juin;
+Mais doux;PC;4;Plantation;24;26;juin;juin;
+Mais doux;PC;4;Récolte;37;40;septembre;octobre;
+Melon;SA;1;Semis en pot/plant;10;12;mars;mars;
+Melon;SA;1;Plantation;13;15;mars;avril;
+Melon;SA;1;Récolte;27;30;juillet;juillet;
+Melon;SA;2;Semis en pot/plant;12;14;mars;avril;
+Melon;SA;2;Plantation;15;17;avril;avril;
+Melon;SA;2;Récolte;28;31;juillet;juillet;
+Melon;SA;3;Semis en pot/plant;14;16;avril;avril;
+Melon;SA;3;Plantation;17;19;avril;mai;
+Melon;SA;3;Récolte;29;32;juillet;août;
+Melon;SA;4;Semis en pot/plant;17;19;avril;mai;
+Melon;SA;4;Plantation;20;22;mai;mai;
+Melon;SA;4;Récolte;32;35;août;août;
+Melon;SA;5;Semis en pot/plant;19;21;mai;mai;
+Melon;SA;5;Plantation;22;24;mai;juin;
+Melon;SA;5;Récolte;34;37;août;septembre;
+Melon;SA;6;Semis en pot/plant;21;23;mai;juin;
+Melon;SA;6;Plantation;24;26;juin;juin;
+Melon;SA;6;Récolte;36;39;septembre;septembre;
+Mâche;PC;1;Semis direct;30;32;juillet;août;
+Mâche;PC;1;Plantation;33;35;août;août;
+Mâche;PC;1;Récolte;38;40;septembre;octobre;
+Mâche;PC;2;Semis direct;32;34;août;août;
+Mâche;PC;2;Plantation;35;37;août;septembre;
+Mâche;PC;2;Récolte;40;42;octobre;octobre;
+Mâche;PC;3;Semis direct;34;36;août;septembre;
+Mâche;PC;3;Plantation;37;39;septembre;septembre;
+Mâche;PC;3;Récolte;44;46;octobre;novembre;
+Mâche;SA;1;Semis direct;34;36;août;septembre;
+Mâche;SA;1;Plantation;37;39;septembre;septembre;
+Mâche;SA;1;Récolte;43;45;octobre;novembre;
+Mâche;SA;2;Semis direct;35;37;août;septembre;
+Mâche;SA;2;Plantation;39;41;septembre;octobre;
+Mâche;SA;2;Récolte;46;48;novembre;novembre;
+Mâche;SA;3;Semis direct;37;38;septembre;septembre;
+Mâche;SA;3;Semis en pot/plant;38;39;septembre;septembre;
+Mâche;SA;3;Plantation;41;43;octobre;octobre;
+Mâche;SA;3;Récolte;49;52;décembre;décembre;
+Mâche;SA;4;Récolte;1;3;janvier;janvier;
+Mâche;SA;4;Semis direct;38;39;septembre;septembre;
+Mâche;SA;4;Semis en pot/plant;39;40;septembre;octobre;
+Mâche;SA;4;Plantation;43;45;octobre;novembre;
+Mâche;SA;5;Récolte;2;5;janvier;janvier;
+Mâche;SA;5;Semis direct;40;41;octobre;octobre;
+Mâche;SA;5;Semis en pot/plant;41;42;octobre;octobre;
+Mâche;SA;5;Plantation;45;47;novembre;novembre;
+Mâche;SA;6;Récolte;4;7;janvier;février;
+Mâche;SA;6;Semis direct;41;42;octobre;octobre;
+Mâche;SA;6;Semis en pot/plant;42;43;octobre;octobre;
+Mâche;SA;6;Plantation;47;49;novembre;décembre;
+Mâche;SA;7;Récolte;6;9;février;février;
+Mâche;SA;7;Semis direct;42;43;octobre;octobre;
+Mâche;SA;7;Semis en pot/plant;43;45;octobre;novembre;
+Mâche;SA;7;Plantation;49;51;décembre;décembre;
+Mâche;SA;8;Plantation;1;1;janvier;janvier;
+Mâche;SA;8;Récolte;8;11;février;mars;
+Mâche;SA;8;Semis direct;43;44;octobre;octobre;
+Mâche;SA;8;Semis en pot/plant;44;46;octobre;novembre;
+Mâche;SA;8;Plantation;51;52;décembre;décembre;
+Mâche;SA;9;Plantation;1;3;janvier;janvier;
+Mâche;SA;9;Récolte;10;12;mars;mars;
+Mâche;SA;9;Semis direct;44;46;octobre;novembre;
+Mâche;SA;9;Semis en pot/plant;46;48;novembre;novembre;
+Mâche;SA;10;Plantation;3;5;janvier;janvier;
+Mâche;SA;10;Récolte;11;13;mars;mars;
+Mâche;SA;10;Semis direct;46;48;novembre;novembre;
+Mâche;SA;10;Semis en pot/plant;48;50;novembre;décembre;
+Mâche;SA;11;Plantation;5;7;janvier;février;
+Mâche;SA;11;Récolte;12;14;mars;avril;
+Mâche;SA;11;Semis direct;48;50;novembre;décembre;
+Mâche;SA;11;Semis en pot/plant;50;52;décembre;décembre;
+Navet botte;PC;1;Semis en pot/plant;8;10;février;mars;Variétés précoces résistantes à la montaison
+Navet botte;PC;1;Plantation;11;13;mars;mars;Variétés précoces résistantes à la montaison
+Navet botte;PC;1;Récolte;18;21;avril;mai;Variétés précoces résistantes à la montaison
+Navet botte;PC;2;Semis en pot/plant;10;12;mars;mars;Variétés précoces résistantes à la montaison
+Navet botte;PC;2;Plantation;13;15;mars;avril;Variétés précoces résistantes à la montaison
+Navet botte;PC;2;Récolte;19;22;mai;mai;Variétés précoces résistantes à la montaison
+Navet botte;PC;3;Semis en pot/plant;12;14;mars;avril;Variétés précoces résistantes à la montaison
+Navet botte;PC;3;Plantation;15;17;avril;avril;Variétés précoces résistantes à la montaison
+Navet botte;PC;3;Récolte;21;24;mai;juin;Variétés précoces résistantes à la montaison
+Navet botte;PC;4;Semis en pot/plant;12;14;mars;avril;Variétés de saison résistantes à la montaison
+Navet botte;PC;4;Plantation;15;17;avril;avril;Variétés de saison résistantes à la montaison
+Navet botte;PC;4;Récolte;23;26;juin;juin;Variétés de saison résistantes à la montaison
+Navet botte;PC;5;Semis direct;16;18;avril;avril;Variétés de saison
+Navet botte;PC;5;Plantation;19;21;mai;mai;Variétés de saison
+Navet botte;PC;5;Récolte;27;30;juillet;juillet;Variétés de saison
+Navet botte;PC;5;Conservation;31;44;juillet;octobre;Variétés de saison
+Navet botte;SA;1;Plantation;1;2;janvier;janvier;Variétés précoces résistantes à la montaison
+Navet botte;SA;1;Récolte;9;13;février;mars;Variétés précoces résistantes à la montaison
+Navet botte;SA;1;Semis en pot/plant;48;50;novembre;décembre;Variétés précoces résistantes à la montaison
+Navet botte;SA;2;Semis en pot/plant;1;3;janvier;janvier;Variétés précoces résistantes à la montaison
+Navet botte;SA;2;Plantation;5;7;janvier;février;Variétés précoces résistantes à la montaison
+Navet botte;SA;2;Récolte;12;15;mars;avril;Variétés précoces résistantes à la montaison
+Navet botte;SA;3;Semis direct;6;8;février;février;Variétés précoces résistantes à la montaison
+Navet botte;SA;3;Plantation;9;11;février;mars;Variétés précoces résistantes à la montaison
+Navet botte;SA;3;Récolte;15;18;avril;avril;Variétés précoces résistantes à la montaison
+Navet botte;SA;4;Semis direct;8;10;février;mars;Variétés précoces résistantes à la montaison
+Navet botte;SA;4;Plantation;11;13;mars;mars;Variétés précoces résistantes à la montaison
+Navet botte;SA;4;Récolte;17;20;avril;mai;Variétés précoces résistantes à la montaison
+Navet conservation;PC;1;Conservation;1;9;janvier;février;Variétés de saison ou tardives
+Navet conservation;PC;1;Semis direct;24;26;juin;juin;Variétés de saison ou tardives
+Navet conservation;PC;1;Récolte;35;39;août;septembre;Variétés de saison ou tardives
+Navet conservation;PC;1;Conservation;41;52;octobre;décembre;Variétés de saison ou tardives
+Navet conservation;PC;2;Conservation;1;13;janvier;mars;Variétés de saison ou tardives
+Navet conservation;PC;2;Semis direct;27;29;juillet;juillet;Variétés de saison ou tardives
+Navet conservation;PC;2;Récolte;39;43;septembre;octobre;Variétés de saison ou tardives
+Navet conservation;PC;2;Conservation;45;52;novembre;décembre;Variétés de saison ou tardives
+Navet conservation;PC;3;Conservation;1;17;janvier;avril;Variétés de saison ou tardives
+Navet conservation;PC;3;Semis direct;30;32;juillet;août;Variétés de saison ou tardives
+Navet conservation;PC;3;Récolte;44;46;octobre;novembre;Variétés de saison ou tardives
+Navet conservation;PC;3;Conservation;48;52;novembre;décembre;Variétés de saison ou tardives
+Navet conservation;PC;4;Conservation;1;9;janvier;février;Variétés précoces
+Navet conservation;PC;4;Semis direct;33;35;août;août;Variétés précoces
+Navet conservation;PC;4;Récolte;44;46;octobre;novembre;Variétés précoces
+Navet conservation;PC;4;Conservation;48;52;novembre;décembre;Variétés précoces
+Oignon botte;PC;1;Récolte;15;19;avril;mai;
+Oignon botte;PC;1;Semis direct;32;34;août;août;
+Oignon botte;PC;1;Plantation;37;39;septembre;septembre;
+Oignon botte;PC;2;Récolte;17;21;avril;mai;
+Oignon botte;PC;2;Semis direct;36;38;septembre;septembre;
+Oignon botte;PC;2;Semis en pot/plant;38;39;septembre;septembre;
+Oignon botte;PC;2;Plantation;42;44;octobre;octobre;
+Oignon botte;PC;3;Semis en pot/plant;5;7;janvier;février;
+Oignon botte;PC;3;Plantation;11;13;mars;mars;
+Oignon botte;PC;3;Récolte;22;26;mai;juin;
+Oignon botte;PC;4;Semis en pot/plant;7;9;février;février;
+Oignon botte;PC;4;Plantation;13;15;mars;avril;
+Oignon botte;PC;4;Récolte;23;27;juin;juillet;
+Oignon botte;PC;5;Semis en pot/plant;9;11;février;mars;
+Oignon botte;PC;5;Plantation;15;17;avril;avril;
+Oignon botte;PC;5;Récolte;25;29;juin;juillet;
+Oignon botte;PC;6;Semis direct;11;13;mars;mars;
+Oignon botte;PC;6;Semis en pot/plant;13;14;mars;avril;
+Oignon botte;PC;6;Plantation;17;19;avril;mai;
+Oignon botte;PC;6;Récolte;27;31;juillet;juillet;
+Oignon botte;PC;7;Semis direct;15;17;avril;avril;
+Oignon botte;PC;7;Semis en pot/plant;17;18;avril;avril;
+Oignon botte;PC;7;Plantation;20;22;mai;mai;
+Oignon botte;PC;7;Récolte;30;34;juillet;août;
+Oignon botte;PC;8;Semis direct;17;19;avril;mai;
+Oignon botte;PC;8;Semis en pot/plant;19;20;mai;mai;
+Oignon botte;PC;8;Plantation;22;24;mai;juin;
+Oignon botte;PC;8;Récolte;32;36;août;septembre;
+Oignon botte;PC;9;Semis direct;19;21;mai;mai;
+Oignon botte;PC;9;Semis en pot/plant;21;22;mai;mai;
+Oignon botte;PC;9;Plantation;24;26;juin;juin;
+Oignon botte;PC;9;Récolte;34;38;août;septembre;
+Oignon botte;SA;1;Récolte;10;14;mars;avril;Barona, De malakoff, vaugirard ou premier
+Oignon botte;SA;1;Semis direct;32;34;août;août;Barona, De malakoff, vaugirard ou premier
+Oignon botte;SA;1;Plantation;37;39;septembre;septembre;Barona, De malakoff, vaugirard ou premier
+Oignon botte;SA;2;Récolte;11;15;mars;avril;
+Oignon botte;SA;2;Semis direct;34;36;août;septembre;
+Oignon botte;SA;2;Plantation;39;41;septembre;octobre;
+Oignon botte;SA;3;Récolte;13;17;mars;avril;
+Oignon botte;SA;3;Semis direct;36;38;septembre;septembre;
+Oignon botte;SA;3;Semis en pot/plant;38;39;septembre;septembre;
+Oignon botte;SA;3;Plantation;42;44;octobre;octobre;
+Oignon botte;SA;4;Récolte;15;19;avril;mai;
+Oignon botte;SA;4;Semis direct;38;40;septembre;octobre;
+Oignon botte;SA;4;Semis en pot/plant;40;41;octobre;octobre;
+Oignon botte;SA;4;Plantation;44;46;octobre;novembre;
+Oignon botte;SA;5;Plantation;1;2;janvier;janvier;
+Oignon botte;SA;5;Récolte;16;20;avril;mai;
+Oignon botte;SA;5;Semis en pot/plant;45;47;novembre;novembre;
+Oignon botte;SA;6;Plantation;5;7;janvier;février;
+Oignon botte;SA;6;Récolte;17;21;avril;mai;
+Oignon botte;SA;6;Semis en pot/plant;49;51;décembre;décembre;
+Oignon botte;SA;7;Semis en pot/plant;1;2;janvier;janvier;
+Oignon botte;SA;7;Plantation;7;9;février;février;
+Oignon botte;SA;7;Récolte;18;22;avril;mai;
+Oignon botte;SA;8;Semis en pot/plant;2;4;janvier;janvier;
+Oignon botte;SA;8;Plantation;9;11;février;mars;
+Oignon botte;SA;8;Récolte;19;23;mai;juin;
+Oignon botte - bulbille;PC;1;Plantation;9;13;février;mars;
+Oignon botte - bulbille;PC;1;Récolte;20;24;mai;juin;
+Oignon conservation;PC;1;Conservation;1;7;janvier;février;
+Oignon conservation;PC;1;Semis en pot/plant;7;11;février;mars;
+Oignon conservation;PC;1;Conservation;11;13;mars;mars;
+Oignon conservation;PC;1;Plantation;13;17;mars;avril;
+Oignon conservation;PC;1;Récolte;30;34;juillet;août;
+Oignon conservation;PC;1;Conservation;36;52;septembre;décembre;
+Oignon conservation;PC;2;Conservation;1;11;janvier;mars;
+Oignon conservation;PC;2;Semis direct;11;13;mars;mars;
+Oignon conservation;PC;2;Semis en pot/plant;13;14;mars;avril;
+Oignon conservation;PC;2;Plantation;17;19;avril;mai;
+Oignon conservation;PC;2;Récolte;32;35;août;août;
+Oignon conservation;PC;2;Conservation;37;52;septembre;décembre;
+Oignon conservation;PC;3;Conservation;1;13;janvier;mars;
+Oignon conservation;PC;3;Semis direct;15;17;avril;avril;
+Oignon conservation;PC;3;Semis en pot/plant;17;18;avril;avril;
+Oignon conservation;PC;3;Plantation;20;22;mai;mai;
+Oignon conservation;PC;3;Récolte;35;37;août;septembre;
+Oignon conservation;PC;3;Conservation;39;52;septembre;décembre;
+Oignon conservation - bulbille;PC;1;Conservation;1;5;janvier;janvier;
+Oignon conservation - bulbille;PC;1;Plantation;9;17;février;avril;
+Oignon conservation - bulbille;PC;1;Récolte;28;32;juillet;août;
+Oignon conservation - bulbille;PC;1;Conservation;34;52;août;décembre;
+Panais;PC;1;Conservation;11;18;mars;avril;
+Panais;PC;1;Semis direct;19;21;mai;mai;
+Panais;PC;1;Récolte;41;48;octobre;novembre;
+Panais;PC;2;Conservation;11;19;mars;mai;
+Panais;PC;2;Semis direct;22;24;mai;juin;
+Panais;PC;2;Récolte;44;48;octobre;novembre;
+Pastèque;PC;1;Semis en pot/plant;17;19;avril;mai;
+Pastèque;PC;1;Plantation;20;22;mai;mai;
+Pastèque;PC;1;Récolte;33;38;août;septembre;
+Pastèque;SA;1;Semis en pot/plant;12;14;mars;avril;
+Pastèque;SA;1;Plantation;15;17;avril;avril;
+Pastèque;SA;1;Récolte;29;33;juillet;août;
+Pastèque;SA;2;Semis en pot/plant;14;16;avril;avril;
+Pastèque;SA;2;Plantation;17;19;avril;mai;
+Pastèque;SA;2;Récolte;30;34;juillet;août;
+Pastèque;SA;3;Semis en pot/plant;17;19;avril;mai;
+Pastèque;SA;3;Plantation;20;22;mai;mai;
+Pastèque;SA;3;Récolte;32;37;août;septembre;
+Patate douce;PC;1;Conservation;1;17;janvier;avril;
+Patate douce;PC;1;Plantation;19;22;mai;mai;
+Patate douce;PC;1;Récolte;39;42;septembre;octobre;
+Patate douce;PC;1;Conservation;44;52;octobre;décembre;
+Patate douce;PC;2;Conservation;1;17;janvier;avril;
+Patate douce;PC;2;Plantation;22;24;mai;juin;
+Patate douce;PC;2;Récolte;39;42;septembre;octobre;
+Patate douce;PC;2;Conservation;44;52;octobre;décembre;
+Patate douce;SA;1;Conservation;1;15;janvier;avril;
+Patate douce;SA;1;Plantation;15;22;avril;mai;
+Patate douce;SA;1;Récolte;39;42;septembre;octobre;
+Patate douce;SA;1;Conservation;44;52;octobre;décembre;
+Persil;PC;1;Semis en pot/plant;3;5;janvier;janvier;
+Persil;PC;1;Plantation;9;11;février;mars;
+Persil;PC;1;Récolte;19;21;mai;mai;
+Persil;PC;1;Récolte;24;26;juin;juin;
+Persil;PC;1;Récolte;29;31;juillet;juillet;
+Persil;PC;1;Récolte;34;36;août;septembre;
+Persil;PC;2;Semis en pot/plant;8;10;février;mars;
+Persil;PC;2;Plantation;13;15;mars;avril;
+Persil;PC;2;Récolte;22;24;mai;juin;
+Persil;PC;2;Récolte;27;29;juillet;juillet;
+Persil;PC;2;Récolte;32;34;août;août;
+Persil;PC;2;Récolte;37;39;septembre;septembre;
+Persil;PC;3;Semis en pot/plant;13;15;mars;avril;
+Persil;PC;3;Plantation;17;19;avril;mai;
+Persil;PC;3;Récolte;25;27;juin;juillet;
+Persil;PC;3;Récolte;30;32;juillet;août;
+Persil;PC;3;Récolte;35;37;août;septembre;
+Persil;PC;4;Semis en pot/plant;16;18;avril;avril;
+Persil;PC;4;Plantation;20;22;mai;mai;
+Persil;PC;4;Récolte;27;29;juillet;juillet;
+Persil;PC;4;Récolte;32;34;août;août;
+Persil;PC;4;Récolte;37;39;septembre;septembre;
+Persil;PC;5;Semis en pot/plant;18;20;avril;mai;
+Persil;PC;5;Plantation;22;24;mai;juin;
+Persil;PC;5;Récolte;30;32;juillet;août;
+Persil;PC;5;Récolte;35;37;août;septembre;
+Persil;SA;1;Récolte;7;9;février;février;
+Persil;SA;1;Récolte;13;15;mars;avril;
+Persil;SA;1;Semis en pot/plant;29;31;juillet;juillet;
+Persil;SA;1;Plantation;33;35;août;août;
+Persil;SA;1;Récolte;43;45;octobre;novembre;
+Persil;SA;2;Récolte;10;12;mars;mars;
+Persil;SA;2;Récolte;15;17;avril;avril;
+Persil;SA;2;Semis en pot/plant;31;33;juillet;août;
+Persil;SA;2;Plantation;35;37;août;septembre;
+Persil;SA;2;Récolte;47;49;novembre;décembre;
+Persil;SA;3;Plantation;5;7;janvier;février;
+Persil;SA;3;Récolte;15;17;avril;avril;
+Persil;SA;3;Récolte;20;22;mai;mai;
+Persil;SA;3;Récolte;25;27;juin;juillet;
+Persil;SA;3;Récolte;30;32;juillet;août;
+Persil;SA;3;Semis en pot/plant;50;52;décembre;décembre;
+Poireau;PC;1;Plantation;11;15;mars;avril;Variétés précoces résistantes à la montaison : Krypton F1, Chiefton F1, Rally F1, Zwitserse Reuzen Lancia
+Poireau;PC;1;Récolte;28;35;juillet;août;Variétés précoces résistantes à la montaison : Krypton F1, Chiefton F1, Rally F1, Zwitserse Reuzen Lancia
+Poireau;PC;1;Semis direct;36;38;septembre;septembre;Variétés précoces résistantes à la montaison : Krypton F1, Chiefton F1, Rally F1, Zwitserse Reuzen Lancia
+Poireau;PC;1;Semis en pot/plant;39;41;septembre;octobre;Variétés précoces résistantes à la montaison : Krypton F1, Chiefton F1, Rally F1, Zwitserse Reuzen Lancia
+Poireau;PC;2;Semis direct;1;2;janvier;janvier;Variétés précoces : Krypton F1, Chiefton F1, Surfer F1, Zwitserse Reuzen Lancia
+Poireau;PC;2;Semis en pot/plant;5;7;janvier;février;Variétés précoces : Krypton F1, Chiefton F1, Surfer F1, Zwitserse Reuzen Lancia
+Poireau;PC;2;Plantation;17;19;avril;mai;Variétés précoces : Krypton F1, Chiefton F1, Surfer F1, Zwitserse Reuzen Lancia
+Poireau;PC;2;Récolte;32;41;août;octobre;Variétés précoces : Krypton F1, Chiefton F1, Surfer F1, Zwitserse Reuzen Lancia
+Poireau;PC;3;Semis direct;9;11;février;mars;Variétés précoces : Krypton F1, Chiefton F1, Surfer F1, Zwitserse Reuzen Lancia
+Poireau;PC;3;Semis en pot/plant;11;13;mars;mars;Variétés précoces : Krypton F1, Chiefton F1, Surfer F1, Zwitserse Reuzen Lancia
+Poireau;PC;3;Plantation;22;24;mai;juin;Variétés précoces : Krypton F1, Chiefton F1, Surfer F1, Zwitserse Reuzen Lancia
+Poireau;PC;3;Récolte;37;48;septembre;novembre;Variétés précoces : Krypton F1, Chiefton F1, Surfer F1, Zwitserse Reuzen Lancia
+Poireau;PC;4;Récolte;1;9;janvier;février;Variétés d'automne-hiver
+Poireau;PC;4;Semis direct;9;11;février;mars;Variétés d'automne-hiver
+Poireau;PC;4;Semis en pot/plant;11;13;mars;mars;Variétés d'automne-hiver
+Poireau;PC;4;Plantation;22;24;mai;juin;Variétés d'automne-hiver
+Poireau;PC;4;Récolte;44;52;octobre;décembre;Variétés d'automne-hiver
+Poireau;PC;5;Récolte;1;13;janvier;mars;Variétés d'automne-hiver
+Poireau;PC;5;Semis direct;13;15;mars;avril;Variétés d'automne-hiver
+Poireau;PC;5;Plantation;24;26;juin;juin;Variétés d'automne-hiver
+Poireau;PC;5;Récolte;48;52;novembre;décembre;Variétés d'automne-hiver
+Poireau;PC;6;Récolte;11;15;mars;avril;Variétés d'hiver
+Poireau;PC;6;Semis direct;15;17;avril;avril;Variétés d'hiver
+Poireau;PC;6;Plantation;26;28;juin;juillet;Variétés d'hiver
+Poireau;SA;1;Plantation;5;9;janvier;février;Variétés précoces très résistantes à la montaison : Krypton F1, Rally F1
+Poireau;SA;1;Récolte;21;25;mai;juin;Variétés précoces très résistantes à la montaison : Krypton F1, Rally F1
+Poireau;SA;1;Semis direct;32;34;août;août;Variétés précoces très résistantes à la montaison : Krypton F1, Rally F1
+Poireau;SA;1;Semis en pot/plant;36;38;septembre;septembre;Variétés précoces très résistantes à la montaison : Krypton F1, Rally F1
+Pois;PC;1;Récolte;19;23;mai;juin;
+Pois;PC;1;Semis direct;42;46;octobre;novembre;
+Pois;PC;1;Plantation;47;49;novembre;décembre;
+Pois;PC;2;Semis direct;11;13;mars;mars;
+Pois;PC;2;Plantation;13;15;mars;avril;
+Pois;PC;2;Récolte;23;27;juin;juillet;
+Pois;PC;3;Semis direct;15;17;avril;avril;
+Pois;PC;3;Récolte;25;29;juin;juillet;
+Pois;PC;4;Semis direct;26;28;juin;juillet;
+Pois;PC;4;Plantation;28;30;juillet;juillet;
+Pois;PC;4;Récolte;34;38;août;septembre;
+Pois;PC;5;Semis direct;28;30;juillet;juillet;
+Pois;PC;5;Plantation;30;32;juillet;août;
+Pois;PC;5;Récolte;36;40;septembre;octobre;
+Pois;SA;1;Récolte;15;19;avril;mai;
+Pois;SA;1;Semis direct;42;46;octobre;novembre;
+Pois;SA;1;Plantation;47;49;novembre;décembre;
+Pois;SA;2;Semis en pot/plant;1;2;janvier;janvier;
+Pois;SA;2;Plantation;3;5;janvier;janvier;
+Pois;SA;2;Récolte;17;21;avril;mai;
+Pois;SA;2;Semis direct;48;52;novembre;décembre;
+Pois;SA;3;Semis direct;6;8;février;février;
+Pois;SA;3;Plantation;9;11;février;mars;
+Pois;SA;3;Récolte;19;23;mai;juin;
+Pois;SA;4;Semis direct;11;13;mars;mars;Bassinage nécessaire
+Pois;SA;4;Plantation;13;15;mars;avril;Bassinage nécessaire
+Pois;SA;4;Récolte;21;25;mai;juin;Bassinage nécessaire
+Pois;SA;5;Semis direct;15;17;avril;avril;Bassinage nécessaire
+Pois;SA;5;Plantation;17;19;avril;mai;Bassinage nécessaire
+Pois;SA;5;Récolte;23;27;juin;juillet;Bassinage nécessaire
+Pois;SA;6;Semis direct;20;22;mai;mai;Bassinage nécessaire
+Pois;SA;6;Plantation;22;24;mai;juin;Bassinage nécessaire
+Pois;SA;6;Récolte;28;32;juillet;août;Bassinage nécessaire
+Pois;SA;7;Semis direct;24;26;juin;juin;Bassinage nécessaire
+Pois;SA;7;Plantation;26;28;juin;juillet;Bassinage nécessaire
+Pois;SA;7;Récolte;32;36;août;septembre;Bassinage nécessaire
+Pois;SA;8;Semis direct;26;28;juin;juillet;
+Pois;SA;8;Plantation;28;30;juillet;juillet;
+Pois;SA;8;Récolte;34;38;août;septembre;
+Poivron;PC;1;Semis en pot/plant;7;9;février;février;
+Poivron;PC;1;Plantation;17;19;avril;mai;
+Poivron;PC;1;Récolte;34;42;août;octobre;
+Poivron;PC;2;Semis en pot/plant;9;11;février;mars;
+Poivron;PC;2;Plantation;19;21;mai;mai;
+Poivron;PC;2;Récolte;35;42;août;octobre;
+Poivron;SA;1;Semis en pot/plant;5;7;janvier;février;
+Poivron;SA;1;Plantation;15;17;avril;avril;
+Poivron;SA;1;Récolte;30;42;juillet;octobre;
+Poivron;SA;2;Semis en pot/plant;7;9;février;février;
+Poivron;SA;2;Plantation;17;19;avril;mai;
+Poivron;SA;2;Récolte;32;42;août;octobre;
+Pomme de terre;PC;1;Conservation;1;12;janvier;mars;Variétés précoces : 70-90 jours
+Pomme de terre;PC;1;Plantation;12;15;mars;avril;Variétés précoces : 70-90 jours
+Pomme de terre;PC;1;Récolte;29;32;juillet;août;Variétés précoces : 70-90 jours
+Pomme de terre;PC;1;Conservation;33;52;août;décembre;Variétés précoces : 70-90 jours
+Pomme de terre;PC;2;Conservation;1;12;janvier;mars;Variétés de saison : 90-120 jours
+Pomme de terre;PC;2;Plantation;12;15;mars;avril;Variétés de saison : 90-120 jours
+Pomme de terre;PC;2;Récolte;31;34;juillet;août;Variétés de saison : 90-120 jours
+Pomme de terre;PC;2;Conservation;35;52;août;décembre;Variétés de saison : 90-120 jours
+Pomme de terre;PC;3;Conservation;1;12;janvier;mars;Variétés tardives : 120-145 jours
+Pomme de terre;PC;3;Plantation;12;15;mars;avril;Variétés tardives : 120-145 jours
+Pomme de terre;PC;3;Récolte;33;36;août;septembre;Variétés tardives : 120-145 jours
+Pomme de terre;PC;3;Conservation;38;52;septembre;décembre;Variétés tardives : 120-145 jours
+Pomme de terre;PC;4;Conservation;1;12;janvier;mars;Variétés précoces : 70-90 jours
+Pomme de terre;PC;4;Plantation;15;17;avril;avril;Variétés précoces : 70-90 jours
+Pomme de terre;PC;4;Récolte;31;34;juillet;août;Variétés précoces : 70-90 jours
+Pomme de terre;PC;4;Conservation;35;52;août;décembre;Variétés précoces : 70-90 jours
+Pomme de terre;PC;5;Conservation;1;12;janvier;mars;Variétés de saison : 90-120 jours
+Pomme de terre;PC;5;Plantation;15;17;avril;avril;Variétés de saison : 90-120 jours
+Pomme de terre;PC;5;Récolte;33;36;août;septembre;Variétés de saison : 90-120 jours
+Pomme de terre;PC;5;Conservation;38;52;septembre;décembre;Variétés de saison : 90-120 jours
+Pomme de terre;PC;6;Conservation;1;12;janvier;mars;Variétés précoces : 70-90 jours
+Pomme de terre;PC;6;Plantation;17;19;avril;mai;Variétés précoces : 70-90 jours
+Pomme de terre;PC;6;Récolte;33;36;août;septembre;Variétés précoces : 70-90 jours
+Pomme de terre;PC;6;Conservation;38;52;septembre;décembre;Variétés précoces : 70-90 jours
+Pomme de terre primeur;PC;1;Plantation;12;15;mars;avril;Variétés précoces : 70-90 jours
+Pomme de terre primeur;PC;1;Récolte;26;29;juin;juillet;Variétés précoces : 70-90 jours
+Pomme de terre primeur;SA;1;Plantation;1;3;janvier;janvier;Variétés précoces : 70-90 jours
+Pomme de terre primeur;SA;1;Récolte;18;21;avril;mai;Variétés précoces : 70-90 jours
+Pomme de terre primeur;SA;2;Plantation;3;5;janvier;janvier;Variétés précoces : 70-90 jours
+Pomme de terre primeur;SA;2;Récolte;19;22;mai;mai;Variétés précoces : 70-90 jours
+Pomme de terre primeur;SA;3;Plantation;5;7;janvier;février;Variétés précoces : 70-90 jours
+Pomme de terre primeur;SA;3;Récolte;20;23;mai;juin;Variétés précoces : 70-90 jours
+Pomme de terre primeur;SA;4;Plantation;7;9;février;février;Variétés précoces : 70-90 jours
+Pomme de terre primeur;SA;4;Récolte;21;24;mai;juin;Variétés précoces : 70-90 jours
+Pomme de terre primeur;SA;5;Plantation;9;11;février;mars;Variétés précoces : 70-90 jours
+Pomme de terre primeur;SA;5;Récolte;23;26;juin;juin;Variétés précoces : 70-90 jours
+Radis botte;PC;1;Semis direct;7;9;février;février;
+Radis botte;PC;1;Récolte;14;16;avril;avril;
+Radis botte;PC;2;Semis direct;9;11;février;mars;
+Radis botte;PC;2;Récolte;15;17;avril;avril;
+Radis botte;PC;3;Semis direct;11;13;mars;mars;
+Radis botte;PC;3;Récolte;16;18;avril;avril;
+Radis botte;PC;4;Semis direct;13;15;mars;avril;
+Radis botte;PC;4;Récolte;18;20;avril;mai;
+Radis botte;PC;5;Semis direct;15;17;avril;avril;
+Radis botte;PC;5;Récolte;20;22;mai;mai;
+Radis botte;PC;6;Semis direct;17;19;avril;mai;
+Radis botte;PC;6;Récolte;22;24;mai;juin;
+Radis botte;PC;7;Semis direct;19;21;mai;mai;
+Radis botte;PC;7;Récolte;23;25;juin;juin;
+Radis botte;PC;8;Semis direct;21;23;mai;juin;
+Radis botte;PC;8;Récolte;25;27;juin;juillet;
+Radis botte;PC;9;Semis direct;23;25;juin;juin;
+Radis botte;PC;9;Récolte;27;29;juillet;juillet;
+Radis botte;PC;10;Semis direct;25;27;juin;juillet;
+Radis botte;PC;10;Récolte;29;31;juillet;juillet;
+Radis botte;PC;11;Semis direct;27;29;juillet;juillet;
+Radis botte;PC;11;Récolte;31;33;juillet;août;
+Radis botte;PC;12;Semis direct;29;31;juillet;juillet;
+Radis botte;PC;12;Récolte;33;35;août;août;
+Radis botte;PC;13;Semis direct;31;33;juillet;août;
+Radis botte;PC;13;Récolte;35;37;août;septembre;
+Radis botte;PC;14;Semis direct;33;35;août;août;
+Radis botte;PC;14;Récolte;37;40;septembre;octobre;
+Radis botte;PC;15;Semis direct;35;37;août;septembre;
+Radis botte;PC;15;Récolte;40;43;octobre;octobre;
+Radis botte;PC;16;Semis direct;37;39;septembre;septembre;
+Radis botte;PC;16;Récolte;43;46;octobre;novembre;
+Radis botte;SA;1;Récolte;7;9;février;février;
+Radis botte;SA;1;Semis direct;47;49;novembre;décembre;
+Radis botte;SA;2;Récolte;8;10;février;mars;
+Radis botte;SA;2;Semis direct;49;51;décembre;décembre;
+Radis botte;SA;3;Semis direct;1;1;janvier;janvier;
+Radis botte;SA;3;Récolte;9;11;février;mars;
+Radis botte;SA;3;Semis direct;51;52;décembre;décembre;
+Radis botte;SA;4;Semis direct;1;3;janvier;janvier;
+Radis botte;SA;4;Récolte;10;12;mars;mars;
+Radis botte;SA;5;Semis direct;3;5;janvier;janvier;
+Radis botte;SA;5;Récolte;11;13;mars;mars;
+Radis botte;SA;6;Semis direct;5;7;janvier;février;
+Radis botte;SA;6;Récolte;12;14;mars;avril;
+Radis botte;SA;7;Semis direct;7;9;février;février;
+Radis botte;SA;7;Récolte;13;15;mars;avril;
+Radis botte;SA;8;Semis direct;9;11;février;mars;
+Radis botte;SA;8;Récolte;15;17;avril;avril;
+Radis botte;SA;9;Semis direct;11;13;mars;mars;
+Radis botte;SA;9;Récolte;16;18;avril;avril;
+Radis botte;SA;10;Semis direct;37;39;septembre;septembre;
+Radis botte;SA;10;Récolte;43;48;octobre;novembre;
+Radis botte;SA;11;Semis direct;39;41;septembre;octobre;
+Radis botte;SA;11;Récolte;46;50;novembre;décembre;
+Radis rave;PC;1;Conservation;1;9;janvier;février;
+Radis rave;PC;1;Semis direct;24;26;juin;juin;
+Radis rave;PC;1;Récolte;35;39;août;septembre;
+Radis rave;PC;1;Conservation;41;52;octobre;décembre;
+Radis rave;PC;2;Conservation;1;13;janvier;mars;
+Radis rave;PC;2;Semis direct;27;29;juillet;juillet;
+Radis rave;PC;2;Récolte;39;43;septembre;octobre;
+Radis rave;PC;2;Conservation;45;52;novembre;décembre;
+Radis rave;PC;3;Conservation;1;17;janvier;avril;
+Radis rave;PC;3;Semis direct;30;32;juillet;août;
+Radis rave;PC;3;Récolte;44;46;octobre;novembre;
+Radis rave;PC;3;Conservation;48;52;novembre;décembre;
+Rutabaga;PC;1;Conservation;1;19;janvier;mai;
+Rutabaga;PC;1;Semis direct;21;23;mai;juin;
+Rutabaga;PC;1;Récolte;41;48;octobre;novembre;
+Rutabaga;PC;1;Conservation;50;52;décembre;décembre;
+Rutabaga;PC;2;Conservation;1;19;janvier;mai;
+Rutabaga;PC;2;Semis direct;24;26;juin;juin;
+Rutabaga;PC;2;Récolte;44;48;octobre;novembre;
+Rutabaga;PC;2;Conservation;50;52;décembre;décembre;
+Salade;PC;1;Semis en pot/plant;3;5;janvier;janvier;
+Salade;PC;1;Plantation;7;9;février;février;
+Salade;PC;1;Récolte;17;19;avril;mai;
+Salade;PC;2;Semis en pot/plant;5;7;janvier;février;
+Salade;PC;2;Plantation;9;11;février;mars;
+Salade;PC;2;Récolte;18;20;avril;mai;
+Salade;PC;3;Semis en pot/plant;7;9;février;février;
+Salade;PC;3;Plantation;11;13;mars;mars;
+Salade;PC;3;Récolte;20;22;mai;mai;
+Salade;PC;4;Semis en pot/plant;10;12;mars;mars;
+Salade;PC;4;Plantation;13;15;mars;avril;
+Salade;PC;4;Récolte;21;23;mai;juin;
+Salade;PC;5;Semis en pot/plant;12;14;mars;avril;
+Salade;PC;5;Plantation;15;17;avril;avril;
+Salade;PC;5;Récolte;22;24;mai;juin;
+Salade;PC;6;Semis en pot/plant;14;16;avril;avril;
+Salade;PC;6;Plantation;17;19;avril;mai;
+Salade;PC;6;Récolte;24;26;juin;juin;
+Salade;PC;7;Semis en pot/plant;16;18;avril;avril;
+Salade;PC;7;Plantation;19;21;mai;mai;
+Salade;PC;7;Récolte;26;28;juin;juillet;
+Salade;PC;8;Semis en pot/plant;18;20;avril;mai;
+Salade;PC;8;Plantation;21;23;mai;juin;
+Salade;PC;8;Récolte;28;30;juillet;juillet;
+Salade;PC;9;Semis en pot/plant;20;22;mai;mai;
+Salade;PC;9;Plantation;23;25;juin;juin;
+Salade;PC;9;Récolte;29;31;juillet;juillet;
+Salade;PC;10;Semis en pot/plant;23;25;juin;juin;
+Salade;PC;10;Plantation;25;27;juin;juillet;
+Salade;PC;10;Récolte;31;33;juillet;août;
+Salade;PC;11;Semis en pot/plant;25;27;juin;juillet;
+Salade;PC;11;Plantation;27;29;juillet;juillet;
+Salade;PC;11;Récolte;33;35;août;août;
+Salade;PC;12;Semis en pot/plant;27;29;juillet;juillet;
+Salade;PC;12;Plantation;29;31;juillet;juillet;
+Salade;PC;12;Récolte;35;37;août;septembre;
+Salade;PC;13;Semis en pot/plant;29;31;juillet;juillet;
+Salade;PC;13;Plantation;31;33;juillet;août;
+Salade;PC;13;Récolte;37;41;septembre;octobre;
+Salade;PC;14;Semis en pot/plant;31;33;juillet;août;
+Salade;PC;14;Plantation;33;35;août;août;
+Salade;PC;14;Récolte;40;44;octobre;octobre;
+Salade;SA;1;Récolte;9;11;février;mars;
+Salade;SA;1;Semis en pot/plant;43;45;octobre;novembre;
+Salade;SA;1;Plantation;47;49;novembre;décembre;
+Salade;SA;2;Récolte;10;12;mars;mars;
+Salade;SA;2;Semis en pot/plant;45;47;novembre;novembre;
+Salade;SA;2;Plantation;49;51;décembre;décembre;
+Salade;SA;3;Plantation;1;1;janvier;janvier;
+Salade;SA;3;Récolte;11;13;mars;mars;
+Salade;SA;3;Semis en pot/plant;47;49;novembre;décembre;
+Salade;SA;3;Plantation;51;52;décembre;décembre;
+Salade;SA;4;Plantation;1;3;janvier;janvier;
+Salade;SA;4;Récolte;12;15;mars;avril;
+Salade;SA;4;Semis en pot/plant;48;50;novembre;décembre;
+Salade;SA;5;Plantation;3;5;janvier;janvier;
+Salade;SA;5;Récolte;14;16;avril;avril;
+Salade;SA;5;Semis en pot/plant;50;52;décembre;décembre;
+Salade;SA;6;Semis en pot/plant;1;2;janvier;janvier;
+Salade;SA;6;Plantation;5;7;janvier;février;
+Salade;SA;6;Récolte;15;17;avril;avril;
+Salade;SA;7;Semis en pot/plant;3;5;janvier;janvier;
+Salade;SA;7;Plantation;7;9;février;février;
+Salade;SA;7;Récolte;16;18;avril;avril;
+Salade;SA;8;Semis en pot/plant;5;7;janvier;février;
+Salade;SA;8;Plantation;9;11;février;mars;
+Salade;SA;8;Récolte;17;19;avril;mai;
+Salade;SA;9;Semis en pot/plant;7;9;février;février;
+Salade;SA;9;Plantation;11;13;mars;mars;
+Salade;SA;9;Récolte;18;20;avril;mai;
+Salade;SA;10;Semis en pot/plant;33;35;août;août;
+Salade;SA;10;Plantation;35;37;août;septembre;
+Salade;SA;10;Récolte;43;46;octobre;novembre;
+Salade;SA;11;Semis en pot/plant;35;37;août;septembre;
+Salade;SA;11;Plantation;37;39;septembre;septembre;
+Salade;SA;11;Récolte;45;49;novembre;décembre;
+Salade;SA;12;Récolte;1;2;janvier;janvier;
+Salade;SA;12;Semis en pot/plant;36;38;septembre;septembre;
+Salade;SA;12;Plantation;39;41;septembre;octobre;
+Salade;SA;12;Récolte;48;52;novembre;décembre;
+Salade;SA;13;Récolte;2;7;janvier;février;
+Salade;SA;13;Semis en pot/plant;38;40;septembre;octobre;
+Salade;SA;13;Plantation;41;43;octobre;octobre;
+Salade;SA;14;Récolte;7;10;février;mars;
+Salade;SA;14;Semis en pot/plant;40;42;octobre;octobre;
+Salade;SA;14;Plantation;43;45;octobre;novembre;
+Tomate;SA;1;Semis en pot/plant;1;3;janvier;janvier;Variétés greffés uniquement
+Tomate;SA;1;Plantation;11;13;mars;mars;Variétés greffés uniquement
+Tomate;SA;1;Récolte;24;39;juin;septembre;Variétés greffés uniquement
+Tomate;SA;2;Semis en pot/plant;2;5;janvier;janvier;Variétés greffés uniquement
+Tomate;SA;2;Plantation;13;15;mars;avril;Variétés greffés uniquement
+Tomate;SA;2;Récolte;25;39;juin;septembre;Variétés greffés uniquement
+Tomate;SA;3;Semis en pot/plant;5;7;janvier;février;
+Tomate;SA;3;Plantation;15;17;avril;avril;
+Tomate;SA;3;Récolte;26;42;juin;octobre;
+Tomate;SA;4;Semis en pot/plant;7;9;février;février;
+Tomate;SA;4;Plantation;17;19;avril;mai;
+Tomate;SA;4;Récolte;28;42;juillet;octobre;
+Tomate;SA;5;Semis en pot/plant;13;15;mars;avril;
+Tomate;SA;5;Plantation;22;24;mai;juin;
+Tomate;SA;5;Récolte;33;42;août;octobre;
+Tomate déterminée;SA;1;Semis en pot/plant;11;13;mars;mars;
+Tomate déterminée;SA;1;Plantation;19;21;mai;mai;
+Tomate déterminée;SA;1;Récolte;34;40;août;octobre;
+Tomate déterminée;SA;2;Semis en pot/plant;15;17;avril;avril;
+Tomate déterminée;SA;2;Plantation;22;24;mai;juin;
+Tomate déterminée;SA;2;Récolte;36;41;septembre;octobre;

@@ -1,0 +1,13 @@
+Récolte au temps t
+Emplacement
+Qualité du sol
+Climat
+Culture précédente
+Rotation
+
+
+-> Emplacement
+-> Fertilisation
+-> Préparer la planche/Bâcher
+-> Rotation
+-> Climat

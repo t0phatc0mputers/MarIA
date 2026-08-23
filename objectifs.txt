@@ -6,8 +6,17 @@ Culture précédente
 Rotation
 
 
--> Emplacement
--> Fertilisation
--> Préparer la planche/Bâcher
--> Rotation
--> Climat
+-> Emplacement v
+-> Fertilisation v
+-> Préparer la planche/Bâcher v
+-> Rotation v
+-> Climat v
+
+accessibilité
+
+Une entrée
+Janvier -> Toutes possibilités
+2 Janvier -> cultures intéressantes
+Tâches du mois
+
+Pas exaustif

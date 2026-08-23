@@ -1,0 +1,3574 @@
+{
+  "Abainville": {
+    "id": "18621",
+    "libelle": "Abainville (55130)"
+  },
+  "Abbevillers": {
+    "id": "7448",
+    "libelle": "Abbévillers (25310)"
+  },
+  "Abilly": {
+    "id": "12909",
+    "libelle": "Abilly (37160)"
+  },
+  "Ablis": {
+    "id": "29027",
+    "libelle": "Ablis (78660)"
+  },
+  "Abondance": {
+    "id": "36507",
+    "libelle": "Abondance (74360)"
+  },
+  "Abreschviller - Cense Charlot": {
+    "id": "19375",
+    "libelle": "Abreschviller (57560)"
+  },
+  "Abreschviller - Karlsthal": {
+    "id": "19375",
+    "libelle": "Abreschviller (57560)"
+  },
+  "Abreschviller - Mf Grossmann": {
+    "id": "19375",
+    "libelle": "Abreschviller (57560)"
+  },
+  "Abreschviller - Nollenbourg": {
+    "id": "19375",
+    "libelle": "Abreschviller (57560)"
+  },
+  "Abries": {
+    "id": "1750",
+    "libelle": "Abriès (05460)"
+  },
+  "Abries Rm": {
+    "id": "1750",
+    "libelle": "Abriès (05460)"
+  },
+  "Abscon Sucrerie": {
+    "id": "20388",
+    "libelle": "Abscon (59215)"
+  },
+  "Accous": {
+    "id": "23437",
+    "libelle": "Accous (64490)"
+  },
+  "Achatel": {
+    "id": "19929",
+    "libelle": "Sailly-Achâtel (57420)"
+  },
+  "Achiet-Le-Grand": {
+    "id": "22208",
+    "libelle": "Achiet-le-Grand (62121)"
+  },
+  "Achères": {
+    "id": "40594",
+    "libelle": "Achères"
+  },
+  "Acy-Romance": {
+    "id": "35319",
+    "libelle": "Acy-Romance (08300)"
+  },
+  "Adam-Les-Vercel": {
+    "id": "7451",
+    "libelle": "Adam-lès-Vercel (25530)"
+  },
+  "Adast": {
+    "id": "23926",
+    "libelle": "Adast (65260)"
+  },
+  "Adrets De L Est": {
+    "id": "30871",
+    "libelle": "Les Adrets-de-l'Estérel (83600)"
+  },
+  "Affoux Agglomeration": {
+    "id": "25507",
+    "libelle": "Affoux (69170)"
+  },
+  "Agde": {
+    "id": "12016",
+    "libelle": "Agde (34300)"
+  },
+  "Agde - Sh": {
+    "id": "12016",
+    "libelle": "Agde (34300)"
+  },
+  "Agde Le Cap D'Adge": {
+    "id": "12016",
+    "libelle": "Agde (34300)"
+  },
+  "Agel-Spc": {
+    "id": "12017",
+    "libelle": "Agel (34210)"
+  },
+  "Agnieres-En-Devoluy": {
+    "id": "1751",
+    "libelle": "Agnières-en-Dévoluy (05250)"
+  },
+  "Agnos": {
+    "id": "23438",
+    "libelle": "Agnos (64400)"
+  },
+  "Agon-Coutainville": {
+    "id": "17219",
+    "libelle": "Agon-Coutainville (50230)"
+  },
+  "Ahun": {
+    "id": "6649",
+    "libelle": "Ahun (23150)"
+  },
+  "Aicirits": {
+    "id": "34324",
+    "libelle": "Aïcirits-Camou-Suhast (64120)"
+  },
+  "Aigrefeuille D'Aunis": {
+    "id": "4921",
+    "libelle": "Aigrefeuille-d'Aunis (17290)"
+  },
+  "Aigrefeuille-D'Aunis": {
+    "id": "4921",
+    "libelle": "Aigrefeuille-d'Aunis (17290)"
+  },
+  "Aiguebelette": {
+    "id": "27288",
+    "libelle": "Aiguebelette-le-Lac (73610)"
+  },
+  "Aiguebelle": {
+    "id": "27289",
+    "libelle": "Aiguebelle (73220)"
+  },
+  "Aigues-Mortes": {
+    "id": "10103",
+    "libelle": "Aigues-Mortes (30220)"
+  },
+  "Aiguillon": {
+    "id": "16358",
+    "libelle": "Aiguillon (47190)"
+  },
+  "Aiguines": {
+    "id": "30872",
+    "libelle": "Aiguines (83630)"
+  },
+  "Aigurande": {
+    "id": "12662",
+    "libelle": "Aigurande (36140)"
+  },
+  "Aigurande - Bg": {
+    "id": "12662",
+    "libelle": "Aigurande (36140)"
+  },
+  "Aillevillers": {
+    "id": "25804",
+    "libelle": "Aillevillers-et-Lyaumont (70320)"
+  },
+  "Aillianville": {
+    "id": "35115",
+    "libelle": "Aillianville (52700)"
+  },
+  "Aillianville Agglomeration": {
+    "id": "35115",
+    "libelle": "Aillianville (52700)"
+  },
+  "Aillon Le Jeune": {
+    "id": "27291",
+    "libelle": "Aillon-le-Jeune (73340)"
+  },
+  "Ailly-Le-Haut": {
+    "id": "29599",
+    "libelle": "Ailly-le-Haut-Clocher (80690)"
+  },
+  "Ailly-Sur-Noye": {
+    "id": "29600",
+    "libelle": "Ailly-sur-Noye (80250)"
+  },
+  "Ainay-Le-Chate": {
+    "id": "1233",
+    "libelle": "Ainay-le-Château (03360)"
+  },
+  "Aire Sur La Lys": {
+    "id": "22216",
+    "libelle": "Aire-sur-la-Lys (62120)"
+  },
+  "Airion": {
+    "id": "21015",
+    "libelle": "Airion (60600)"
+  },
+  "Airvault Gendarmerie": {
+    "id": "29290",
+    "libelle": "Airvault (79600)"
+  },
+  "Aix Les Bains": {
+    "id": "27295",
+    "libelle": "Aix-les-Bains (73100)"
+  },
+  "Aix-En-Provence": {
+    "id": "3478",
+    "libelle": "Aix-en-Provence (13100)"
+  },
+  "Aix-La-Molle": {
+    "id": "40507",
+    "libelle": "Aix-La-Molle"
+  },
+  "Aix-Les-Bains": {
+    "id": "27295",
+    "libelle": "Aix-les-Bains (73100)"
+  },
+  "Aixe Sur Vienne": {
+    "id": "31734",
+    "libelle": "Aixe-sur-Vienne (87700)"
+  },
+  "Aizac": {
+    "id": "2081",
+    "libelle": "Aizac (07530)"
+  },
+  "Aizenay": {
+    "id": "31172",
+    "libelle": "Aizenay (85190)"
+  },
+  "Ajaccio": {
+    "id": "9742",
+    "libelle": "Ajaccio (20000)"
+  },
+  "Ajaccio-Milelli": {
+    "id": "9742",
+    "libelle": "Ajaccio (20000)"
+  },
+  "Alaigne": {
+    "id": "2747",
+    "libelle": "Alaigne (11240)"
+  },
+  "Alaigne Agglomeration": {
+    "id": "2747",
+    "libelle": "Alaigne (11240)"
+  },
+  "Alba La Romaine": {
+    "id": "2083",
+    "libelle": "Alba-la-Romaine (07400)"
+  },
+  "Albestroff": {
+    "id": "36314",
+    "libelle": "Albestroff (57670)"
+  },
+  "Albi Fonlabour": {
+    "id": "30378",
+    "libelle": "Albi (81000)"
+  },
+  "Albi-Man": {
+    "id": "30378",
+    "libelle": "Albi (81000)"
+  },
+  "Albias": {
+    "id": "30678",
+    "libelle": "Albias (82350)"
+  },
+  "Albiez-Montrond": {
+    "id": "27298",
+    "libelle": "Albiez-Montrond (73300)"
+  },
+  "Albine": {
+    "id": "30379",
+    "libelle": "Albine (81240)"
+  },
+  "Albussac": {
+    "id": "5683",
+    "libelle": "Albussac (19380)"
+  },
+  "Alby Sur Cheran": {
+    "id": "27591",
+    "libelle": "Alby-sur-Chéran (74540)"
+  },
+  "Aldudes Hameau D'Esnazu": {
+    "id": "23446",
+    "libelle": "Aldudes (64430)"
+  },
+  "Alencon": {
+    "id": "21698",
+    "libelle": "Alençon (61000)"
+  },
+  "Alencon Rue Pasteur": {
+    "id": "21698",
+    "libelle": "Alençon (61000)"
+  },
+  "Alette": {
+    "id": "22220",
+    "libelle": "Alette (62650)"
+  },
+  "Alexain": {
+    "id": "17801",
+    "libelle": "Alexain (53240)"
+  },
+  "Algans": {
+    "id": "30380",
+    "libelle": "Algans (81470)"
+  },
+  "Algolsheim Sad": {
+    "id": "25132",
+    "libelle": "Algolsheim (68600)"
+  },
+  "Allanche": {
+    "id": "4261",
+    "libelle": "Allanche (15160)"
+  },
+  "Allanche - Gend": {
+    "id": "4261",
+    "libelle": "Allanche (15160)"
+  },
+  "Allanche-Spc": {
+    "id": "4261",
+    "libelle": "Allanche (15160)"
+  },
+  "Allemans-Du-Dro": {
+    "id": "16359",
+    "libelle": "Allemans-du-Dropt (47800)"
+  },
+  "Allemond": {
+    "id": "13190",
+    "libelle": "Allemond (38114)"
+  },
+  "Allenc Larzalier": {
+    "id": "16674",
+    "libelle": "Allenc (48190)"
+  },
+  "Alleriot": {
+    "id": "26344",
+    "libelle": "Allériot (71380)"
+  },
+  "Allevard": {
+    "id": "13191",
+    "libelle": "Allevard (38580)"
+  },
+  "Alleyrac": {
+    "id": "15208",
+    "libelle": "Alleyrac (43150)"
+  },
+  "Alleyras Barrage De Poutes": {
+    "id": "15209",
+    "libelle": "Alleyras (43580)"
+  },
+  "Allineuc": {
+    "id": "33966",
+    "libelle": "Allineuc (22460)"
+  },
+  "Allineuc-Spc": {
+    "id": "33966",
+    "libelle": "Allineuc (22460)"
+  },
+  "Allos": {
+    "id": "1554",
+    "libelle": "Allos (04260)"
+  },
+  "Allouagne": {
+    "id": "36432",
+    "libelle": "Allouagne (62157)"
+  },
+  "Allouagne Agglomeration": {
+    "id": "36432",
+    "libelle": "Allouagne (62157)"
+  },
+  "Almeneches": {
+    "id": "21699",
+    "libelle": "Almenêches (61570)"
+  },
+  "Aloxe Corton": {
+    "id": "5975",
+    "libelle": "Aloxe-Corton (21420)"
+  },
+  "Alpuech": {
+    "id": "3179",
+    "libelle": "Alpuech (12210)"
+  },
+  "Alrance Terrain Experimental": {
+    "id": "3180",
+    "libelle": "Alrance (12430)"
+  },
+  "Alteckendorf": {
+    "id": "24619",
+    "libelle": "Alteckendorf (67270)"
+  },
+  "Altier": {
+    "id": "16675",
+    "libelle": "Altier (48800)"
+  },
+  "Altillac-Spc": {
+    "id": "5686",
+    "libelle": "Altillac (19120)"
+  },
+  "Altkirch": {
+    "id": "25134",
+    "libelle": "Altkirch (68130)"
+  },
+  "Aluze": {
+    "id": "26345",
+    "libelle": "Aluze (71510)"
+  },
+  "Alzon Agglomeration": {
+    "id": "10108",
+    "libelle": "Alzon (30770)"
+  },
+  "Alzon Cazebonne": {
+    "id": "10108",
+    "libelle": "Alzon (30770)"
+  },
+  "Amancey": {
+    "id": "7458",
+    "libelle": "Amancey (25330)"
+  },
+  "Amanlis-Spc": {
+    "id": "12343",
+    "libelle": "Amanlis (35150)"
+  },
+  "Ambazac Agglomeration": {
+    "id": "31735",
+    "libelle": "Ambazac (87240)"
+  },
+  "Ambert": {
+    "id": "22964",
+    "libelle": "Ambert (63600)"
+  },
+  "Ambes": {
+    "id": "11479",
+    "libelle": "Ambès (33810)"
+  },
+  "Amboise - La Gabillière": {
+    "id": "12911",
+    "libelle": "Amboise (37530)"
+  },
+  "Amboise - Lycée Viticole": {
+    "id": "12911",
+    "libelle": "Amboise (37530)"
+  },
+  "Ambrieres-Les-V": {
+    "id": "33498",
+    "libelle": "Ambrières-les-Vallées (53300)"
+  },
+  "Amelecourt Ipg": {
+    "id": "19388",
+    "libelle": "Amélécourt (57170)"
+  },
+  "Amelie-Les-Bains": {
+    "id": "24401",
+    "libelle": "Amélie-les-Bains-Palalda (66110)"
+  },
+  "Amelie-Les-Bains-Palalda": {
+    "id": "24401",
+    "libelle": "Amélie-les-Bains-Palalda (66110)"
+  },
+  "Amiens": {
+    "id": "29610",
+    "libelle": "Amiens (80000)"
+  },
+  "Amne Agglomeration": {
+    "id": "26916",
+    "libelle": "Amné (72540)"
+  },
+  "Amoncourt": {
+    "id": "25813",
+    "libelle": "Amoncourt (70170)"
+  },
+  "Amou": {
+    "id": "14261",
+    "libelle": "Amou (40330)"
+  },
+  "Amou Lateoulere": {
+    "id": "14261",
+    "libelle": "Amou (40330)"
+  },
+  "Ampilly Le Sec": {
+    "id": "5977",
+    "libelle": "Ampilly-le-Sec (21400)"
+  },
+  "Ampuis": {
+    "id": "25513",
+    "libelle": "Ampuis (69420)"
+  },
+  "Ancelle": {
+    "id": "1753",
+    "libelle": "Ancelle (05260)"
+  },
+  "Ancenis": {
+    "id": "15465",
+    "libelle": "Ancenis (44150)"
+  },
+  "Ancey": {
+    "id": "5978",
+    "libelle": "Ancey (21410)"
+  },
+  "Ancinnes": {
+    "id": "26917",
+    "libelle": "Ancinnes (72610)"
+  },
+  "Ancy-Le-Franc": {
+    "id": "32452",
+    "libelle": "Ancy-le-Franc (89160)"
+  },
+  "Andelot-Blanche": {
+    "id": "35021",
+    "libelle": "Andelot-Blancheville (52700)"
+  },
+  "Andelot-Blancheville": {
+    "id": "35021",
+    "libelle": "Andelot-Blancheville (52700)"
+  },
+  "Andernos-Les-Bains": {
+    "id": "11480",
+    "libelle": "Andernos-les-Bains (33510)"
+  },
+  "Andiran": {
+    "id": "16363",
+    "libelle": "Andiran (47170)"
+  },
+  "Andoins": {
+    "id": "23449",
+    "libelle": "Andoins (64420)"
+  },
+  "Andon Domaine De Thorenc": {
+    "id": "1925",
+    "libelle": "Andon (06750)"
+  },
+  "Andresy": {
+    "id": "29034",
+    "libelle": "Andrésy (78570)"
+  },
+  "Andrezieux-Boutheon": {
+    "id": "14883",
+    "libelle": "Andrézieux-Bouthéon (42160)"
+  },
+  "Anduze Agglomeration": {
+    "id": "10109",
+    "libelle": "Anduze (30140)"
+  },
+  "Anduze Rmc": {
+    "id": "10109",
+    "libelle": "Anduze (30140)"
+  },
+  "Anduze-Spc": {
+    "id": "10109",
+    "libelle": "Anduze (30140)"
+  },
+  "Anetz": {
+    "id": "15466",
+    "libelle": "Anetz (44150)"
+  },
+  "Angivillers": {
+    "id": "21021",
+    "libelle": "Angivillers (60130)"
+  },
+  "Anglefort": {
+    "id": "9",
+    "libelle": "Anglefort (01350)"
+  },
+  "Angouleme Credit Agricole": {
+    "id": "4533",
+    "libelle": "Angoulême (16000)"
+  },
+  "Angouleme Poudrerie": {
+    "id": "4533",
+    "libelle": "Angoulême (16000)"
+  },
+  "Angouleme Prefecture": {
+    "id": "4533",
+    "libelle": "Angoulême (16000)"
+  },
+  "Angoustrine": {
+    "id": "24403",
+    "libelle": "Angoustrine-Villeneuve-des-Escaldes (66760)"
+  },
+  "Angrie": {
+    "id": "16864",
+    "libelle": "Angrie (49440)"
+  },
+  "Aniane": {
+    "id": "12023",
+    "libelle": "Aniane (34150)"
+  },
+  "Anlezy": {
+    "id": "20080",
+    "libelle": "Anlezy (58270)"
+  },
+  "Annebault": {
+    "id": "3584",
+    "libelle": "Annebault (14430)"
+  },
+  "Annemasse": {
+    "id": "27600",
+    "libelle": "Annemasse (74100)"
+  },
+  "Annemasse Equipement": {
+    "id": "27600",
+    "libelle": "Annemasse (74100)"
+  },
+  "Anneyron": {
+    "id": "8046",
+    "libelle": "Anneyron (26140)"
+  },
+  "Annonay": {
+    "id": "2088",
+    "libelle": "Annonay (07100)"
+  },
+  "Annot Pre De Monge": {
+    "id": "1556",
+    "libelle": "Annot (04240)"
+  },
+  "Annoville": {
+    "id": "17230",
+    "libelle": "Annoville (50660)"
+  },
+  "Anost": {
+    "id": "26349",
+    "libelle": "Anost (71550)"
+  },
+  "Anould Rm": {
+    "id": "31942",
+    "libelle": "Anould (88650)"
+  },
+  "Ansignan-Spc": {
+    "id": "24404",
+    "libelle": "Ansignan (66220)"
+  },
+  "Anterrieux": {
+    "id": "4267",
+    "libelle": "Anterrieux (15110)"
+  },
+  "Antibes": {
+    "id": "1926",
+    "libelle": "Antibes (06160)"
+  },
+  "Antibes - Les Prugnons": {
+    "id": "1926",
+    "libelle": "Antibes (06160)"
+  },
+  "Antibes Le Puy - Cge": {
+    "id": "1926",
+    "libelle": "Antibes (06160)"
+  },
+  "Antibes-Obs": {
+    "id": "1926",
+    "libelle": "Antibes (06160)"
+  },
+  "Antonne": {
+    "id": "6916",
+    "libelle": "Antonne-et-Trigonant (24420)"
+  },
+  "Antony": {
+    "id": "33188",
+    "libelle": "Antony (92160)"
+  },
+  "Antony-Tourvoie": {
+    "id": "33188",
+    "libelle": "Antony (92160)"
+  },
+  "Antraigues": {
+    "id": "2089",
+    "libelle": "Antraigues-sur-Volane (07530)"
+  },
+  "Antraigues-Sur-Volane-Spc": {
+    "id": "2089",
+    "libelle": "Antraigues-sur-Volane (07530)"
+  },
+  "Antrain": {
+    "id": "12345",
+    "libelle": "Antrain (35560)"
+  },
+  "Antully": {
+    "id": "26350",
+    "libelle": "Antully (71400)"
+  },
+  "Anzat-Le-Luguet": {
+    "id": "22967",
+    "libelle": "Anzat-le-Luguet (63420)"
+  },
+  "Anzeme Montbut": {
+    "id": "6652",
+    "libelle": "Anzème (23000)"
+  },
+  "Anzeme Pechadoire": {
+    "id": "6652",
+    "libelle": "Anzème (23000)"
+  },
+  "Aouste Sur Sye": {
+    "id": "8047",
+    "libelle": "Aouste-sur-Sye (26400)"
+  },
+  "Arache": {
+    "id": "27601",
+    "libelle": "Arâches (74300)"
+  },
+  "Aragnouet": {
+    "id": "23941",
+    "libelle": "Aragnouet (65170)"
+  },
+  "Aragnouet Chaubere": {
+    "id": "23941",
+    "libelle": "Aragnouet (65170)"
+  },
+  "Aragnouet Fabian": {
+    "id": "23941",
+    "libelle": "Aragnouet (65170)"
+  },
+  "Araing": {
+    "id": "14159",
+    "libelle": "Saint-Baraing (39120)"
+  },
+  "Aramon": {
+    "id": "10111",
+    "libelle": "Aramon (30390)"
+  },
+  "Aramon Usine": {
+    "id": "10111",
+    "libelle": "Aramon (30390)"
+  },
+  "Arbas": {
+    "id": "10456",
+    "libelle": "Arbas (31160)"
+  },
+  "Arbent": {
+    "id": "13",
+    "libelle": "Arbent (01100)"
+  },
+  "Arbois": {
+    "id": "13725",
+    "libelle": "Arbois (39600)"
+  },
+  "Arbrissel": {
+    "id": "12346",
+    "libelle": "Arbrissel (35130)"
+  },
+  "Arbéost": {
+    "id": "52109",
+    "libelle": "Arbéost"
+  },
+  "Arc-En-Barrois": {
+    "id": "35030",
+    "libelle": "Arc-en-Barrois (52210)"
+  },
+  "Arc-Et-Senans": {
+    "id": "7464",
+    "libelle": "Arc-et-Senans (25610)"
+  },
+  "Arc-Les-Gray": {
+    "id": "25824",
+    "libelle": "Arc-lès-Gray (70100)"
+  },
+  "Arcachon": {
+    "id": "11484",
+    "libelle": "Arcachon (33120)"
+  },
+  "Arcachon Agglomeration - Cmd": {
+    "id": "11484",
+    "libelle": "Arcachon (33120)"
+  },
+  "Arcachon Lycee Climatique": {
+    "id": "11484",
+    "libelle": "Arcachon (33120)"
+  },
+  "Arcachon Piquey": {
+    "id": "11484",
+    "libelle": "Arcachon (33120)"
+  },
+  "Arcais Agglomeration": {
+    "id": "29295",
+    "libelle": "Arçais (79210)"
+  },
+  "Arceau Hameau D'Arcelot": {
+    "id": "33725",
+    "libelle": "Arceau (21310)"
+  },
+  "Arcens": {
+    "id": "2090",
+    "libelle": "Arcens (07310)"
+  },
+  "Arces-Dilo": {
+    "id": "32460",
+    "libelle": "Arces-Dilo (89320)"
+  },
+  "Archamps": {
+    "id": "27603",
+    "libelle": "Archamps (74160)"
+  },
+  "Archiac": {
+    "id": "4933",
+    "libelle": "Archiac (17520)"
+  },
+  "Archignat": {
+    "id": "1235",
+    "libelle": "Archignat (03380)"
+  },
+  "Archignat-Spc": {
+    "id": "1235",
+    "libelle": "Archignat (03380)"
+  },
+  "Archigny": {
+    "id": "31461",
+    "libelle": "Archigny (86210)"
+  },
+  "Archingeay": {
+    "id": "4934",
+    "libelle": "Archingeay (17380)"
+  },
+  "Arcy-Ste-Restit": {
+    "id": "438",
+    "libelle": "Arcy-Sainte-Restitue (02130)"
+  },
+  "Ardentes": {
+    "id": "12666",
+    "libelle": "Ardentes (36120)"
+  },
+  "Ardentes - Onf": {
+    "id": "12666",
+    "libelle": "Ardentes (36120)"
+  },
+  "Ardouval": {
+    "id": "27859",
+    "libelle": "Ardouval (76680)"
+  },
+  "Areches": {
+    "id": "84426",
+    "libelle": "Areches"
+  },
+  "Areines": {
+    "id": "14592",
+    "libelle": "Areines (41100)"
+  },
+  "Areines - Lycee": {
+    "id": "14592",
+    "libelle": "Areines (41100)"
+  },
+  "Arengosse": {
+    "id": "14265",
+    "libelle": "Arengosse (40110)"
+  },
+  "Arette": {
+    "id": "23464",
+    "libelle": "Arette (64570)"
+  },
+  "Arette-Ec": {
+    "id": "23464",
+    "libelle": "Arette (64570)"
+  },
+  "Arfeuilles": {
+    "id": "1236",
+    "libelle": "Arfeuilles (03120)"
+  },
+  "Arfons": {
+    "id": "30389",
+    "libelle": "Arfons (81110)"
+  },
+  "Argagnon": {
+    "id": "23466",
+    "libelle": "Argagnon (64300)"
+  },
+  "Argeles-Sur-Mer": {
+    "id": "24406",
+    "libelle": "Argelès-sur-Mer (66700)"
+  },
+  "Argeliers": {
+    "id": "2755",
+    "libelle": "Argeliers (11120)"
+  },
+  "Argences": {
+    "id": "3586",
+    "libelle": "Argences (14370)"
+  },
+  "Argens-Minervois": {
+    "id": "2756",
+    "libelle": "Argens-Minervois (11200)"
+  },
+  "Argentan": {
+    "id": "21703",
+    "libelle": "Argentan (61200)"
+  },
+  "Argentan Agglomeration": {
+    "id": "21703",
+    "libelle": "Argentan (61200)"
+  },
+  "Argentat": {
+    "id": "5689",
+    "libelle": "Argentat (19400)"
+  },
+  "Argentat Avenue Clemenceau": {
+    "id": "5689",
+    "libelle": "Argentat (19400)"
+  },
+  "Argentat-Basteyroux-Spc": {
+    "id": "5689",
+    "libelle": "Argentat (19400)"
+  },
+  "Argers": {
+    "id": "36034",
+    "libelle": "Argers (51800)"
+  },
+  "Arinthod": {
+    "id": "13728",
+    "libelle": "Arinthod (39240)"
+  },
+  "Arjuzanx": {
+    "id": "14268",
+    "libelle": "Arjuzanx (40110)"
+  },
+  "Arles-Sur-Tech": {
+    "id": "24407",
+    "libelle": "Arles-sur-Tech (66150)"
+  },
+  "Arleuf": {
+    "id": "20084",
+    "libelle": "Arleuf (58430)"
+  },
+  "Arleuf Agglomeration": {
+    "id": "20084",
+    "libelle": "Arleuf (58430)"
+  },
+  "Arleuf Les Pasqualins": {
+    "id": "20084",
+    "libelle": "Arleuf (58430)"
+  },
+  "Arnac-Pompadour": {
+    "id": "5690",
+    "libelle": "Arnac-Pompadour (19230)"
+  },
+  "Arnay Le Duc": {
+    "id": "5986",
+    "libelle": "Arnay-le-Duc (21230)"
+  },
+  "Arphy": {
+    "id": "10114",
+    "libelle": "Arphy (30120)"
+  },
+  "Arques-La-Bataille": {
+    "id": "27861",
+    "libelle": "Arques-la-Bataille (76880)"
+  },
+  "Arquettes En Va": {
+    "id": "2759",
+    "libelle": "Arquettes-en-Val (11220)"
+  },
+  "Arquettes-En-Val": {
+    "id": "2759",
+    "libelle": "Arquettes-en-Val (11220)"
+  },
+  "Arracourt": {
+    "id": "18079",
+    "libelle": "Arracourt (54370)"
+  },
+  "Arradon": {
+    "id": "19115",
+    "libelle": "Arradon (56610)"
+  },
+  "Arreau-Spc": {
+    "id": "23954",
+    "libelle": "Arreau (65240)"
+  },
+  "Arrelles": {
+    "id": "34765",
+    "libelle": "Arrelles (10340)"
+  },
+  "Arrembecourt": {
+    "id": "34419",
+    "libelle": "Arrembécourt (10330)"
+  },
+  "Arrembecourt Agglomeration": {
+    "id": "34419",
+    "libelle": "Arrembécourt (10330)"
+  },
+  "Arrens Marsous": {
+    "id": "23955",
+    "libelle": "Arrens-Marsous (65400)"
+  },
+  "Arrigas Sanatorium": {
+    "id": "10116",
+    "libelle": "Arrigas (30770)"
+  },
+  "Arronville": {
+    "id": "33309",
+    "libelle": "Arronville (95810)"
+  },
+  "Arsy": {
+    "id": "21031",
+    "libelle": "Arsy (60190)"
+  },
+  "Artaix": {
+    "id": "26352",
+    "libelle": "Artaix (71110)"
+  },
+  "Artaix Agglomeration": {
+    "id": "26352",
+    "libelle": "Artaix (71110)"
+  },
+  "Artenay Sucrerie": {
+    "id": "15688",
+    "libelle": "Artenay (45410)"
+  },
+  "Arthes": {
+    "id": "30391",
+    "libelle": "Arthès (81160)"
+  },
+  "Arthez-D Armag": {
+    "id": "14271",
+    "libelle": "Arthez-d'Armagnac (40190)"
+  },
+  "Arthon-En-Retz": {
+    "id": "15467",
+    "libelle": "Arthon-en-Retz (44320)"
+  },
+  "Artiguelouve-Spc": {
+    "id": "23479",
+    "libelle": "Artiguelouve (64230)"
+  },
+  "Artonne": {
+    "id": "22973",
+    "libelle": "Artonne (63460)"
+  },
+  "Artouste": {
+    "id": "39998",
+    "libelle": "Artouste (64440)"
+  },
+  "Arvieux": {
+    "id": "1756",
+    "libelle": "Arvieux (05350)"
+  },
+  "Arvieux Brunissard": {
+    "id": "1756",
+    "libelle": "Arvieux (05350)"
+  },
+  "Arvieux La Chalp": {
+    "id": "1756",
+    "libelle": "Arvieux (05350)"
+  },
+  "Arvigna": {
+    "id": "2433",
+    "libelle": "Arvigna (09100)"
+  },
+  "Arvillard": {
+    "id": "27305",
+    "libelle": "Arvillard (73110)"
+  },
+  "Arzal": {
+    "id": "19116",
+    "libelle": "Arzal (56190)"
+  },
+  "Arzens": {
+    "id": "2761",
+    "libelle": "Arzens (11290)"
+  },
+  "Arzviller": {
+    "id": "19402",
+    "libelle": "Arzviller (57400)"
+  },
+  "Ascou Lavail": {
+    "id": "2434",
+    "libelle": "Ascou (09110)"
+  },
+  "Ascou Pailheres": {
+    "id": "2434",
+    "libelle": "Ascou (09110)"
+  },
+  "Ascros": {
+    "id": "1927",
+    "libelle": "Ascros (06260)"
+  },
+  "Asfeld": {
+    "id": "35235",
+    "libelle": "Asfeld (08190)"
+  },
+  "Asnelles": {
+    "id": "3588",
+    "libelle": "Asnelles (14960)"
+  },
+  "Asnieres/Oise": {
+    "id": "33311",
+    "libelle": "Asnières-sur-Oise (95270)"
+  },
+  "Asnieres/Seine": {
+    "id": "33189",
+    "libelle": "Asnières-sur-Seine (92600)"
+  },
+  "Aspach Le Bas": {
+    "id": "25141",
+    "libelle": "Aspach-le-Bas (68700)"
+  },
+  "Aspiran-Spc": {
+    "id": "12026",
+    "libelle": "Aspiran (34800)"
+  },
+  "Assais": {
+    "id": "29301",
+    "libelle": "Assais-les-Jumeaux (79600)"
+  },
+  "Asson": {
+    "id": "34287",
+    "libelle": "Asson (64800)"
+  },
+  "Aston": {
+    "id": "2435",
+    "libelle": "Aston (09310)"
+  },
+  "Athienville-Aggl": {
+    "id": "18082",
+    "libelle": "Athienville (54370)"
+  },
+  "Athis-De-L'Orne": {
+    "id": "21704",
+    "libelle": "Athis-de-l'Orne (61430)"
+  },
+  "Athis-Mons": {
+    "id": "32997",
+    "libelle": "Athis-Mons (91200)"
+  },
+  "Aubagne": {
+    "id": "3482",
+    "libelle": "Aubagne (13400)"
+  },
+  "Aubagne-Dde": {
+    "id": "3482",
+    "libelle": "Aubagne (13400)"
+  },
+  "Aubaine": {
+    "id": "5993",
+    "libelle": "Aubaine (21360)"
+  },
+  "Aubenton": {
+    "id": "447",
+    "libelle": "Aubenton (02500)"
+  },
+  "Aubervilliers": {
+    "id": "33794",
+    "libelle": "Aubervilliers (93300)"
+  },
+  "Aubiat": {
+    "id": "22974",
+    "libelle": "Aubiat (63260)"
+  },
+  "Aubiere": {
+    "id": "22975",
+    "libelle": "Aubière (63170)"
+  },
+  "Aubiet-Spc": {
+    "id": "11024",
+    "libelle": "Aubiet (32270)"
+  },
+  "Aubreville": {
+    "id": "18632",
+    "libelle": "Aubréville (55120)"
+  },
+  "Aubry En Exmes": {
+    "id": "21706",
+    "libelle": "Aubry-en-Exmes (61160)"
+  },
+  "Aubure": {
+    "id": "25144",
+    "libelle": "Aubure (68150)"
+  },
+  "Aubure - Rm": {
+    "id": "25144",
+    "libelle": "Aubure (68150)"
+  },
+  "Aubure Sad12": {
+    "id": "25144",
+    "libelle": "Aubure (68150)"
+  },
+  "Auch Dde": {
+    "id": "11025",
+    "libelle": "Auch (32000)"
+  },
+  "Auch Grisous": {
+    "id": "11025",
+    "libelle": "Auch (32000)"
+  },
+  "Auch-Spc": {
+    "id": "11025",
+    "libelle": "Auch (32000)"
+  },
+  "Audembert": {
+    "id": "22242",
+    "libelle": "Audembert (62250)"
+  },
+  "Audenge Agglomeration": {
+    "id": "11494",
+    "libelle": "Audenge (33980)"
+  },
+  "Audigny": {
+    "id": "451",
+    "libelle": "Audigny (02120)"
+  },
+  "Audinghen Cap Gris-Nez Sem": {
+    "id": "22244",
+    "libelle": "Audinghen (62179)"
+  },
+  "Audrehem Shc": {
+    "id": "22245",
+    "libelle": "Audrehem (62890)"
+  },
+  "Audressein": {
+    "id": "2437",
+    "libelle": "Audressein (09800)"
+  },
+  "Audruicq": {
+    "id": "22247",
+    "libelle": "Audruicq (62370)"
+  },
+  "Auffargis": {
+    "id": "29037",
+    "libelle": "Auffargis (78610)"
+  },
+  "Auffay": {
+    "id": "27869",
+    "libelle": "Auffay (76720)"
+  },
+  "Augers-En-Brie": {
+    "id": "28589",
+    "libelle": "Augers-en-Brie (77560)"
+  },
+  "Augirein": {
+    "id": "2438",
+    "libelle": "Augirein (09800)"
+  },
+  "Aulnois-Sous-Laon": {
+    "id": "453",
+    "libelle": "Aulnois-sous-Laon (02000)"
+  },
+  "Aulnoye-Aymeries-Spc": {
+    "id": "20413",
+    "libelle": "Aulnoye-Aymeries (59620)"
+  },
+  "Ault": {
+    "id": "29628",
+    "libelle": "Ault (80460)"
+  },
+  "Aulus Les Bains": {
+    "id": "2440",
+    "libelle": "Aulus-les-Bains (09140)"
+  },
+  "Aulus-Les-Bains": {
+    "id": "2440",
+    "libelle": "Aulus-les-Bains (09140)"
+  },
+  "Aumale": {
+    "id": "27870",
+    "libelle": "Aumale (76390)"
+  },
+  "Aumetz-Pc": {
+    "id": "19410",
+    "libelle": "Aumetz (57710)"
+  },
+  "Aumont Aubrac": {
+    "id": "16679",
+    "libelle": "Aumont-Aubrac (48130)"
+  },
+  "Auneau": {
+    "id": "9092",
+    "libelle": "Auneau (28700)"
+  },
+  "Auneuil": {
+    "id": "21036",
+    "libelle": "Auneuil (60390)"
+  },
+  "Aups": {
+    "id": "30877",
+    "libelle": "Aups (83630)"
+  },
+  "Auragne": {
+    "id": "10468",
+    "libelle": "Auragne (31190)"
+  },
+  "Auragne Ponties": {
+    "id": "10468",
+    "libelle": "Auragne (31190)"
+  },
+  "Auray": {
+    "id": "19119",
+    "libelle": "Auray (56400)"
+  },
+  "Aurelle-Verlac": {
+    "id": "3188",
+    "libelle": "Aurelle-Verlac (12130)"
+  },
+  "Auriac-Du-Perigord": {
+    "id": "6922",
+    "libelle": "Auriac-du-Périgord (24290)"
+  },
+  "Auribail Agglomeration": {
+    "id": "10471",
+    "libelle": "Auribail (31190)"
+  },
+  "Aurignac": {
+    "id": "10472",
+    "libelle": "Aurignac (31420)"
+  },
+  "Aurillac": {
+    "id": "4274",
+    "libelle": "Aurillac (15000)"
+  },
+  "Auriol Col De La Coutronne": {
+    "id": "3484",
+    "libelle": "Auriol (13390)"
+  },
+  "Auris-En-Oisans": {
+    "id": "84427",
+    "libelle": "Auris-En-Oisans"
+  },
+  "Auros": {
+    "id": "11496",
+    "libelle": "Auros (33124)"
+  },
+  "Auroux": {
+    "id": "16680",
+    "libelle": "Auroux (48600)"
+  },
+  "Aussois": {
+    "id": "27307",
+    "libelle": "Aussois (73500)"
+  },
+  "Aussois-Clim": {
+    "id": "27307",
+    "libelle": "Aussois (73500)"
+  },
+  "Autouillet": {
+    "id": "29041",
+    "libelle": "Autouillet (78770)"
+  },
+  "Autrac": {
+    "id": "15218",
+    "libelle": "Autrac (43450)"
+  },
+  "Autrans": {
+    "id": "13205",
+    "libelle": "Autrans (38880)"
+  },
+  "Autrans-Nivo": {
+    "id": "13205",
+    "libelle": "Autrans (38880)"
+  },
+  "Autrey Le Vay": {
+    "id": "25838",
+    "libelle": "Autrey-le-Vay (70110)"
+  },
+  "Autun": {
+    "id": "26354",
+    "libelle": "Autun (71400)"
+  },
+  "Autun-Omnither": {
+    "id": "26354",
+    "libelle": "Autun (71400)"
+  },
+  "Auvernaux": {
+    "id": "32999",
+    "libelle": "Auvernaux (91830)"
+  },
+  "Auvers Le Hamon": {
+    "id": "26927",
+    "libelle": "Auvers-le-Hamon (72300)"
+  },
+  "Auvers-Le-Hamon": {
+    "id": "26927",
+    "libelle": "Auvers-le-Hamon (72300)"
+  },
+  "Auverse Agglomeration": {
+    "id": "16868",
+    "libelle": "Auverse (49490)"
+  },
+  "Auxerre": {
+    "id": "32470",
+    "libelle": "Auxerre (89000)"
+  },
+  "Auxerre - Ile": {
+    "id": "32470",
+    "libelle": "Auxerre (89000)"
+  },
+  "Auxerre Avenue Pasteur": {
+    "id": "32470",
+    "libelle": "Auxerre (89000)"
+  },
+  "Auxonne": {
+    "id": "6001",
+    "libelle": "Auxonne (21130)"
+  },
+  "Auzances": {
+    "id": "6661",
+    "libelle": "Auzances (23700)"
+  },
+  "Auzances Agglomeration": {
+    "id": "6661",
+    "libelle": "Auzances (23700)"
+  },
+  "Auzat-Sur-Allie": {
+    "id": "22983",
+    "libelle": "Auzat-sur-Allier (63570)"
+  },
+  "Auzebosc": {
+    "id": "27878",
+    "libelle": "Auzebosc (76190)"
+  },
+  "Availles-Limouzine": {
+    "id": "31467",
+    "libelle": "Availles-Limouzine (86460)"
+  },
+  "Avallon": {
+    "id": "32471",
+    "libelle": "Avallon (89200)"
+  },
+  "Avallon Agglomeration": {
+    "id": "32471",
+    "libelle": "Avallon (89200)"
+  },
+  "Avallon Veyrat": {
+    "id": "32471",
+    "libelle": "Avallon (89200)"
+  },
+  "Avant-Les-Ramerupt": {
+    "id": "34757",
+    "libelle": "Avant-lès-Ramerupt (10240)"
+  },
+  "Avene Barrage": {
+    "id": "12032",
+    "libelle": "Avène (34260)"
+  },
+  "Avermes Rue Des Gateaux": {
+    "id": "1243",
+    "libelle": "Avermes (03000)"
+  },
+  "Avesnelles": {
+    "id": "20415",
+    "libelle": "Avesnelles (59440)"
+  },
+  "Avesnelles-Spc": {
+    "id": "20415",
+    "libelle": "Avesnelles (59440)"
+  },
+  "Avesnes-Sur-Helpe": {
+    "id": "20416",
+    "libelle": "Avesnes-sur-Helpe (59440)"
+  },
+  "Avignonet-Lauragais": {
+    "id": "10481",
+    "libelle": "Avignonet-Lauragais (31290)"
+  },
+  "Avize": {
+    "id": "35840",
+    "libelle": "Avize (51190)"
+  },
+  "Avize-Civc": {
+    "id": "35840",
+    "libelle": "Avize (51190)"
+  },
+  "Avize-Man": {
+    "id": "35840",
+    "libelle": "Avize (51190)"
+  },
+  "Avocourt": {
+    "id": "18638",
+    "libelle": "Avocourt (55270)"
+  },
+  "Avon-Les-Roches": {
+    "id": "12920",
+    "libelle": "Avon-les-Roches (37220)"
+  },
+  "Avord": {
+    "id": "5408",
+    "libelle": "Avord (18520)"
+  },
+  "Avoriaz": {
+    "id": "39984",
+    "libelle": "Avoriaz (74110)"
+  },
+  "Avranches": {
+    "id": "17238",
+    "libelle": "Avranches (50300)"
+  },
+  "Avremesnil": {
+    "id": "27885",
+    "libelle": "Avremesnil (76730)"
+  },
+  "Avrieux": {
+    "id": "27309",
+    "libelle": "Avrieux (73500)"
+  },
+  "Avrieux Enregistreur Edf": {
+    "id": "27309",
+    "libelle": "Avrieux (73500)"
+  },
+  "Avrée": {
+    "id": "82897",
+    "libelle": "Avrée"
+  },
+  "Ax Bonascre": {
+    "id": "40027",
+    "libelle": "Ax 3 Domaines (09110)"
+  },
+  "Ax Les Thermes": {
+    "id": "2443",
+    "libelle": "Ax-les-Thermes (09110)"
+  },
+  "Aydius": {
+    "id": "23502",
+    "libelle": "Aydius (64490)"
+  },
+  "Ayen-Spc": {
+    "id": "5694",
+    "libelle": "Ayen (19310)"
+  },
+  "Ayros Arbouix": {
+    "id": "23978",
+    "libelle": "Ayros-Arbouix (65400)"
+  },
+  "Ayvelles": {
+    "id": "35413",
+    "libelle": "Les Ayvelles (08000)"
+  },
+  "Azolette": {
+    "id": "25521",
+    "libelle": "Azolette (69790)"
+  },
+  "Baccarat": {
+    "id": "18095",
+    "libelle": "Baccarat (54120)"
+  },
+  "Baccarat-Spc": {
+    "id": "18095",
+    "libelle": "Baccarat (54120)"
+  },
+  "Baccon": {
+    "id": "15699",
+    "libelle": "Baccon (45130)"
+  },
+  "Badonviller": {
+    "id": "18096",
+    "libelle": "Badonviller (54540)"
+  },
+  "Bagard": {
+    "id": "10126",
+    "libelle": "Bagard (30140)"
+  },
+  "Bagatelle": {
+    "id": "22669",
+    "libelle": "Merlimont (62155)"
+  },
+  "Bagneres-De-Luc": {
+    "id": "10486",
+    "libelle": "Bagnères-de-Luchon (31110)"
+  },
+  "Bagneres-De-Luchon": {
+    "id": "10486",
+    "libelle": "Bagnères-de-Luchon (31110)"
+  },
+  "Bagnoles-De-L'Orne": {
+    "id": "21719",
+    "libelle": "Bagnoles-de-l'Orne (61140)"
+  },
+  "Bagnolet": {
+    "id": "33225",
+    "libelle": "Bagnolet (93170)"
+  },
+  "Bagnols En Foret": {
+    "id": "30878",
+    "libelle": "Bagnols-en-Forêt (83600)"
+  },
+  "Bagnols-En-Foret": {
+    "id": "30878",
+    "libelle": "Bagnols-en-Forêt (83600)"
+  },
+  "Bagnols-Sur-Ceze": {
+    "id": "10127",
+    "libelle": "Bagnols-sur-Cèze (30200)"
+  },
+  "Bahus Fleton": {
+    "id": "14280",
+    "libelle": "Bahus-Soubiran (40320)"
+  },
+  "Bahus-Soubiran": {
+    "id": "14280",
+    "libelle": "Bahus-Soubiran (40320)"
+  },
+  "Baigneux Les Juifs": {
+    "id": "6006",
+    "libelle": "Baigneux-les-Juifs (21450)"
+  },
+  "Baigts-De-Bearn": {
+    "id": "23504",
+    "libelle": "Baigts-de-Béarn (64300)"
+  },
+  "Baillestavy": {
+    "id": "24411",
+    "libelle": "Baillestavy (66320)"
+  },
+  "Bailleul-Le-Soc": {
+    "id": "21047",
+    "libelle": "Bailleul-le-Soc (60190)"
+  },
+  "Bain-De-B.": {
+    "id": "12353",
+    "libelle": "Bain-de-Bretagne (35470)"
+  },
+  "Bainghen": {
+    "id": "22266",
+    "libelle": "Bainghen (62850)"
+  },
+  "Bainghen Osthove - Brgm - Shc": {
+    "id": "22266",
+    "libelle": "Bainghen (62850)"
+  },
+  "Bains-Les-Bains": {
+    "id": "31962",
+    "libelle": "Bains-les-Bains (88240)"
+  },
+  "Bajus": {
+    "id": "22267",
+    "libelle": "Bajus (62150)"
+  },
+  "Balbigny": {
+    "id": "14889",
+    "libelle": "Balbigny (42510)"
+  },
+  "Baldersheim": {
+    "id": "25145",
+    "libelle": "Baldersheim (68390)"
+  },
+  "Ballancourt": {
+    "id": "33003",
+    "libelle": "Ballancourt-sur-Essonne (91610)"
+  },
+  "Ballee Pastouri": {
+    "id": "17815",
+    "libelle": "Ballée (53340)"
+  },
+  "Ballots": {
+    "id": "17816",
+    "libelle": "Ballots (53350)"
+  },
+  "Balloy": {
+    "id": "28594",
+    "libelle": "Balloy (77118)"
+  },
+  "Balsieges Agglomeration": {
+    "id": "16685",
+    "libelle": "Balsièges (48000)"
+  },
+  "Ban-De-Sapt": {
+    "id": "31966",
+    "libelle": "Ban-de-Sapt (88210)"
+  },
+  "Ban-De-Sapt Man": {
+    "id": "31966",
+    "libelle": "Ban-de-Sapt (88210)"
+  },
+  "Banassac Agglomeration": {
+    "id": "16686",
+    "libelle": "Banassac (48500)"
+  },
+  "Bandol": {
+    "id": "30879",
+    "libelle": "Bandol (83150)"
+  },
+  "Baneins": {
+    "id": "25",
+    "libelle": "Baneins (01990)"
+  },
+  "Bannalec": {
+    "id": "9465",
+    "libelle": "Bannalec (29380)"
+  },
+  "Banogne-Recouvrance": {
+    "id": "35251",
+    "libelle": "Banogne-Recouvrance (08220)"
+  },
+  "Banon": {
+    "id": "1562",
+    "libelle": "Banon (04150)"
+  },
+  "Banyuls-Sur-Mer": {
+    "id": "24414",
+    "libelle": "Banyuls-sur-Mer (66650)"
+  },
+  "Bar Le Duc": {
+    "id": "18644",
+    "libelle": "Bar-le-Duc (55000)"
+  },
+  "Bar-Sur-Aube": {
+    "id": "34373",
+    "libelle": "Bar-sur-Aube (10200)"
+  },
+  "Bar-Sur-Loup": {
+    "id": "1932",
+    "libelle": "Le Bar-sur-Loup (06620)"
+  },
+  "Bar-Sur-Seine": {
+    "id": "34596",
+    "libelle": "Bar-sur-Seine (10110)"
+  },
+  "Barbaggio": {
+    "id": "9878",
+    "libelle": "Barbaggio (20253)"
+  },
+  "Barbaira": {
+    "id": "2770",
+    "libelle": "Barbaira (11800)"
+  },
+  "Barbentane": {
+    "id": "3485",
+    "libelle": "Barbentane (13570)"
+  },
+  "Barbezieux-Saint-Hilaire": {
+    "id": "4545",
+    "libelle": "Barbezieux-Saint-Hilaire (16300)"
+  },
+  "Barbizon": {
+    "id": "28596",
+    "libelle": "Barbizon (77630)"
+  },
+  "Barcelonnette": {
+    "id": "1563",
+    "libelle": "Barcelonnette (04400)"
+  },
+  "Barcillonnette": {
+    "id": "1762",
+    "libelle": "Barcillonnette (05110)"
+  },
+  "Bareges": {
+    "id": "24398",
+    "libelle": "Barèges (65120)"
+  },
+  "Barfleur": {
+    "id": "17243",
+    "libelle": "Barfleur (50760)"
+  },
+  "Bargemon": {
+    "id": "30881",
+    "libelle": "Bargemon (83830)"
+  },
+  "Barjols": {
+    "id": "30882",
+    "libelle": "Barjols (83670)"
+  },
+  "Barnas": {
+    "id": "2102",
+    "libelle": "Barnas (07330)"
+  },
+  "Barnas-Spc": {
+    "id": "2102",
+    "libelle": "Barnas (07330)"
+  },
+  "Barneville - Carteret": {
+    "id": "17244",
+    "libelle": "Barneville-Carteret (50270)"
+  },
+  "Barre-Des-Cevennes": {
+    "id": "16688",
+    "libelle": "Barre-des-Cévennes (48400)"
+  },
+  "Barreme": {
+    "id": "1566",
+    "libelle": "Barrême (04330)"
+  },
+  "Bas-En-Basset": {
+    "id": "15224",
+    "libelle": "Bas-en-Basset (43210)"
+  },
+  "Bassillac": {
+    "id": "6929",
+    "libelle": "Bassillac (24330)"
+  },
+  "Bassillac Agglomeration": {
+    "id": "6929",
+    "libelle": "Bassillac (24330)"
+  },
+  "Bassoues": {
+    "id": "11044",
+    "libelle": "Bassoues (32320)"
+  },
+  "Bassurels": {
+    "id": "16689",
+    "libelle": "Bassurels (48400)"
+  },
+  "Bassurels Tunnel De Marquaires": {
+    "id": "16689",
+    "libelle": "Bassurels (48400)"
+  },
+  "Bastide Eveque": {
+    "id": "3195",
+    "libelle": "La Bastide-l'Évêque (12200)"
+  },
+  "Bastide Solages": {
+    "id": "3197",
+    "libelle": "La Bastide-Solages (12550)"
+  },
+  "Baud Agglomeration": {
+    "id": "19122",
+    "libelle": "Baud (56150)"
+  },
+  "Baudemont": {
+    "id": "26362",
+    "libelle": "Baudemont (71800)"
+  },
+  "Baudinard": {
+    "id": "30884",
+    "libelle": "Baudinard-sur-Verdon (83630)"
+  },
+  "Baudreix": {
+    "id": "34282",
+    "libelle": "Baudreix (64800)"
+  },
+  "Bauge": {
+    "id": "16872",
+    "libelle": "Baugé (49150)"
+  },
+  "Baule": {
+    "id": "15704",
+    "libelle": "Baule (45130)"
+  },
+  "Baule-Escoublac": {
+    "id": "15515",
+    "libelle": "La Baule-Escoublac (44500)"
+  },
+  "Baume-Les-Dames": {
+    "id": "7488",
+    "libelle": "Baume-les-Dames (25110)"
+  },
+  "Baupte": {
+    "id": "17249",
+    "libelle": "Baupte (50500)"
+  },
+  "Bavay": {
+    "id": "20431",
+    "libelle": "Bavay (59570)"
+  },
+  "Bavilliers Rte De Froideval": {
+    "id": "32899",
+    "libelle": "Bavilliers (90850)"
+  },
+  "Bayon Sur Giron": {
+    "id": "11510",
+    "libelle": "Bayon-sur-Gironde (33710)"
+  },
+  "Bayons": {
+    "id": "1567",
+    "libelle": "Bayons (04250)"
+  },
+  "Bazailles Mine": {
+    "id": "18112",
+    "libelle": "Bazailles (54620)"
+  },
+  "Bazas": {
+    "id": "11511",
+    "libelle": "Bazas (33430)"
+  },
+  "Baziege-Spc": {
+    "id": "10492",
+    "libelle": "Baziège (31450)"
+  },
+  "Bazoches-Au-Houlme": {
+    "id": "21725",
+    "libelle": "Bazoches-au-Houlme (61210)"
+  },
+  "Bazolles": {
+    "id": "20098",
+    "libelle": "Bazolles (58110)"
+  },
+  "Bazougers": {
+    "id": "17821",
+    "libelle": "Bazougers (53170)"
+  },
+  "Bazouges-La-Perouse": {
+    "id": "12360",
+    "libelle": "Bazouges-la-Pérouse (35560)"
+  },
+  "Bazus-Aure": {
+    "id": "23998",
+    "libelle": "Bazus-Aure (65170)"
+  },
+  "Beage": {
+    "id": "2103",
+    "libelle": "Le Béage (07630)"
+  },
+  "Beaubery": {
+    "id": "26365",
+    "libelle": "Beaubery (71220)"
+  },
+  "Beaucamps-Le-J": {
+    "id": "29650",
+    "libelle": "Beaucamps-le-Jeune (80430)"
+  },
+  "Beaucamps-Le-V": {
+    "id": "29651",
+    "libelle": "Beaucamps-le-Vieux (80430)"
+  },
+  "Beauchalot /Sa": {
+    "id": "10494",
+    "libelle": "Beauchalot (31360)"
+  },
+  "Beauchery": {
+    "id": "28600",
+    "libelle": "Beauchery-Saint-Martin (77560)"
+  },
+  "Beauchery - Bg": {
+    "id": "28600",
+    "libelle": "Beauchery-Saint-Martin (77560)"
+  },
+  "Beaucoudray": {
+    "id": "17252",
+    "libelle": "Beaucoudray (50420)"
+  },
+  "Beaucroissant": {
+    "id": "13214",
+    "libelle": "Beaucroissant (38140)"
+  },
+  "Beaudean Traouessarou": {
+    "id": "24001",
+    "libelle": "Beaudéan (65710)"
+  },
+  "Beaufort-En-Va": {
+    "id": "16875",
+    "libelle": "Beaufort-en-Vallée (49250)"
+  },
+  "Beaufort-Sur-Gervanne": {
+    "id": "8069",
+    "libelle": "Beaufort-sur-Gervanne (26400)"
+  },
+  "Beaufremont Aggl.": {
+    "id": "31977",
+    "libelle": "Beaufremont (88300)"
+  },
+  "Beaujeu Saint Pierre": {
+    "id": "25854",
+    "libelle": "Beaujeu-Saint-Vallier-Pierrejux-et-Quitteur (70100)"
+  },
+  "Beaulieu-Sur-Layon": {
+    "id": "16876",
+    "libelle": "Beaulieu-sur-Layon (49750)"
+  },
+  "Beaulieu-Sur-Mer": {
+    "id": "1933",
+    "libelle": "Beaulieu-sur-Mer (06310)"
+  },
+  "Beaumetz-Les-Loges": {
+    "id": "22286",
+    "libelle": "Beaumetz-lès-Loges (62123)"
+  },
+  "Beaumont De Pertuis": {
+    "id": "31034",
+    "libelle": "Beaumont-de-Pertuis (84120)"
+  },
+  "Beaumont Du Lac": {
+    "id": "31741",
+    "libelle": "Beaumont-du-Lac (87120)"
+  },
+  "Beaumont Du Ventoux": {
+    "id": "31035",
+    "libelle": "Beaumont-du-Ventoux (84340)"
+  },
+  "Beaumont-De-Pertuis": {
+    "id": "31034",
+    "libelle": "Beaumont-de-Pertuis (84120)"
+  },
+  "Beaumont-Le-Roger": {
+    "id": "8454",
+    "libelle": "Beaumont-le-Roger (27170)"
+  },
+  "Beaumont-Monteux": {
+    "id": "8072",
+    "libelle": "Beaumont-Monteux (26600)"
+  },
+  "Beaumont/Oise": {
+    "id": "33318",
+    "libelle": "Beaumont-sur-Oise (95260)"
+  },
+  "Beaupont": {
+    "id": "26",
+    "libelle": "Beaupont (01270)"
+  },
+  "Beaupreau": {
+    "id": "16877",
+    "libelle": "Beaupréau (49600)"
+  },
+  "Beaupreau Agglomeration": {
+    "id": "16877",
+    "libelle": "Beaupréau (49600)"
+  },
+  "Beauvene-Spc": {
+    "id": "2107",
+    "libelle": "Beauvène (07190)"
+  },
+  "Beauvoir Sur Mer": {
+    "id": "31186",
+    "libelle": "Beauvoir-sur-Mer (85230)"
+  },
+  "Beauvoir-Sur-Ni": {
+    "id": "29313",
+    "libelle": "Beauvoir-sur-Niort (79360)"
+  },
+  "Beauvoir-Sur-Niort": {
+    "id": "29313",
+    "libelle": "Beauvoir-sur-Niort (79360)"
+  },
+  "Beauzac-Spc": {
+    "id": "15229",
+    "libelle": "Beauzac (43590)"
+  },
+  "Beceleuf Agglomeration": {
+    "id": "29314",
+    "libelle": "Béceleuf (79160)"
+  },
+  "Becon-Les-Granits": {
+    "id": "16880",
+    "libelle": "Bécon-les-Granits (49370)"
+  },
+  "Becon-Les-Granits-Agg": {
+    "id": "16880",
+    "libelle": "Bécon-les-Granits (49370)"
+  },
+  "Bedarieux": {
+    "id": "12041",
+    "libelle": "Bédarieux (34600)"
+  },
+  "Bedarieux - Sh": {
+    "id": "12041",
+    "libelle": "Bédarieux (34600)"
+  },
+  "Bedarrides-Spc": {
+    "id": "31036",
+    "libelle": "Bédarrides (84370)"
+  },
+  "Bedee": {
+    "id": "33753",
+    "libelle": "Bédée (35137)"
+  },
+  "Bedoin": {
+    "id": "31037",
+    "libelle": "Bédoin (84410)"
+  },
+  "Bedoin Agglomeration": {
+    "id": "31037",
+    "libelle": "Bédoin (84410)"
+  },
+  "Beduer": {
+    "id": "16037",
+    "libelle": "Béduer (46100)"
+  },
+  "Beffes": {
+    "id": "5415",
+    "libelle": "Beffes (18320)"
+  },
+  "Beg Meil": {
+    "id": "2283",
+    "libelle": "Saint-Barthélemy-le-Meil (07160)"
+  },
+  "Begaar Stna": {
+    "id": "14289",
+    "libelle": "Bégaar (40400)"
+  },
+  "Begadan": {
+    "id": "11513",
+    "libelle": "Bégadan (33340)"
+  },
+  "Beganne": {
+    "id": "19123",
+    "libelle": "Béganne (56350)"
+  },
+  "Begnecourt-Spc": {
+    "id": "31979",
+    "libelle": "Begnécourt (88270)"
+  },
+  "Behonne": {
+    "id": "18656",
+    "libelle": "Behonne (55000)"
+  },
+  "Beille": {
+    "id": "26941",
+    "libelle": "Beillé (72160)"
+  },
+  "Beire Le Chatel": {
+    "id": "33727",
+    "libelle": "Beire-le-Châtel (21310)"
+  },
+  "Belabre": {
+    "id": "12677",
+    "libelle": "Bélâbre (36370)"
+  },
+  "Belcaire": {
+    "id": "2771",
+    "libelle": "Belcaire (11340)"
+  },
+  "Belcaire-Aggl": {
+    "id": "2771",
+    "libelle": "Belcaire (11340)"
+  },
+  "Beleymas": {
+    "id": "6936",
+    "libelle": "Beleymas (24140)"
+  },
+  "Belfahy": {
+    "id": "25857",
+    "libelle": "Belfahy (70290)"
+  },
+  "Belfahy - Agglo": {
+    "id": "25857",
+    "libelle": "Belfahy (70290)"
+  },
+  "Bellac": {
+    "id": "31742",
+    "libelle": "Bellac (87300)"
+  },
+  "Bellaing": {
+    "id": "20442",
+    "libelle": "Bellaing (59135)"
+  },
+  "Belle-Isle-En-T": {
+    "id": "33882",
+    "libelle": "Belle-Isle-en-Terre (22810)"
+  },
+  "Belle-Isle-En-Terre": {
+    "id": "33882",
+    "libelle": "Belle-Isle-en-Terre (22810)"
+  },
+  "Bellegarde-En-Diois": {
+    "id": "8080",
+    "libelle": "Bellegarde-en-Diois (26470)"
+  },
+  "Bellenaves-Spc": {
+    "id": "1252",
+    "libelle": "Bellenaves (03330)"
+  },
+  "Bellevesvre": {
+    "id": "26369",
+    "libelle": "Bellevesvre (71270)"
+  },
+  "Belley Man": {
+    "id": "31",
+    "libelle": "Belley (01300)"
+  },
+  "Belmont-Sur-Rance": {
+    "id": "3199",
+    "libelle": "Belmont-sur-Rance (12370)"
+  },
+  "Belmont/Rance": {
+    "id": "3199",
+    "libelle": "Belmont-sur-Rance (12370)"
+  },
+  "Belpech": {
+    "id": "2776",
+    "libelle": "Belpech (11420)"
+  },
+  "Belpech Agglomeration": {
+    "id": "2776",
+    "libelle": "Belpech (11420)"
+  },
+  "Belvis": {
+    "id": "2779",
+    "libelle": "Belvis (11340)"
+  },
+  "Belvis Picaussel": {
+    "id": "2779",
+    "libelle": "Belvis (11340)"
+  },
+  "Benamenil Aggl.": {
+    "id": "18117",
+    "libelle": "Bénaménil (54450)"
+  },
+  "Benassay": {
+    "id": "31473",
+    "libelle": "Benassay (86470)"
+  },
+  "Benassay-Man": {
+    "id": "31473",
+    "libelle": "Benassay (86470)"
+  },
+  "Benejacq": {
+    "id": "34281",
+    "libelle": "Bénéjacq (64800)"
+  },
+  "Benestroff": {
+    "id": "36315",
+    "libelle": "Bénestroff (57670)"
+  },
+  "Beneuvre Agglomeration": {
+    "id": "6023",
+    "libelle": "Beneuvre (21290)"
+  },
+  "Bengy": {
+    "id": "5417",
+    "libelle": "Bengy-sur-Craon (18520)"
+  },
+  "Benney": {
+    "id": "18118",
+    "libelle": "Benney (54740)"
+  },
+  "Benodet": {
+    "id": "9467",
+    "libelle": "Bénodet (29950)"
+  },
+  "Benonces": {
+    "id": "34",
+    "libelle": "Bénonces (01470)"
+  },
+  "Benquet": {
+    "id": "14295",
+    "libelle": "Benquet (40280)"
+  },
+  "Benquet Les Garluches": {
+    "id": "14295",
+    "libelle": "Benquet (40280)"
+  },
+  "Beost": {
+    "id": "23522",
+    "libelle": "Béost (64440)"
+  },
+  "Beost-Spc": {
+    "id": "23522",
+    "libelle": "Béost (64440)"
+  },
+  "Berck": {
+    "id": "33605",
+    "libelle": "Berck (62600)"
+  },
+  "Berfay": {
+    "id": "26942",
+    "libelle": "Berfay (72320)"
+  },
+  "Bergerac": {
+    "id": "6939",
+    "libelle": "Bergerac (24100)"
+  },
+  "Bergerac Smma": {
+    "id": "6939",
+    "libelle": "Bergerac (24100)"
+  },
+  "Bergerac Tabac": {
+    "id": "6939",
+    "libelle": "Bergerac (24100)"
+  },
+  "Berigny Agglomeration": {
+    "id": "17258",
+    "libelle": "Bérigny (50810)"
+  },
+  "Berlou": {
+    "id": "12043",
+    "libelle": "Berlou (34360)"
+  },
+  "Berlou Rmc": {
+    "id": "12043",
+    "libelle": "Berlou (34360)"
+  },
+  "Bermeries": {
+    "id": "20448",
+    "libelle": "Bermeries (59570)"
+  },
+  "Bermering": {
+    "id": "36316",
+    "libelle": "Bermering (57340)"
+  },
+  "Bernaville": {
+    "id": "29673",
+    "libelle": "Bernaville (80370)"
+  },
+  "Bernaville Man": {
+    "id": "29673",
+    "libelle": "Bernaville (80370)"
+  },
+  "Bernis-Spc": {
+    "id": "10135",
+    "libelle": "Bernis (30620)"
+  },
+  "Bernon Agglomeration": {
+    "id": "34634",
+    "libelle": "Bernon (10130)"
+  },
+  "Berrogain Larun": {
+    "id": "23527",
+    "libelle": "Berrogain-Laruns (64130)"
+  },
+  "Berson": {
+    "id": "11521",
+    "libelle": "Berson (33390)"
+  },
+  "Bertholene": {
+    "id": "3200",
+    "libelle": "Bertholène (12310)"
+  },
+  "Bertholene Banc Hameau": {
+    "id": "3200",
+    "libelle": "Bertholène (12310)"
+  },
+  "Bertincourt Raperie": {
+    "id": "22303",
+    "libelle": "Bertincourt (62124)"
+  },
+  "Beruges": {
+    "id": "31476",
+    "libelle": "Béruges (86190)"
+  },
+  "Berzeme": {
+    "id": "2109",
+    "libelle": "Berzème (07580)"
+  },
+  "Berzeme Sa": {
+    "id": "2109",
+    "libelle": "Berzème (07580)"
+  },
+  "Berzeme-Spc": {
+    "id": "2109",
+    "libelle": "Berzème (07580)"
+  },
+  "Berzieux": {
+    "id": "36061",
+    "libelle": "Berzieux (51800)"
+  },
+  "Berzy-Le-Sec": {
+    "id": "492",
+    "libelle": "Berzy-le-Sec (02200)"
+  },
+  "Besain": {
+    "id": "13760",
+    "libelle": "Besain (39800)"
+  },
+  "Besancon - Chaprais": {
+    "id": "7497",
+    "libelle": "Besançon (25000)"
+  },
+  "Besancon - En": {
+    "id": "7497",
+    "libelle": "Besançon (25000)"
+  },
+  "Besancon - Jannot": {
+    "id": "7497",
+    "libelle": "Besançon (25000)"
+  },
+  "Besancon - Palente": {
+    "id": "7497",
+    "libelle": "Besançon (25000)"
+  },
+  "Besancon - Tarragnoz": {
+    "id": "7497",
+    "libelle": "Besançon (25000)"
+  },
+  "Besançon": {
+    "id": "60821",
+    "libelle": "Besançon"
+  },
+  "Besignan": {
+    "id": "8083",
+    "libelle": "Bésignan (26110)"
+  },
+  "Bessans": {
+    "id": "27321",
+    "libelle": "Bessans (73480)"
+  },
+  "Bessans Averole": {
+    "id": "27321",
+    "libelle": "Bessans (73480)"
+  },
+  "Bessans-Clim": {
+    "id": "27321",
+    "libelle": "Bessans (73480)"
+  },
+  "Bessas": {
+    "id": "2110",
+    "libelle": "Bessas (07150)"
+  },
+  "Besse-Et-St-Ana": {
+    "id": "22999",
+    "libelle": "Besse-et-Saint-Anastaise (63610)"
+  },
+  "Besse-Sur-Issole": {
+    "id": "30888",
+    "libelle": "Besse-sur-Issole (83890)"
+  },
+  "Bessede-De-Sault": {
+    "id": "2781",
+    "libelle": "Bessède-de-Sault (11140)"
+  },
+  "Besseges": {
+    "id": "10136",
+    "libelle": "Bessèges (30160)"
+  },
+  "Besseges-Spc": {
+    "id": "10136",
+    "libelle": "Bessèges (30160)"
+  },
+  "Bessenay": {
+    "id": "25526",
+    "libelle": "Bessenay (69690)"
+  },
+  "Besson - La Barillette": {
+    "id": "1256",
+    "libelle": "Besson (03210)"
+  },
+  "Bethmale": {
+    "id": "2465",
+    "libelle": "Bethmale (09800)"
+  },
+  "Bethonsart": {
+    "id": "22304",
+    "libelle": "Béthonsart (62690)"
+  },
+  "Bethune": {
+    "id": "36438",
+    "libelle": "Béthune (62400)"
+  },
+  "Betschdorf": {
+    "id": "24925",
+    "libelle": "Betschdorf (67660)"
+  },
+  "Bettainvillers": {
+    "id": "18122",
+    "libelle": "Bettainvillers (54640)"
+  },
+  "Betz-Le-Chateau": {
+    "id": "12933",
+    "libelle": "Betz-le-Château (37600)"
+  },
+  "Beuil": {
+    "id": "1937",
+    "libelle": "Beuil (06470)"
+  },
+  "Beuil-Obs": {
+    "id": "1937",
+    "libelle": "Beuil (06470)"
+  },
+  "Beurey-Bauguay": {
+    "id": "6028",
+    "libelle": "Beurey-Bauguay (21320)"
+  },
+  "Beuveille Aggl.": {
+    "id": "18123",
+    "libelle": "Beuveille (54620)"
+  },
+  "Bevons": {
+    "id": "1571",
+    "libelle": "Bevons (04200)"
+  },
+  "Beychac Et Cail": {
+    "id": "11523",
+    "libelle": "Beychac-et-Caillau (33750)"
+  },
+  "Beynat": {
+    "id": "5702",
+    "libelle": "Beynat (19190)"
+  },
+  "Beynat-Espagnagol": {
+    "id": "5702",
+    "libelle": "Beynat (19190)"
+  },
+  "Beynat-Spc": {
+    "id": "5702",
+    "libelle": "Beynat (19190)"
+  },
+  "Beynost": {
+    "id": "40",
+    "libelle": "Beynost (01700)"
+  },
+  "Beyrede-Ju": {
+    "id": "24015",
+    "libelle": "Beyrède-Jumet (65410)"
+  },
+  "Bezalles": {
+    "id": "28607",
+    "libelle": "Bézalles (77970)"
+  },
+  "Beziers": {
+    "id": "12045",
+    "libelle": "Béziers (34500)"
+  },
+  "Bg-Argent - Man": {
+    "id": "5401",
+    "libelle": "Argent-sur-Sauldre (18410)"
+  },
+  "Biache-Saint-Vaast": {
+    "id": "22311",
+    "libelle": "Biache-Saint-Vaast (62118)"
+  },
+  "Biarritz": {
+    "id": "23532",
+    "libelle": "Biarritz (64200)"
+  },
+  "Biarritz-Musee": {
+    "id": "23532",
+    "libelle": "Biarritz (64200)"
+  },
+  "Biarritz-Semaphore": {
+    "id": "23532",
+    "libelle": "Biarritz (64200)"
+  },
+  "Bichancourt": {
+    "id": "501",
+    "libelle": "Bichancourt (02300)"
+  },
+  "Biches": {
+    "id": "20104",
+    "libelle": "Biches (58110)"
+  },
+  "Bidache": {
+    "id": "23533",
+    "libelle": "Bidache (64520)"
+  },
+  "Biencourt-Sur-O": {
+    "id": "18665",
+    "libelle": "Biencourt-sur-Orge (55290)"
+  },
+  "Biesles": {
+    "id": "34982",
+    "libelle": "Biesles (52340)"
+  },
+  "Biganos": {
+    "id": "11525",
+    "libelle": "Biganos (33380)"
+  },
+  "Bignan": {
+    "id": "19129",
+    "libelle": "Bignan (56500)"
+  },
+  "Billancelles": {
+    "id": "9115",
+    "libelle": "Billancelles (28190)"
+  },
+  "Billiers": {
+    "id": "19130",
+    "libelle": "Billiers (56190)"
+  },
+  "Billy-Sous-Mangiennes": {
+    "id": "18666",
+    "libelle": "Billy-sous-Mangiennes (55230)"
+  },
+  "Bioule": {
+    "id": "30694",
+    "libelle": "Bioule (82800)"
+  },
+  "Bioule Agglomeration": {
+    "id": "30694",
+    "libelle": "Bioule (82800)"
+  },
+  "Bioule Les Valettes": {
+    "id": "30694",
+    "libelle": "Bioule (82800)"
+  },
+  "Biran": {
+    "id": "11065",
+    "libelle": "Biran (32350)"
+  },
+  "Birlenbach": {
+    "id": "24709",
+    "libelle": "Drachenbronn-Birlenbach (67160)"
+  },
+  "Biscarrosse": {
+    "id": "14303",
+    "libelle": "Biscarrosse (40600)"
+  },
+  "Biscarrosse-Hourtiquets": {
+    "id": "14303",
+    "libelle": "Biscarrosse (40600)"
+  },
+  "Bisping": {
+    "id": "49637",
+    "libelle": "Bisping"
+  },
+  "Bistroff Bischdorf": {
+    "id": "19453",
+    "libelle": "Bistroff (57660)"
+  },
+  "Bize-Minervois": {
+    "id": "2784",
+    "libelle": "Bize-Minervois (11120)"
+  },
+  "Blace": {
+    "id": "25528",
+    "libelle": "Blacé (69460)"
+  },
+  "Blaison-Gohier": {
+    "id": "16883",
+    "libelle": "Blaison-Gohier (49320)"
+  },
+  "Blajan": {
+    "id": "10512",
+    "libelle": "Blajan (31350)"
+  },
+  "Blancafort": {
+    "id": "5420",
+    "libelle": "Blancafort (18410)"
+  },
+  "Blandainville": {
+    "id": "9116",
+    "libelle": "Blandainville (28120)"
+  },
+  "Blandas Agglomeration": {
+    "id": "10139",
+    "libelle": "Blandas (30770)"
+  },
+  "Blandas-Spc": {
+    "id": "10139",
+    "libelle": "Blandas (30770)"
+  },
+  "Blanquefort-Sur-Briolance": {
+    "id": "16383",
+    "libelle": "Blanquefort-sur-Briolance (47500)"
+  },
+  "Blanzaguet-Saint-Cybard": {
+    "id": "4563",
+    "libelle": "Blanzaguet-Saint-Cybard (16320)"
+  },
+  "Blars": {
+    "id": "16047",
+    "libelle": "Blars (46330)"
+  },
+  "Blasimon": {
+    "id": "11531",
+    "libelle": "Blasimon (33540)"
+  },
+  "Blauvac": {
+    "id": "31038",
+    "libelle": "Blauvac (84570)"
+  },
+  "Blendecques": {
+    "id": "22319",
+    "libelle": "Blendecques (62575)"
+  },
+  "Blendecques Le Blancbourg": {
+    "id": "22319",
+    "libelle": "Blendecques (62575)"
+  },
+  "Bleneau": {
+    "id": "32491",
+    "libelle": "Bléneau (89220)"
+  },
+  "Blere": {
+    "id": "12934",
+    "libelle": "Bléré (37150)"
+  },
+  "Bleruais": {
+    "id": "12364",
+    "libelle": "Bléruais (35750)"
+  },
+  "Blesmes": {
+    "id": "508",
+    "libelle": "Blesmes (02400)"
+  },
+  "Blicourt": {
+    "id": "21083",
+    "libelle": "Blicourt (60860)"
+  },
+  "Blou Agglomeration": {
+    "id": "16884",
+    "libelle": "Blou (49160)"
+  },
+  "Bloye": {
+    "id": "27613",
+    "libelle": "Bloye (74150)"
+  },
+  "Blumeray": {
+    "id": "35217",
+    "libelle": "Blumeray (52110)"
+  },
+  "Bobigny": {
+    "id": "33227",
+    "libelle": "Bobigny (93000)"
+  },
+  "Bocognano": {
+    "id": "9760",
+    "libelle": "Bocognano (20136)"
+  },
+  "Boege": {
+    "id": "36522",
+    "libelle": "Boëge (74420)"
+  },
+  "Boen-Lign - Man": {
+    "id": "14897",
+    "libelle": "Boën (42130)"
+  },
+  "Boeurs En Othe": {
+    "id": "32492",
+    "libelle": "Boeurs-en-Othe (89770)"
+  },
+  "Bogeve": {
+    "id": "36523",
+    "libelle": "Bogève (74250)"
+  },
+  "Bohain-En-Verma": {
+    "id": "509",
+    "libelle": "Bohain-en-Vermandois (02110)"
+  },
+  "Boigneville": {
+    "id": "33007",
+    "libelle": "Boigneville (91720)"
+  },
+  "Bois Arnault": {
+    "id": "8472",
+    "libelle": "Bois-Arnault (27250)"
+  },
+  "Bois-Colombes": {
+    "id": "33191",
+    "libelle": "Bois-Colombes (92270)"
+  },
+  "Bois-Herpin": {
+    "id": "33008",
+    "libelle": "Bois-Herpin (91150)"
+  },
+  "Bois-Jerome-Saint-Ouen": {
+    "id": "8475",
+    "libelle": "Bois-Jérôme-Saint-Ouen (27620)"
+  },
+  "Boiscommun": {
+    "id": "15715",
+    "libelle": "Boiscommun (45340)"
+  },
+  "Boisgervilly": {
+    "id": "34242",
+    "libelle": "Boisgervilly (35360)"
+  },
+  "Boisleux-Au-Mont": {
+    "id": "22330",
+    "libelle": "Boisleux-au-Mont (62175)"
+  },
+  "Boissy-Le-Bois": {
+    "id": "21086",
+    "libelle": "Boissy-le-Bois (60240)"
+  },
+  "Boissy-Le-Sec": {
+    "id": "33011",
+    "libelle": "Boissy-le-Sec (91870)"
+  },
+  "Boissy-St-Leger": {
+    "id": "33258",
+    "libelle": "Boissy-Saint-Léger (94470)"
+  },
+  "Boisville": {
+    "id": "9121",
+    "libelle": "Boisville-la-Saint-Père (28150)"
+  },
+  "Bolbec": {
+    "id": "27947",
+    "libelle": "Bolbec (76210)"
+  },
+  "Bomme": {
+    "id": "11534",
+    "libelle": "Bommes (33210)"
+  },
+  "Bonac-Irazein": {
+    "id": "2469",
+    "libelle": "Bonac-Irazein (09800)"
+  },
+  "Bondy": {
+    "id": "33228",
+    "libelle": "Bondy (93140)"
+  },
+  "Bonnat": {
+    "id": "6673",
+    "libelle": "Bonnat (23220)"
+  },
+  "Bonnecombe - Les Salces": {
+    "id": "16846",
+    "libelle": "Les Salces (48100)"
+  },
+  "Bonnecourt": {
+    "id": "34825",
+    "libelle": "Bonnecourt (52360)"
+  },
+  "Bonnelles": {
+    "id": "29058",
+    "libelle": "Bonnelles (78830)"
+  },
+  "Bonnemain": {
+    "id": "12366",
+    "libelle": "Bonnemain (35270)"
+  },
+  "Bonnetable": {
+    "id": "26949",
+    "libelle": "Bonnétable (72110)"
+  },
+  "Bonneuil-Matour": {
+    "id": "31484",
+    "libelle": "Bonneuil-Matours (86210)"
+  },
+  "Bonneval Sur Arc": {
+    "id": "27327",
+    "libelle": "Bonneval-sur-Arc (73480)"
+  },
+  "Bonnieux": {
+    "id": "31040",
+    "libelle": "Bonnieux (84480)"
+  },
+  "Bonny-Sur-Loire": {
+    "id": "15720",
+    "libelle": "Bonny-sur-Loire (45420)"
+  },
+  "Bons Chablais": {
+    "id": "36497",
+    "libelle": "Bons-en-Chablais (74890)"
+  },
+  "Bonzee Pc": {
+    "id": "18672",
+    "libelle": "Bonzée (55160)"
+  },
+  "Bords": {
+    "id": "4970",
+    "libelle": "Bords (17430)"
+  },
+  "Boree-Spc": {
+    "id": "2114",
+    "libelle": "Borée (07310)"
+  },
+  "Bormes-Les-Mimosas": {
+    "id": "30889",
+    "libelle": "Bormes-les-Mimosas (83230)"
+  },
+  "Bormes-Mimosas": {
+    "id": "30889",
+    "libelle": "Bormes-les-Mimosas (83230)"
+  },
+  "Borre-01-Spc": {
+    "id": "20469",
+    "libelle": "Borre (59190)"
+  },
+  "Borreze Sa": {
+    "id": "6951",
+    "libelle": "Borrèze (24590)"
+  },
+  "Bort-Les-Orgues": {
+    "id": "5707",
+    "libelle": "Bort-les-Orgues (19110)"
+  },
+  "Bosc-Guerard-Saint-Adrien": {
+    "id": "27956",
+    "libelle": "Bosc-Guérard-Saint-Adrien (76710)"
+  },
+  "Bosc-Renoult-En-Ouche": {
+    "id": "8488",
+    "libelle": "Bosc-Renoult-en-Ouche (27330)"
+  },
+  "Bosguerard-De-Marcouville": {
+    "id": "8492",
+    "libelle": "Bosguérard-de-Marcouville (27520)"
+  },
+  "Bouchain": {
+    "id": "20470",
+    "libelle": "Bouchain (59111)"
+  },
+  "Bouclans - Aggl": {
+    "id": "7516",
+    "libelle": "Bouclans (25360)"
+  },
+  "Bouelles": {
+    "id": "27963",
+    "libelle": "Bouelles (76270)"
+  },
+  "Bouex Agglomeration": {
+    "id": "4571",
+    "libelle": "Bouëx (16410)"
+  },
+  "Bouffemont": {
+    "id": "33330",
+    "libelle": "Bouffémont (95570)"
+  },
+  "Bougival": {
+    "id": "29061",
+    "libelle": "Bougival (78380)"
+  },
+  "Bouglon": {
+    "id": "16388",
+    "libelle": "Bouglon (47250)"
+  },
+  "Bouglon Agglomeration": {
+    "id": "16388",
+    "libelle": "Bouglon (47250)"
+  },
+  "Bouhans-Et-Feur": {
+    "id": "25874",
+    "libelle": "Bouhans-et-Feurg (70100)"
+  },
+  "Bouhy": {
+    "id": "20110",
+    "libelle": "Bouhy (58310)"
+  },
+  "Bouillargues": {
+    "id": "10146",
+    "libelle": "Bouillargues (30230)"
+  },
+  "Bouille-Loretz": {
+    "id": "29323",
+    "libelle": "Bouillé-Loretz (79290)"
+  },
+  "Bouisse": {
+    "id": "2787",
+    "libelle": "Bouisse (11190)"
+  },
+  "Bouisse-Spc": {
+    "id": "2787",
+    "libelle": "Bouisse (11190)"
+  },
+  "Boulc": {
+    "id": "8087",
+    "libelle": "Boulc (26410)"
+  },
+  "Bouleternere Agglomeration": {
+    "id": "24421",
+    "libelle": "Bouleternère (66130)"
+  },
+  "Bouligny": {
+    "id": "18675",
+    "libelle": "Bouligny (55240)"
+  },
+  "Boulleville": {
+    "id": "8500",
+    "libelle": "Boulleville (27210)"
+  },
+  "Boulogne-Sur-Gesse": {
+    "id": "10522",
+    "libelle": "Boulogne-Sur-Gesse (31350)"
+  },
+  "Bouloire": {
+    "id": "26952",
+    "libelle": "Bouloire (72440)"
+  },
+  "Bourbach Le Haut": {
+    "id": "25175",
+    "libelle": "Bourbach-le-Haut (68290)"
+  },
+  "Bourbon Lancy": {
+    "id": "26387",
+    "libelle": "Bourbon-Lancy (71140)"
+  },
+  "Bourbon-L Arch": {
+    "id": "1266",
+    "libelle": "Bourbon-l'Archambault (03160)"
+  },
+  "Bourbon-L'Arch": {
+    "id": "1266",
+    "libelle": "Bourbon-l'Archambault (03160)"
+  },
+  "Bourbon-L'Archambault": {
+    "id": "1266",
+    "libelle": "Bourbon-l'Archambault (03160)"
+  },
+  "Bourbon-Lancy": {
+    "id": "26387",
+    "libelle": "Bourbon-Lancy (71140)"
+  },
+  "Bourbonne-Les-Bains": {
+    "id": "34924",
+    "libelle": "Bourbonne-les-Bains (52400)"
+  },
+  "Bourbourg Papeterie": {
+    "id": "20472",
+    "libelle": "Bourbourg (59630)"
+  },
+  "Bourbourg Shc 1": {
+    "id": "20472",
+    "libelle": "Bourbourg (59630)"
+  },
+  "Bourbourg Shc 2": {
+    "id": "20472",
+    "libelle": "Bourbourg (59630)"
+  },
+  "Bourdeaux": {
+    "id": "8088",
+    "libelle": "Bourdeaux (26460)"
+  },
+  "Bourdonne": {
+    "id": "29062",
+    "libelle": "Bourdonné (78113)"
+  },
+  "Bourdons": {
+    "id": "35025",
+    "libelle": "Bourdons-sur-Rognon (52700)"
+  },
+  "Bourdons-Sur-Ro": {
+    "id": "35025",
+    "libelle": "Bourdons-sur-Rognon (52700)"
+  },
+  "Bouret-Sur-Can": {
+    "id": "22340",
+    "libelle": "Bouret-sur-Canche (62270)"
+  },
+  "Bourg D Oisans": {
+    "id": "13236",
+    "libelle": "Le Bourg-d'Oisans (38520)"
+  },
+  "Bourg En Bresse": {
+    "id": "49",
+    "libelle": "Bourg-en-Bresse (01000)"
+  },
+  "Bourg Saint Andeol": {
+    "id": "2119",
+    "libelle": "Bourg-Saint-Andéol (07700)"
+  },
+  "Bourg Saint Mauric": {
+    "id": "27334",
+    "libelle": "Bourg-Saint-Maurice (73700)"
+  },
+  "Bourg-Argental": {
+    "id": "14901",
+    "libelle": "Bourg-Argental (42220)"
+  },
+  "Bourg-De-Sirod": {
+    "id": "13779",
+    "libelle": "Bourg-de-Sirod (39300)"
+  },
+  "Bourg-De-Visa": {
+    "id": "30698",
+    "libelle": "Bourg-de-Visa (82190)"
+  },
+  "Bourg-Des-Comptes": {
+    "id": "12369",
+    "libelle": "Bourg-des-Comptes (35890)"
+  },
+  "Bourg-En-Bresse": {
+    "id": "49",
+    "libelle": "Bourg-en-Bresse (01000)"
+  },
+  "Bourg-Madame": {
+    "id": "24423",
+    "libelle": "Bourg-Madame (66760)"
+  },
+  "Bourg-Saint-Maurice": {
+    "id": "27334",
+    "libelle": "Bourg-Saint-Maurice (73700)"
+  },
+  "Bourganeuf": {
+    "id": "6678",
+    "libelle": "Bourganeuf (23400)"
+  },
+  "Bourganeuf Agglomeration": {
+    "id": "6678",
+    "libelle": "Bourganeuf (23400)"
+  },
+  "Bourges": {
+    "id": "5423",
+    "libelle": "Bourges (18000)"
+  },
+  "Bourges - En": {
+    "id": "5423",
+    "libelle": "Bourges (18000)"
+  },
+  "Bourges - Pc": {
+    "id": "5423",
+    "libelle": "Bourges (18000)"
+  },
+  "Bourget-En-Huile": {
+    "id": "27332",
+    "libelle": "Bourget-en-Huile (73110)"
+  },
+  "Bourgogne": {
+    "id": "35968",
+    "libelle": "Bourgogne (51110)"
+  },
+  "Bourgoin": {
+    "id": "13237",
+    "libelle": "Bourgoin-Jallieu (38300)"
+  },
+  "Bourgtheroulde": {
+    "id": "8505",
+    "libelle": "Bourgtheroulde-Infreville (27520)"
+  },
+  "Bourgtheroulde-Infreville": {
+    "id": "8505",
+    "libelle": "Bourgtheroulde-Infreville (27520)"
+  },
+  "Bourgueil": {
+    "id": "12938",
+    "libelle": "Bourgueil (37140)"
+  },
+  "Bourideys": {
+    "id": "11542",
+    "libelle": "Bourideys (33113)"
+  },
+  "Bourlon Bg,Shc": {
+    "id": "22341",
+    "libelle": "Bourlon (62860)"
+  },
+  "Bourmont": {
+    "id": "35060",
+    "libelle": "Bourmont (52150)"
+  },
+  "Bournainville-Faverolles": {
+    "id": "8506",
+    "libelle": "Bournainville-Faverolles (27230)"
+  },
+  "Bourran Inra": {
+    "id": "16392",
+    "libelle": "Bourran (47320)"
+  },
+  "Bourran-Inra": {
+    "id": "16392",
+    "libelle": "Bourran (47320)"
+  },
+  "Bourret La Leine": {
+    "id": "30699",
+    "libelle": "Bourret (82700)"
+  },
+  "Bourriot-Bergonce": {
+    "id": "14310",
+    "libelle": "Bourriot-Bergonce (40120)"
+  },
+  "Bourthes": {
+    "id": "22345",
+    "libelle": "Bourthes (62650)"
+  },
+  "Bourthes-01-Spc": {
+    "id": "22345",
+    "libelle": "Bourthes (62650)"
+  },
+  "Boussan": {
+    "id": "10525",
+    "libelle": "Boussan (31420)"
+  },
+  "Boussena": {
+    "id": "2475",
+    "libelle": "Boussenac (09320)"
+  },
+  "Boussenac Agglomeration": {
+    "id": "2475",
+    "libelle": "Boussenac (09320)"
+  },
+  "Bouteville": {
+    "id": "4573",
+    "libelle": "Bouteville (16120)"
+  },
+  "Bouvante": {
+    "id": "8091",
+    "libelle": "Bouvante (26190)"
+  },
+  "Bouvignies Agglomeration": {
+    "id": "20482",
+    "libelle": "Bouvignies (59870)"
+  },
+  "Bouy-Sur-Orvin": {
+    "id": "34526",
+    "libelle": "Bouy-sur-Orvin (10400)"
+  },
+  "Bouyon": {
+    "id": "1943",
+    "libelle": "Bouyon (06510)"
+  },
+  "Bouyon-Obs": {
+    "id": "1943",
+    "libelle": "Bouyon (06510)"
+  },
+  "Bouzel": {
+    "id": "23010",
+    "libelle": "Bouzel (63910)"
+  },
+  "Boviolles": {
+    "id": "18679",
+    "libelle": "Boviolles (55500)"
+  },
+  "Bozel": {
+    "id": "27335",
+    "libelle": "Bozel (73350)"
+  },
+  "Bragassargues-Spc": {
+    "id": "10149",
+    "libelle": "Bragassargues (30260)"
+  },
+  "Bragny Sur Saone": {
+    "id": "26392",
+    "libelle": "Bragny-sur-Saône (71350)"
+  },
+  "Bram Agglomeration": {
+    "id": "2792",
+    "libelle": "Bram (11150)"
+  },
+  "Branceilles": {
+    "id": "5708",
+    "libelle": "Branceilles (19500)"
+  },
+  "Branges": {
+    "id": "26394",
+    "libelle": "Branges (71500)"
+  },
+  "Branges Le Guidon": {
+    "id": "26394",
+    "libelle": "Branges (71500)"
+  },
+  "Bransat": {
+    "id": "1268",
+    "libelle": "Bransat (03500)"
+  },
+  "Brantes": {
+    "id": "31041",
+    "libelle": "Brantes (84390)"
+  },
+  "Brantome-Spc": {
+    "id": "6965",
+    "libelle": "Brantôme (24310)"
+  },
+  "Braquis Dda": {
+    "id": "18683",
+    "libelle": "Braquis (55400)"
+  },
+  "Bras-Sur-Meuse": {
+    "id": "18684",
+    "libelle": "Bras-sur-Meuse (55100)"
+  },
+  "Brasles": {
+    "id": "527",
+    "libelle": "Brasles (02400)"
+  },
+  "Brasparts": {
+    "id": "9475",
+    "libelle": "Brasparts (29190)"
+  },
+  "Braud Et Saint Lou": {
+    "id": "11547",
+    "libelle": "Braud-et-Saint-Louis (33820)"
+  },
+  "Brauvilliers": {
+    "id": "18685",
+    "libelle": "Brauvilliers (55170)"
+  },
+  "Bray-Et-Lu": {
+    "id": "33332",
+    "libelle": "Bray-et-Lû (95710)"
+  },
+  "Bray-Sur-Seine": {
+    "id": "28623",
+    "libelle": "Bray-sur-Seine (77480)"
+  },
+  "Bray-Sur-Somme": {
+    "id": "29721",
+    "libelle": "Bray-sur-Somme (80340)"
+  },
+  "Breau-Et-Salagosse": {
+    "id": "10151",
+    "libelle": "Bréau-et-Salagosse (30120)"
+  },
+  "Brebieres": {
+    "id": "22349",
+    "libelle": "Brébières (62117)"
+  },
+  "Brecey": {
+    "id": "17279",
+    "libelle": "Brécey (50670)"
+  },
+  "Breches": {
+    "id": "12944",
+    "libelle": "Brèches (37330)"
+  },
+  "Brehand": {
+    "id": "34005",
+    "libelle": "Bréhand (22510)"
+  },
+  "Brehat": {
+    "id": "34015",
+    "libelle": "Île-de-Bréhat (22870)"
+  },
+  "Breil Sur Roya": {
+    "id": "1944",
+    "libelle": "Breil-sur-Roya (06540)"
+  },
+  "Bremoy": {
+    "id": "3653",
+    "libelle": "Brémoy (14260)"
+  },
+  "Brenas": {
+    "id": "12053",
+    "libelle": "Brenas (34650)"
+  },
+  "Brenaz": {
+    "id": "54",
+    "libelle": "Brénaz (01260)"
+  },
+  "Brennilis": {
+    "id": "9477",
+    "libelle": "Brennilis (29690)"
+  },
+  "Brennilis-Spc": {
+    "id": "9477",
+    "libelle": "Brennilis (29690)"
+  },
+  "Bresles": {
+    "id": "21109",
+    "libelle": "Bresles (60510)"
+  },
+  "Bressuire": {
+    "id": "29329",
+    "libelle": "Bressuire (79300)"
+  },
+  "Bressuire-Pc": {
+    "id": "29329",
+    "libelle": "Bressuire (79300)"
+  },
+  "Breteil": {
+    "id": "33751",
+    "libelle": "Breteil (35160)"
+  },
+  "Bretenieres Inrae": {
+    "id": "13785",
+    "libelle": "Bretenières (39120)"
+  },
+  "Bretenoux": {
+    "id": "16054",
+    "libelle": "Bretenoux (46130)"
+  },
+  "Bretteville-L'Orgueilleuse": {
+    "id": "3655",
+    "libelle": "Bretteville-l'Orgueilleuse (14740)"
+  },
+  "Breuil-Le-Vert": {
+    "id": "21113",
+    "libelle": "Breuil-le-Vert (60600)"
+  },
+  "Breuil-Sur-Couz": {
+    "id": "23013",
+    "libelle": "Le Breuil-sur-Couze (63340)"
+  },
+  "Breuvannes": {
+    "id": "35098",
+    "libelle": "Breuvannes-en-Bassigny (52240)"
+  },
+  "Breuvannes-En-Bassigny": {
+    "id": "35098",
+    "libelle": "Breuvannes-en-Bassigny (52240)"
+  },
+  "Breval": {
+    "id": "29064",
+    "libelle": "Bréval (78980)"
+  },
+  "Breviaires": {
+    "id": "29065",
+    "libelle": "Les Bréviaires (78610)"
+  },
+  "Breviandes": {
+    "id": "34558",
+    "libelle": "Bréviandes (10800)"
+  },
+  "Brezolles": {
+    "id": "34304",
+    "libelle": "Brezolles (28270)"
+  },
+  "Brezons": {
+    "id": "4285",
+    "libelle": "Brezons (15230)"
+  },
+  "Bricquebec": {
+    "id": "17287",
+    "libelle": "Bricquebec (50260)"
+  },
+  "Brides Les Bain": {
+    "id": "27337",
+    "libelle": "Brides-les-Bains (73570)"
+  },
+  "Brie Man": {
+    "id": "32498",
+    "libelle": "Brienon-sur-Armançon (89210)"
+  },
+  "Brielles": {
+    "id": "12376",
+    "libelle": "Brielles (35370)"
+  },
+  "Brienne-La-Vieille": {
+    "id": "34396",
+    "libelle": "Brienne-la-Vieille (10500)"
+  },
+  "Brienne-Le-Chateau": {
+    "id": "34410",
+    "libelle": "Brienne-le-Château (10500)"
+  },
+  "Briey Aggl.": {
+    "id": "18153",
+    "libelle": "Briey (54150)"
+  },
+  "Brignogan": {
+    "id": "9480",
+    "libelle": "Brignogan-Plage (29890)"
+  },
+  "Brignoles": {
+    "id": "30893",
+    "libelle": "Brignoles (83170)"
+  },
+  "Brignoles-Est": {
+    "id": "30893",
+    "libelle": "Brignoles (83170)"
+  },
+  "Brigueuil": {
+    "id": "4579",
+    "libelle": "Brigueuil (16420)"
+  },
+  "Brin-Sur-Seille": {
+    "id": "36462",
+    "libelle": "Brin-sur-Seille (54280)"
+  },
+  "Brindas": {
+    "id": "25533",
+    "libelle": "Brindas (69126)"
+  },
+  "Brion Sur Ource": {
+    "id": "6066",
+    "libelle": "Brion-sur-Ource (21570)"
+  },
+  "Brionne": {
+    "id": "8516",
+    "libelle": "Brionne (27800)"
+  },
+  "Brioude": {
+    "id": "15244",
+    "libelle": "Brioude (43100)"
+  },
+  "Brioux-Sur-Bout": {
+    "id": "29336",
+    "libelle": "Brioux-sur-Boutonne (79170)"
+  },
+  "Briouze": {
+    "id": "21760",
+    "libelle": "Briouze (61220)"
+  },
+  "Brissac-Quince": {
+    "id": "16904",
+    "libelle": "Brissac-Quincé (49320)"
+  },
+  "Brive Bassaler": {
+    "id": "5710",
+    "libelle": "Brive-la-Gaillarde (19100)"
+  },
+  "Brive-Cipan": {
+    "id": "5710",
+    "libelle": "Brive-la-Gaillarde (19100)"
+  },
+  "Brive-La-Gaillarde": {
+    "id": "5710",
+    "libelle": "Brive-la-Gaillarde (19100)"
+  },
+  "Brive-Migoule": {
+    "id": "5710",
+    "libelle": "Brive-la-Gaillarde (19100)"
+  },
+  "Brizeaux": {
+    "id": "18691",
+    "libelle": "Brizeaux (55250)"
+  },
+  "Brommat": {
+    "id": "3210",
+    "libelle": "Brommat (12600)"
+  },
+  "Bron - Vinatier": {
+    "id": "25534",
+    "libelle": "Bron (69500)"
+  },
+  "Broons": {
+    "id": "34138",
+    "libelle": "Broons (22250)"
+  },
+  "Broquies La Jourdannie": {
+    "id": "3211",
+    "libelle": "Broquiès (12480)"
+  },
+  "Broualan": {
+    "id": "12377",
+    "libelle": "Broualan (35120)"
+  },
+  "Brouilla": {
+    "id": "24424",
+    "libelle": "Brouilla (66620)"
+  },
+  "Brout-Vernet": {
+    "id": "1273",
+    "libelle": "Broût-Vernet (03110)"
+  },
+  "Brouvelieures": {
+    "id": "32006",
+    "libelle": "Brouvelieures (88600)"
+  },
+  "Brouy": {
+    "id": "33025",
+    "libelle": "Brouy (91150)"
+  },
+  "Broze": {
+    "id": "30413",
+    "libelle": "Broze (81600)"
+  },
+  "Bruges-Capbis-Mifaget": {
+    "id": "34288",
+    "libelle": "Bruges-Capbis-Mifaget (64800)"
+  },
+  "Brullemail": {
+    "id": "21761",
+    "libelle": "Brullemail (61390)"
+  },
+  "Brullioles": {
+    "id": "25535",
+    "libelle": "Brullioles (69690)"
+  },
+  "Brumath": {
+    "id": "24672",
+    "libelle": "Brumath (67170)"
+  },
+  "Bruniquel": {
+    "id": "30702",
+    "libelle": "Bruniquel (82800)"
+  },
+  "Bruville": {
+    "id": "18156",
+    "libelle": "Bruville (54800)"
+  },
+  "Bry-Sur-Marne": {
+    "id": "33260",
+    "libelle": "Bry-sur-Marne (94360)"
+  },
+  "Buais": {
+    "id": "17295",
+    "libelle": "Buais (50640)"
+  },
+  "Bubry": {
+    "id": "19138",
+    "libelle": "Bubry (56310)"
+  },
+  "Bucey-Les-Gy": {
+    "id": "25898",
+    "libelle": "Bucey-lès-Gy (70700)"
+  },
+  "Budos": {
+    "id": "11550",
+    "libelle": "Budos (33720)"
+  },
+  "Buffard Bg": {
+    "id": "7534",
+    "libelle": "Buffard (25440)"
+  },
+  "Bugarach": {
+    "id": "2798",
+    "libelle": "Bugarach (11190)"
+  },
+  "Bugarach Agglomeration": {
+    "id": "2798",
+    "libelle": "Bugarach (11190)"
+  },
+  "Bugeat": {
+    "id": "5712",
+    "libelle": "Bugeat (19170)"
+  },
+  "Buhl-Lorraine": {
+    "id": "19483",
+    "libelle": "Buhl-Lorraine (57400)"
+  },
+  "Buhy": {
+    "id": "33336",
+    "libelle": "Buhy (95770)"
+  },
+  "Buigny-Les-Gamaches": {
+    "id": "29733",
+    "libelle": "Buigny-lès-Gamaches (80220)"
+  },
+  "Buironfosse": {
+    "id": "548",
+    "libelle": "Buironfosse (02620)"
+  },
+  "Buis -Baronnies": {
+    "id": "8095",
+    "libelle": "Buis-les-Baronnies (26170)"
+  },
+  "Bulat-Pestivien": {
+    "id": "33896",
+    "libelle": "Bulat-Pestivien (22160)"
+  },
+  "Bulgneville": {
+    "id": "32009",
+    "libelle": "Bulgnéville (88140)"
+  },
+  "Bulligny": {
+    "id": "18158",
+    "libelle": "Bulligny (54113)"
+  },
+  "Bulson": {
+    "id": "35402",
+    "libelle": "Bulson (08450)"
+  },
+  "Bure-Les-Templiers": {
+    "id": "6073",
+    "libelle": "Bure-les-Templiers (21290)"
+  },
+  "Bures-Sur-Yvette": {
+    "id": "33029",
+    "libelle": "Bures-sur-Yvette (91440)"
+  }
+}

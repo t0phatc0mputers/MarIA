@@ -1,7 +1,7 @@
 # MarIA
 Projet d'aide à la décision pour le maraîchage destiné aux apprentis et au delà ! 
 
-Pour pouvoir pleinement profiter de l'application, il faut lancer dans un terminal de commande :`pip install PyQt5 PyQtWebEngine pandas matplotlib requests beautifulsoup4 html5lib folium meteociel-api`
+Pour pouvoir pleinement profiter de l'application, il faut lancer dans un terminal de commande :`pip install PyQt5 PyQtWebEngine pandas matplotlib requests beautifulsoup4 html5lib folium meteociel-api openpyxl`
 
 Il y a des modifications à réaliser dans le code même de l'API : 
 - Dans forecasts.py éliminer l'usage du backslash dans un des f-strings près du commentaire (# If the city hasn't been found).

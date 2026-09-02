@@ -1,0 +1,32 @@
+PLAN_FERME 1
+
+RECT id=1 parent=0
+  nom=Zone 1
+  type=Planche
+  etat=Non défini
+  culture=Salade
+  x=184.0
+  y=249.0
+  largeur=195.0
+  hauteur=331.0
+
+RECT id=2 parent=0
+  nom=Zone 2
+  type=Chapelle
+  etat=Serre
+  culture=
+  x=475.0
+  y=249.0
+  largeur=273.0
+  hauteur=331.0
+
+RECT id=3 parent=2
+  nom=Zone 3
+  type=Planche
+  etat=Non défini
+  culture=Tomate
+  x=27.0
+  y=29.0
+  largeur=123.0
+  hauteur=270.0
+

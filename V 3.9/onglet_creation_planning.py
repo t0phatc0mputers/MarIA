@@ -1,0 +1,1876 @@
+# -*- coding: utf-8 -*-
+"""
+onglet_creation_planning.py
+-----------------------------
+Onglet "🌱 Création planning cultural" : assistant pas-à-pas (pop-ups
+successives) qui aide l'utilisateur à construire un planning cultural pour
+sa ferme, puis rassemble le résultat dans un tableau récapitulatif intégré
+à l'onglet et exportable vers le fichier Excel du planning.
+
+Déroulé de l'assistant (voir lancer_assistant) :
+    1. Point de départ  : "je commence de zéro" / "j'ai déjà cultivé"
+    2. Durée de culture  : période (dates) sur laquelle générer le planning
+    3. Région            : carte régionale (climat/sol) - cf. carte_france.py
+    4. Disposition       : structure Zones/Chapelles/Planches de la ferme
+                            (générée par défaut, ou saisie/importée si
+                            l'utilisateur a déjà cultivé - avec la dernière
+                            culture de chaque planche)
+    5. Sélection cultures : pour chaque planche, choix d'une culture parmi
+                             celles triées par score d'adéquation décroissant
+                             (région + saison + [rotation])
+
+Ce module est volontairement coupé en deux parties, comme le reste de
+l'application :
+  - une partie logique pure (scoring, génération de disposition, tableau
+    final) qui ne dépend pas de PyQt et peut être testée séparément ;
+  - une partie interface (pop-ups QDialog + construction de l'onglet).
+
+Le calcul de score est un système à règles simple et documenté (comme
+meteo_decision.py) : il donne un repère de départ raisonné, pas une vérité
+absolue - à ajuster selon la connaissance du terrain.
+"""
+
+import csv
+import datetime
+import os
+import re
+
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QColor, QBrush
+from PyQt5.QtWidgets import (
+    QDialog, QVBoxLayout, QHBoxLayout, QFormLayout, QLabel, QRadioButton,
+    QButtonGroup, QDialogButtonBox, QDateEdit, QSpinBox, QPushButton,
+    QTableWidget, QTableWidgetItem, QHeaderView, QAbstractItemView,
+    QComboBox, QListWidget, QListWidgetItem, QGroupBox, QMessageBox,
+    QWidget, QSplitter, QTextBrowser, QFileDialog, QLineEdit, QGraphicsScene,
+)
+
+
+# ====================================================================
+# PARTIE LOGIQUE PURE (pas de dépendance PyQt)
+# ====================================================================
+
+# ------------------------------------------------------------------
+# Score "région" : compatibilité climat/sol de la région avec la culture
+# ------------------------------------------------------------------
+_RE_PLAGE_TEMP = re.compile(r"(-?\d+)\s*-\s*(-?\d+)\s*°C")
+
+# Besoin en sol (issu de rotation_cultures.classifier_besoin) -> niveau de
+# fertilité de sol idéal (échelle 1-5 de carte_france.SOL_LABELS_NIVEAU).
+_SOL_IDEAL_PAR_GROUPE = {
+    "Gourmande (très exigeante)": 5,
+    "Moyennement exigeante": 4,
+    "Légumineuse (fixe l'azote)": 3,
+    "Peu exigeante (sol reposé / racine)": 3,
+}
+
+
+def temp_ideale_croissance(fiche):
+    """Extrait (tmin, tmax) en °C depuis le champ texte 'temp_croissance'
+    d'une fiche botanique (ex. "18-26 °C, nouaison compromise..." -> (18,
+    26)). Renvoie None si aucune plage n'a pu être trouvée."""
+    m = _RE_PLAGE_TEMP.search(fiche.get("temp_croissance", "") or "")
+    if not m:
+        return None
+    a, b = float(m.group(1)), float(m.group(2))
+    return (min(a, b), max(a, b))
+
+
+def score_region(fiche, nom_region, cf):
+    """Score 0-100 d'adéquation climat/sol d'une région pour une culture.
+
+    Heuristique volontairement simple (comme carte_france.py le précise
+    lui-même, les données régionales sont indicatives) :
+      - température : on compare le milieu de la plage de température de
+        croissance idéale de la culture à une estimation grossière de la
+        température en pleine saison de la région (température moyenne
+        annuelle indicative + 8°C, pour approcher un "cœur d'été/saison") ;
+      - sol : on compare le niveau de fertilité indicatif de la région au
+        niveau idéal pour le groupe de besoin de la culture (gourmande,
+        moyenne, légumineuse, peu exigeante).
+    Renvoie un score global (moyenne pondérée 60% température / 40% sol).
+    """
+    donnees_region = cf.REGIONS[nom_region]
+
+    plage = temp_ideale_croissance(fiche)
+    if plage is None:
+        score_temp = 70.0  # pas d'info : score neutre, ni pénalisant ni favorisant
+    else:
+        milieu_culture = (plage[0] + plage[1]) / 2
+        temp_saison_region = donnees_region["temp_moy_indicatif_c"] + 8
+        ecart = abs(milieu_culture - temp_saison_region)
+        score_temp = max(0.0, 100.0 - ecart * 6.0)
+
+    groupe = _groupe_besoin(fiche)
+    sol_ideal = _SOL_IDEAL_PAR_GROUPE.get(groupe, 4)
+    ecart_sol = abs(donnees_region["sol_niveau"] - sol_ideal)
+    score_sol = max(0.0, 100.0 - ecart_sol * 15.0)
+
+    return round(0.6 * score_temp + 0.4 * score_sol)
+
+
+def _groupe_besoin(fiche):
+    """Classement en groupe de besoin (même logique que
+    rotation_cultures.classifier_besoin, dupliquée ici pour ne pas imposer
+    de dépendance directe au module rc dans le calcul de score région)."""
+    texte = (fiche.get("fertilisation") or "").lower()
+    if "légumineuses" in texte and "azote" in texte:
+        return "Légumineuse (fixe l'azote)"
+    if "très gourmande" in texte or "gourmande" in texte:
+        return "Gourmande (très exigeante)"
+    if ("éviter tout apport de matière organique fraîche" in texte
+            or "fourchage" in texte or "à l'automne précédent" in texte
+            or "peu d'azote" in texte):
+        return "Peu exigeante (sol reposé / racine)"
+    return "Moyennement exigeante"
+
+
+# ------------------------------------------------------------------
+# Score "saison" : proximité de la semaine actuelle avec la fenêtre de
+# lancement de la culture (semis/plantation) dans le planning existant.
+# ------------------------------------------------------------------
+ACTIONS_LANCEMENT = ("Semis direct", "Semis en pot/plant", "Plantation")
+
+
+def _semaine_dans_fenetre(semaine, debut, fin):
+    if debut <= fin:
+        return debut <= semaine <= fin
+    return semaine >= debut or semaine <= fin
+
+
+def _distance_semaines(semaine, debut):
+    return (debut - semaine) % 52
+
+
+def score_saison(culture_nom, semaine_ref, rows_planning):
+    """Score 0-100 selon la proximité de semaine_ref avec la/les fenêtre(s)
+    de semis/plantation de cette culture dans le planning existant (CSV).
+    Renvoie (score, meilleure_fenetre_texte)."""
+    fenetres = [
+        (int(r["semaine_debut"]), int(r["semaine_fin"]))
+        for r in rows_planning
+        if r["culture"].strip().lower() == culture_nom.strip().lower()
+        and r["action"] in ACTIONS_LANCEMENT
+        and str(r.get("semaine_debut", "")).isdigit()
+        and str(r.get("semaine_fin", "")).isdigit()
+    ]
+    if not fenetres:
+        return 50, "fenêtre inconnue"
+
+    meilleur_score = -1
+    meilleur_texte = ""
+    for debut, fin in fenetres:
+        if _semaine_dans_fenetre(semaine_ref, debut, fin):
+            score = 100
+        else:
+            dist = min(_distance_semaines(semaine_ref, debut),
+                       _distance_semaines(fin, semaine_ref))
+            score = max(0, 100 - dist * 10)
+        if score > meilleur_score:
+            meilleur_score = score
+            meilleur_texte = f"sem. {debut}-{fin}"
+    return meilleur_score, meilleur_texte
+
+
+# ------------------------------------------------------------------
+# Score "rotation" : uniquement si la planche a déjà porté une culture
+# (règle impérative de non-retour de la même famille botanique).
+# ------------------------------------------------------------------
+def score_rotation(culture_nom, derniere_culture, fb, rc):
+    """Renvoie (score, motif). score=0 signifie "interdit" (même famille
+    botanique que la dernière culture de la planche - règle impérative)."""
+    if not derniere_culture or derniere_culture not in fb.FICHES:
+        return 100, ""
+    analyse = rc.analyser_rotation(derniere_culture)
+    if analyse is None:
+        return 100, ""
+    noms_a_eviter = {e["nom"] for e in analyse["a_eviter"]}
+    noms_recommandees = {e["nom"] for e in analyse["recommandees"]}
+    noms_possibles = {e["nom"] for e in analyse["possibles"]}
+    if culture_nom in noms_a_eviter:
+        return 0, f"même famille que « {derniere_culture} » (délai conseillé : {analyse['delai_retour_annees']} ans)"
+    if culture_nom in noms_recommandees:
+        return 100, "rotation recommandée après cette culture"
+    if culture_nom in noms_possibles:
+        return 70, "rotation possible"
+    return 55, ""
+
+
+# ------------------------------------------------------------------
+# Agrégation : liste des cultures triées par score pour une planche donnée
+# ------------------------------------------------------------------
+def lister_cultures_triees(nom_region, semaine_ref, derniere_culture,
+                            rows_planning, fb, rc, cf):
+    """Renvoie une liste de dicts {culture, famille, score, score_region,
+    score_saison, score_rotation, fenetre, motif_rotation, interdit},
+    triée par score décroissant. `derniere_culture` peut être vide/None
+    (mode "je commence de zéro" : pas de contrainte de rotation)."""
+    resultats = []
+    for nom_culture, fiche in fb.FICHES.items():
+        s_region = score_region(fiche, nom_region, cf)
+        s_saison, fenetre = score_saison(nom_culture, semaine_ref, rows_planning)
+        s_rotation, motif = score_rotation(nom_culture, derniere_culture, fb, rc)
+
+        if s_rotation == 0:
+            score_final = 0
+        elif derniere_culture:
+            score_final = round(0.4 * s_region + 0.3 * s_saison + 0.3 * s_rotation)
+        else:
+            score_final = round(0.55 * s_region + 0.45 * s_saison)
+
+        resultats.append({
+            "culture": nom_culture,
+            "famille": fiche["famille"],
+            "score": score_final,
+            "score_region": s_region,
+            "score_saison": s_saison,
+            "score_rotation": s_rotation,
+            "fenetre": fenetre,
+            "motif_rotation": motif,
+            "interdit": s_rotation == 0,
+        })
+
+    resultats.sort(key=lambda e: e["score"], reverse=True)
+    return resultats
+
+
+# ------------------------------------------------------------------
+# Disposition de la ferme (Zones > Chapelles > Planches)
+# ------------------------------------------------------------------
+def generer_disposition_defaut(nb_zones, nb_chapelles, nb_planches):
+    """Disposition par défaut proposée à un débutant : nb_zones zones,
+    chacune avec nb_chapelles chapelles, chacune avec nb_planches planches.
+    Renvoie une liste de dicts {zone, chapelle, planche, derniere_culture}
+    (derniere_culture toujours vide dans ce cas)."""
+    planches = []
+    for z in range(1, nb_zones + 1):
+        nom_zone = f"Zone {z}"
+        for c in range(1, nb_chapelles + 1):
+            nom_chapelle = f"Chapelle {z}.{c}"
+            for p in range(1, nb_planches + 1):
+                planches.append({
+                    "zone": nom_zone,
+                    "chapelle": nom_chapelle,
+                    "planche": f"Planche {z}.{c}.{p}",
+                    "derniere_culture": "",
+                })
+    return planches
+
+
+def importer_planches_depuis_plan(chemin, pf):
+    """Lit un fichier .ferme (format plan_ferme.py) et renvoie la liste des
+    planches trouvées, sous la même forme que generer_disposition_defaut,
+    en reprenant la culture actuellement affectée à chaque planche (champ
+    'culture' du rectangle) comme 'derniere_culture'."""
+    with open(chemin, "r", encoding="utf-8") as f:
+        rects = pf.deserialiser(f.read())
+
+    par_id = {r["id"]: r for r in rects}
+
+    def nom_ancetre(rect, type_cherche):
+        courant = rect
+        while courant is not None:
+            if courant["type"] == type_cherche:
+                return courant["nom"]
+            courant = par_id.get(courant["parent"]) if courant["parent"] else None
+        return ""
+
+    planches = []
+    for r in rects:
+        if r["type"] != "Planche":
+            continue
+        planches.append({
+            "zone": nom_ancetre(r, "Zone") or "(sans zone)",
+            "chapelle": nom_ancetre(par_id.get(r["parent"], r), "Chapelle") or "(sans chapelle)",
+            "planche": r["nom"],
+            "derniere_culture": r.get("culture", ""),
+        })
+    return planches
+
+
+# ------------------------------------------------------------------
+# Tableau final : rassemble, pour chaque planche assignée, les lignes du
+# planning cultural existant (CSV) correspondant à la culture choisie et à
+# la période demandée.
+# ------------------------------------------------------------------
+COLONNES_FINALES = ["zone", "chapelle", "planche", "annee", "culture", "conduite",
+                     "variete_n", "action", "semaine_debut", "semaine_fin",
+                     "mois_debut", "mois_fin", "commentaire", "score"]
+ENTETES_FINALES = ["Zone", "Chapelle", "Planche", "Année", "Culture", "Conduite",
+                    "Variété n°", "Action", "Sem. début", "Sem. fin",
+                    "Mois début", "Mois fin", "Commentaire", "Score adéquation"]
+
+
+ACTIONS_DEBUT_CYCLE = ACTIONS_LANCEMENT + ("Travail du sol",)
+
+
+def _semaine_cycle_culture(culture_nom, rows_planning):
+    """Renvoie (semaine_debut, semaine_fin) englobant l'ensemble du cycle
+    (travail du sol -> semis/plantation -> récolte -> conservation) de la
+    culture dans le planning existant (CSV), ou None si la culture n'y
+    figure pas. Sert à savoir combien de temps une culture occupe une
+    planche avant qu'une autre puisse lui succéder.
+
+    Le début est pris parmi les actions de lancement (travail du sol,
+    semis, plantation) plutôt qu'un simple min() sur toutes les actions :
+    sinon, une récolte tardive de numéro de semaine faible (ex. semaine 5,
+    car elle a lieu l'année suivante) serait à tort prise pour le début du
+    cycle. La fin est choisie comme la fin de ligne la plus éloignée du
+    début en distance circulaire (modulo 52) plutôt qu'un simple max() :
+    un simple max() se trompe dès qu'une action de fin de cycle a lieu
+    l'année suivante (numéro de semaine plus petit que le début)."""
+    lignes = [
+        r for r in rows_planning
+        if r["culture"].strip().lower() == culture_nom.strip().lower()
+        and str(r.get("semaine_debut", "")).isdigit()
+        and str(r.get("semaine_fin", "")).isdigit()
+    ]
+    if not lignes:
+        return None
+
+    debuts_lancement = [int(r["semaine_debut"]) for r in lignes if r.get("action") in ACTIONS_DEBUT_CYCLE]
+    debut = min(debuts_lancement) if debuts_lancement else min(int(r["semaine_debut"]) for r in lignes)
+
+    fin, meilleure_distance = debut, -1
+    for r in lignes:
+        f = int(r["semaine_fin"])
+        distance = (f - debut) % 52
+        if distance >= meilleure_distance:
+            meilleure_distance = distance
+            fin = f
+    return debut, fin
+
+
+DUREE_CYCLE_PAR_DEFAUT_SEMAINES = 10  # repli si la culture n'a aucune donnée de planning
+
+
+def semaine_annee_apres_culture(annee, semaine_ref, culture_nom, rows_planning):
+    """Calcule (année, semaine) juste après la fin du cycle de `culture_nom`
+    commencé en `semaine_ref` de l'année `annee` - c'est-à-dire le prochain
+    créneau libre sur la planche, en faisant avancer l'année quand la
+    semaine dépasse 52. Permet d'enchaîner plusieurs cultures successives
+    sur une même planche au fil d'une période longue (plusieurs années)."""
+    cycle = _semaine_cycle_culture(culture_nom, rows_planning)
+    if cycle is None:
+        fin = semaine_ref + DUREE_CYCLE_PAR_DEFAUT_SEMAINES
+    else:
+        _, fin_cycle = cycle
+        fin = fin_cycle if fin_cycle >= semaine_ref else fin_cycle + 52
+    annee_suivante, semaine_suivante = annee, fin + 1
+    while semaine_suivante > 52:
+        semaine_suivante -= 52
+        annee_suivante += 1
+    return annee_suivante, semaine_suivante
+
+
+def _position_atteinte_ou_depassee(annee, semaine, annee_limite, semaine_limite):
+    return (annee, semaine) >= (annee_limite, semaine_limite)
+
+
+def _semaine_precedente(annee, semaine):
+    """(année, semaine) juste avant la position donnée, en reculant à la
+    semaine 52 de l'année précédente si besoin."""
+    if semaine > 1:
+        return annee, semaine - 1
+    return annee - 1, 52
+
+
+def annee_pour_semaine_dans_etape(semaine_ligne, etape):
+    """Détermine l'année civile réelle à associer à une ligne du planning
+    (qui démarre en semaine `semaine_ligne`) à l'intérieur d'une étape de
+    chaîne, laquelle peut chevaucher une fois le changement d'année (ex.
+    une culture semée en semaine 45 et récoltée en semaine 5 de l'année
+    suivante). Sans ce calcul, toutes les lignes de l'étape - y compris
+    celles de janvier - seraient à tort rattachées à l'année de début."""
+    if etape["annee_fin"] == etape["annee_debut"]:
+        return etape["annee_debut"]
+    # L'étape chevauche le nouvel an. On classe selon la moitié de l'année
+    # civile (avant/après semaine 26) plutôt que par comparaison stricte au
+    # bord exact de l'étape : une ligne du planning existant peut légèrement
+    # déborder ce bord (ex. une conservation qui démarre une semaine avant
+    # le semis propre à cette étape) sans que cela change l'année à
+    # laquelle elle appartient réellement.
+    if semaine_ligne > 26:
+        return etape["annee_debut"]
+    return etape["annee_fin"]
+
+
+def _rogner_semaine_dans_etape(r_debut, r_fin, etape):
+    """Borne la fenêtre [r_debut, r_fin] d'une ligne du planning existant à
+    l'intérieur de la fenêtre propre à l'étape de chaîne à laquelle elle
+    est rattachée.
+
+    Sans ce bornage, une ligne dont la fenêtre déborde de l'étape (ex. une
+    récolte étalée sur plusieurs semaines dans le planning de référence,
+    alors que la planche a déjà été réaffectée à la culture suivante avant
+    la fin de cette fenêtre) garde sa largeur d'origine dans le tableau et
+    le diagramme de Gantt : son bloc empiète alors sur celui de la culture
+    suivante et peut le recouvrir entièrement, la rendant invisible."""
+    e_debut, e_fin = etape["semaine_debut"], etape["semaine_fin"]
+    duree_etape = ((e_fin - e_debut) % 52) + 1
+    decalage_debut = (r_debut - e_debut) % 52
+    decalage_fin = (r_fin - e_debut) % 52
+    debut_borne = r_debut if decalage_debut < duree_etape else e_debut
+    fin_borne = r_fin if decalage_fin < duree_etape else e_fin
+    return debut_borne, fin_borne
+
+
+def construire_lignes_finales(planches, assignations, rows_planning):
+    """planches : liste de dicts (zone/chapelle/planche/derniere_culture).
+    assignations : dict {index_planche: [etape, ...]} où chaque étape est un
+    dict {"annee_debut", "semaine_debut", "annee_fin", "semaine_fin",
+    "culture", "score"} - une chaîne de cultures successives dans le temps
+    pour cette planche (permet de couvrir de longues périodes en enchaînant
+    plusieurs cultures). Une étape peut chevaucher le changement d'année
+    (annee_fin == annee_debut + 1) : chaque ligne de planning qui lui est
+    rattachée reçoit alors l'année civile réelle qui lui correspond (et non
+    systématiquement l'année de début de l'étape).
+
+    Pour chaque étape de chaque planche, reprend dans rows_planning (le
+    planning CSV déjà chargé dans l'application) toutes les lignes de la
+    culture choisie dont la fenêtre de semaines chevauche le cycle de cette
+    étape, et les rattache à cette planche/année. Si aucune ligne du
+    planning existant ne correspond à la culture, une ligne indicative
+    unique est tout de même créée (action vide) pour que l'étape apparaisse
+    dans le tableau."""
+    lignes = []
+    for idx, chaine in assignations.items():
+        planche = planches[idx]
+        for etape in chaine:
+            culture = etape["culture"]
+            score = etape.get("score", "")
+            lignes_culture = [
+                r for r in rows_planning
+                if r["culture"].strip().lower() == culture.strip().lower()
+                and str(r.get("semaine_debut", "")).isdigit()
+                and str(r.get("semaine_fin", "")).isdigit()
+                and _periodes_se_chevauchent(
+                    int(r["semaine_debut"]), int(r["semaine_fin"]),
+                    etape["semaine_debut"], etape["semaine_fin"])
+            ]
+            if not lignes_culture:
+                lignes.append({
+                    "zone": planche["zone"], "chapelle": planche["chapelle"],
+                    "planche": planche["planche"], "annee": etape["annee_debut"], "culture": culture,
+                    "conduite": "", "variete_n": "", "action": "(aucune donnée de planning)",
+                    "semaine_debut": "", "semaine_fin": "", "mois_debut": "", "mois_fin": "",
+                    "commentaire": "", "score": score,
+                })
+                continue
+            for r in lignes_culture:
+                r_debut, r_fin = int(r["semaine_debut"]), int(r["semaine_fin"])
+                annee_ligne = annee_pour_semaine_dans_etape(r_debut, etape)
+                semaine_debut_bornee, semaine_fin_bornee = _rogner_semaine_dans_etape(r_debut, r_fin, etape)
+                lignes.append({
+                    "zone": planche["zone"], "chapelle": planche["chapelle"],
+                    "planche": planche["planche"], "annee": annee_ligne, "culture": culture,
+                    "conduite": r.get("conduite", ""), "variete_n": r.get("variete_n", ""),
+                    "action": r.get("action", ""), "semaine_debut": semaine_debut_bornee,
+                    "semaine_fin": semaine_fin_bornee, "mois_debut": r.get("mois_debut", ""),
+                    "mois_fin": r.get("mois_fin", ""), "commentaire": r.get("commentaire", ""),
+                    "score": score,
+
+                })
+    lignes.sort(key=lambda l: (l["zone"], l["chapelle"], l["planche"], l["annee"],
+                                int(l["semaine_debut"]) if str(l["semaine_debut"]).isdigit() else 0))
+    return lignes
+
+
+
+def _periodes_se_chevauchent(debut_a, fin_a, debut_b, fin_b):
+    """Teste le chevauchement de deux intervalles de semaines (1-52),
+    chacun pouvant chevaucher le changement d'année (debut > fin)."""
+    semaines_a = _semaines_de_intervalle(debut_a, fin_a)
+    semaines_b = _semaines_de_intervalle(debut_b, fin_b)
+    return not semaines_a.isdisjoint(semaines_b)
+
+
+def _semaines_de_intervalle(debut, fin):
+    if debut <= fin:
+        return set(range(debut, fin + 1))
+    return set(range(debut, 53)) | set(range(1, fin + 1))
+
+
+def exporter_vers_excel(chemin_xlsx, lignes, nom_feuille="Planning créé (assistant)"):
+    """Écrit (ou remplace) une feuille dans le classeur Excel existant avec
+    les lignes du tableau récapitulatif. Nécessite openpyxl."""
+    import openpyxl
+
+    if os.path.exists(chemin_xlsx):
+        classeur = openpyxl.load_workbook(chemin_xlsx)
+    else:
+        classeur = openpyxl.Workbook()
+        classeur.remove(classeur.active)
+
+    if nom_feuille in classeur.sheetnames:
+        del classeur[nom_feuille]
+    feuille = classeur.create_sheet(nom_feuille)
+
+    feuille.append(ENTETES_FINALES)
+    for ligne in lignes:
+        feuille.append([ligne.get(c, "") for c in COLONNES_FINALES])
+
+    for i, entete in enumerate(ENTETES_FINALES, start=1):
+        feuille.column_dimensions[feuille.cell(row=1, column=i).column_letter].width = max(12, len(entete) + 2)
+
+    classeur.save(chemin_xlsx)
+
+
+# ------------------------------------------------------------------
+# Import d'un planning cultural déjà généré (CSV), pour affichage direct
+# dans le tableau de l'onglet sans repasser par l'assistant.
+# ------------------------------------------------------------------
+_CORRESPONDANCES_ENTETES_CSV = {
+    'zone': 'zone', 'chapelle': 'chapelle', 'planche': 'planche',
+    'annee': 'annee', 'annee_civile': 'annee', 'year': 'annee',
+    'culture': 'culture', 'conduite': 'conduite',
+    'variete_n': 'variete_n', 'variete': 'variete_n', 'variete_no': 'variete_n',
+    'action': 'action',
+    'sem_debut': 'semaine_debut', 'semaine_debut': 'semaine_debut',
+    'sem_fin': 'semaine_fin', 'semaine_fin': 'semaine_fin',
+    'mois_debut': 'mois_debut', 'mois_fin': 'mois_fin',
+    'commentaire': 'commentaire',
+    'score_adequation': 'score', 'score': 'score',
+}
+
+
+def _normaliser_entete_csv(entete):
+    e = (entete or "").strip().lower()
+    e = (e.replace("é", "e").replace("è", "e").replace("ê", "e").replace("à", "a")
+           .replace("°", "").replace("'", ""))
+    return re.sub(r'[^a-z0-9]+', '_', e).strip('_')
+
+
+def importer_lignes_csv(chemin):
+    """Charge un fichier CSV de planning cultural et renvoie une liste de
+    lignes au format interne (mêmes clés que COLONNES_FINALES), prêtes à
+    être affichées dans le tableau récapitulatif de l'onglet.
+
+    Accepte aussi bien le format complet exporté par cet assistant (avec
+    Zone / Chapelle / Planche / Score adéquation, entêtes en français) que
+    le format simple du planning cultural de base (culture;conduite;
+    variete_n;action;semaine_debut;semaine_fin;mois_debut;mois_fin;
+    commentaire, sans zone ni score) : les colonnes absentes sont
+    simplement laissées vides. Le séparateur (';' ou ',') est détecté
+    automatiquement."""
+    with open(chemin, newline='', encoding='utf-8-sig') as f:
+        extrait = f.read(4096)
+        f.seek(0)
+        try:
+            delimiteur = csv.Sniffer().sniff(extrait, delimiters=';,').delimiter
+        except csv.Error:
+            delimiteur = ';'
+        lignes_brutes = list(csv.DictReader(f, delimiter=delimiteur))
+
+    lignes = []
+    for brute in lignes_brutes:
+        ligne = {c: "" for c in COLONNES_FINALES}
+        for entete, valeur in brute.items():
+            if entete is None:
+                continue
+            cle = _CORRESPONDANCES_ENTETES_CSV.get(_normaliser_entete_csv(entete))
+            if cle:
+                ligne[cle] = (valeur or "").strip()
+        if any(ligne.values()):
+            lignes.append(ligne)
+    return lignes
+
+
+# ======================================================================
+# VUE GANTT (reproduit la disposition du fichier Excel PLAN_CULTURAL :
+# une colonne par semaine, plusieurs années côte à côte, une ligne par
+# planche, les cultures affichées en cellules fusionnées bordées sur leur
+# période de présence - sans remplissage de couleur, comme l'original).
+# ======================================================================
+MOIS_FR_GANTT = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet",
+                  "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+
+
+def _mois_pour_semaine_gantt(semaine):
+    d = datetime.date(2025, 1, 1) + datetime.timedelta(days=(semaine - 1) * 7)
+    return MOIS_FR_GANTT[d.month - 1]
+
+
+def _cle_naturelle(s):
+    """Clé de tri qui ordonne "Jardin 2" avant "Jardin 10" (au lieu de
+    l'ordre alphabétique strict)."""
+    return [int(t) if t.isdigit() else t.lower() for t in re.split(r'(\d+)', s or "")]
+
+
+def construire_gabarit_gantt(lignes):
+    """À partir des lignes du tableau récapitulatif (zone/chapelle/planche/
+    annee/culture/semaine_debut/semaine_fin), construit :
+      - planches_ordre : liste ordonnée de tuples (zone, chapelle, planche)
+        (tri naturel, comme l'affichage des jardins/planches dans l'Excel) ;
+      - blocs : dict {(zone,chapelle,planche): [(texte, annee, sem_debut, sem_fin), ...]}
+        avec sem_debut <= sem_fin - une plage à cheval sur le changement
+        d'année (ex. conservation janvier + décembre) est découpée en deux
+        blocs distincts pour rester affichable sur une grille 1-52.
+        ``annee`` vaut None quand la ligne ne porte pas d'année (ex. import
+        d'un CSV au format simple, sans colonne Année) : le bloc est alors
+        affiché sur toutes les années visibles, comme avant - pour ne pas
+        casser l'affichage des anciens plannings à une seule culture répétée.
+
+    Les lignes d'une même planche/année/culture sont regroupées en un seul
+    bloc englobant (du travail du sol à la récolte), mais uniquement quand
+    elles se suivent immédiatement dans le temps - jamais si une AUTRE
+    culture s'intercale chronologiquement entre deux occurrences. Sans
+    cette précaution, une rotation comme Salade -> Radis -> Salade sur la
+    même planche la même année fusionnerait les deux passages de Salade en
+    un seul bloc qui engloberait entièrement celui du Radis : en plus
+    d'être visuellement faux, ce chevauchement fait planter l'export Excel
+    (écriture dans une cellule déjà fusionnée par le bloc englobant, ce que
+    openpyxl refuse - erreur "MergedCell object attribute 'value' is
+    read-only").
+
+    Les lignes sans planche assignée (zone/chapelle/planche vides) sont
+    ignorées : cette vue ne peut représenter que les plannings où chaque
+    ligne est rattachée à un emplacement physique (issus de l'assistant
+    « Création planning cultural »)."""
+    occurrences_par_planche = {}
+    ordre_planches = {}
+    for l in lignes:
+        cle = (l.get("zone", ""), l.get("chapelle", ""), l.get("planche", ""))
+        if not any(cle):
+            continue
+        ordre_planches.setdefault(cle, len(ordre_planches))
+        sd, sf = l.get("semaine_debut"), l.get("semaine_fin")
+        if not (str(sd).isdigit() and str(sf).isdigit()):
+            continue
+        annee_brute = l.get("annee", "")
+        annee = int(annee_brute) if str(annee_brute).isdigit() else None
+        d, f = int(sd), int(sf)
+        occurrences_par_planche.setdefault(cle, []).append((annee, l.get("culture", ""), d, f))
+
+    planches_ordre = sorted(
+        ordre_planches.keys(),
+        key=lambda c: (_cle_naturelle(c[0]), _cle_naturelle(c[1]), _cle_naturelle(c[2])))
+
+    blocs = {}
+    for cle, occurrences in occurrences_par_planche.items():
+        # Tri chronologique (année puis semaine de début) : ne fusionne que
+        # des occurrences réellement voisines dans cet ordre, jamais deux
+        # occurrences séparées par une autre culture.
+        occurrences.sort(key=lambda o: (o[0] if o[0] is not None else 0, o[2]))
+        fusionnes = []
+        for annee, texte, d, f in occurrences:
+            if fusionnes and fusionnes[-1][0] == annee and fusionnes[-1][1] == texte:
+                _, _, d0, f0 = fusionnes[-1]
+                fusionnes[-1] = (annee, texte, min(d0, d), max(f0, f))
+            else:
+                fusionnes.append((annee, texte, d, f))
+
+        liste = []
+        for annee, texte, d, f in fusionnes:
+            if d <= f:
+                liste.append((texte, annee, d, f))
+            else:
+                # chevauche le changement d'année : deux blocs distincts.
+                # La partie de janvier appartient à l'année suivante (sauf
+                # si `annee` est None - ligne sans info d'année, affichée
+                # sur toutes les colonnes comme avant).
+                annee_suivante = annee + 1 if annee is not None else None
+                liste.append((texte, annee, d, 52))
+                liste.append((texte, annee_suivante, 1, f))
+        blocs[cle] = liste
+    return planches_ordre, blocs
+
+
+def exporter_gantt_vers_excel(chemin_xlsx, lignes, annee_depart=None, nb_annees=None,
+                               nom_feuille="Plan cultural - vue Gantt"):
+    """Écrit (ou remplace) une feuille dans le classeur Excel existant qui
+    reproduit la disposition du fichier Excel PLAN_CULTURAL d'origine :
+    une colonne par semaine, plusieurs années côte à côte, une ligne par
+    planche - Zone/Chapelle/Planche en colonnes A à C figées (l'original
+    n'a que deux colonnes, Jardin et Planche ; une colonne Chapelle est
+    ajoutée ici pour refléter la hiérarchie à trois niveaux de l'assistant,
+    par ex. les tri-chapelles sous abri). Les cultures sont affichées en
+    cellules fusionnées bordées sur leur période de présence, sans
+    remplissage de couleur - comme l'original, qui n'utilise que des
+    bordures. S'appuie sur construire_gabarit_gantt : mêmes données et même
+    logique de placement par année que la vue Gantt affichée dans
+    l'application. Nécessite openpyxl.
+
+    Deux blocs qui se chevaudraient sur une même ligne/année (semaines en
+    commun) ne peuvent pas être écrits tous les deux : Excel ne permet pas
+    de fusionner une cellule qui appartient déjà à une autre fusion, et
+    openpyxl refuse alors toute écriture dessus ("MergedCell object
+    attribute 'value' is read-only"). construire_gabarit_gantt évite déjà
+    la plupart de ces chevauchements, mais des données importées ou
+    modifiées à la main peuvent toujours en contenir : plutôt que de
+    planter, cette fonction ignore silencieusement tout bloc qui
+    empiéterait sur un autre déjà placé sur la même ligne, et les renvoie
+    dans `conflits` pour que l'appelant puisse en informer l'utilisateur.
+
+    Renvoie (annee_depart, nb_annees, conflits) - `conflits` est une liste
+    de tuples ((zone, chapelle, planche), culture, annee, semaine_debut,
+    semaine_fin) pour chaque bloc ignoré."""
+    import openpyxl
+    from openpyxl.styles import Alignment, Font, Border, Side
+    from openpyxl.utils import get_column_letter
+
+    planches_ordre, blocs = construire_gabarit_gantt(lignes)
+
+    annees_trouvees = sorted({a for b in blocs.values() for (_, a, _, _) in b if a is not None})
+    if annee_depart is None:
+        annee_depart = annees_trouvees[0] if annees_trouvees else datetime.date.today().year
+    if nb_annees is None:
+        nb_annees = max(1, (annees_trouvees[-1] - annee_depart + 1) if annees_trouvees else 3)
+
+    if os.path.exists(chemin_xlsx):
+        classeur = openpyxl.load_workbook(chemin_xlsx)
+    else:
+        classeur = openpyxl.Workbook()
+        classeur.remove(classeur.active)
+    if nom_feuille in classeur.sheetnames:
+        del classeur[nom_feuille]
+    feuille = classeur.create_sheet(nom_feuille)
+
+    NB_LIGNES_ENTETE = 4   # Année / Mois / Semaine / ligne d'espacement (comme l'original)
+    NB_COL_LABELS = 3      # Zone / Chapelle / Planche
+    bord = Side(style="thin", color="000000")
+    bordure = Border(left=bord, right=bord, top=bord, bottom=bord)
+    centre = Alignment(horizontal="center", vertical="center", wrap_text=True)
+    gras = Font(bold=True)
+
+    feuille.column_dimensions["A"].width = 14
+    feuille.column_dimensions["B"].width = 14
+    feuille.column_dimensions["C"].width = 10
+    for a in range(nb_annees):
+        for s in range(52):
+            col = NB_COL_LABELS + a * 52 + s + 1
+            feuille.column_dimensions[get_column_letter(col)].width = 3.6
+
+    for col, texte in enumerate(["Zone", "Chapelle", "Planche"], start=1):
+        c = feuille.cell(row=NB_LIGNES_ENTETE, column=col, value=texte)
+        c.font, c.alignment, c.border = gras, centre, bordure
+
+    for a in range(nb_annees):
+        offset = NB_COL_LABELS + a * 52
+        c1 = feuille.cell(row=1, column=offset + 1, value=annee_depart + a)
+        c1.font, c1.alignment = gras, centre
+        try:
+            feuille.merge_cells(start_row=1, start_column=offset + 1, end_row=1, end_column=offset + 52)
+        except Exception:
+            pass
+
+        semaine = 1
+        while semaine <= 52:
+            mois = _mois_pour_semaine_gantt(semaine)
+            debut = semaine
+            while semaine <= 52 and _mois_pour_semaine_gantt(semaine) == mois:
+                semaine += 1
+            fin = semaine - 1
+            c2 = feuille.cell(row=2, column=offset + debut, value=mois)
+            c2.alignment = centre
+            if fin > debut:
+                try:
+                    feuille.merge_cells(start_row=2, start_column=offset + debut,
+                                         end_row=2, end_column=offset + fin)
+                except Exception:
+                    pass
+
+        for s in range(1, 53):
+            c3 = feuille.cell(row=3, column=offset + s, value=s)
+            c3.alignment = centre
+            c3.font = Font(size=7)
+
+    conflits = []
+    for idx, cle in enumerate(planches_ordre):
+        zone, chapelle, planche = cle
+        row = NB_LIGNES_ENTETE + 1 + idx
+        for col, texte in ((1, zone), (2, chapelle), (3, planche)):
+            c = feuille.cell(row=row, column=col, value=texte)
+            c.border = bordure
+            c.alignment = centre
+
+        for a in range(nb_annees):
+            offset = NB_COL_LABELS + a * 52
+            annee_colonne = annee_depart + a
+            colonnes_occupees = set()
+            for texte, annee_bloc, d, f in blocs.get(cle, []):
+                if annee_bloc is not None and annee_bloc != annee_colonne:
+                    continue
+                plage = range(offset + d, offset + f + 1)
+                if colonnes_occupees.intersection(plage):
+                    # Chevauche un bloc déjà placé sur cette même ligne :
+                    # l'ignorer plutôt que planter en écrivant dans une
+                    # cellule déjà fusionnée par ce bloc précédent.
+                    conflits.append((cle, texte, annee_bloc, d, f))
+                    continue
+                colonnes_occupees.update(plage)
+
+                cell = feuille.cell(row=row, column=offset + d, value=texte)
+                cell.alignment = centre
+                if f > d:
+                    try:
+                        feuille.merge_cells(start_row=row, start_column=offset + d,
+                                             end_row=row, end_column=offset + f)
+                    except Exception:
+                        pass
+                for cc in range(offset + d, offset + f + 1):
+                    feuille.cell(row=row, column=cc).border = bordure
+
+    def _fusionner_vertical(col, cle_fn):
+        debut = 0
+        n = len(planches_ordre)
+        for i in range(1, n + 1):
+            fin_groupe = (i == n or cle_fn(planches_ordre[i]) != cle_fn(planches_ordre[debut]))
+            if fin_groupe:
+                if i - debut > 1:
+                    r1 = NB_LIGNES_ENTETE + 1 + debut
+                    r2 = NB_LIGNES_ENTETE + 1 + i - 1
+                    try:
+                        feuille.merge_cells(start_row=r1, start_column=col, end_row=r2, end_column=col)
+                    except Exception:
+                        pass
+                debut = i
+    _fusionner_vertical(1, lambda c: c[0])
+    _fusionner_vertical(2, lambda c: (c[0], c[1]))
+
+    feuille.row_dimensions[1].height = 20
+    for r in range(2, NB_LIGNES_ENTETE + 1 + len(planches_ordre) + 1):
+        feuille.row_dimensions[r].height = 15
+
+    feuille.freeze_panes = feuille.cell(row=NB_LIGNES_ENTETE + 1, column=NB_COL_LABELS + 1).coordinate
+
+    classeur.save(chemin_xlsx)
+    return annee_depart, nb_annees, conflits
+
+
+# ====================================================================
+# PARTIE INTERFACE (PyQt)
+# ====================================================================
+
+class DialoguePointDepart(QDialog):
+    """Pop-up 1 : point de départ de l'assistant."""
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Créer un planning cultural — Point de départ")
+        self.resize(460, 220)
+        layout = QVBoxLayout(self)
+
+        layout.addWidget(QLabel(
+            "<b>Avant de commencer, une question :</b>"))
+
+        self.groupe = QButtonGroup(self)
+        self.radio_zero = QRadioButton("🌱 Je commence de zéro (nouvelle ferme, planches vierges)")
+        self.radio_existant = QRadioButton("🚜 J'ai déjà cultivé sur mes terres (rotation à respecter)")
+        self.radio_zero.setChecked(True)
+        self.groupe.addButton(self.radio_zero)
+        self.groupe.addButton(self.radio_existant)
+        layout.addWidget(self.radio_zero)
+        layout.addWidget(self.radio_existant)
+        layout.addStretch(1)
+
+        info = QLabel(
+            "Si vous avez déjà cultivé, l'assistant vous demandera la dernière culture "
+            "de chaque planche afin de respecter la règle de rotation (ne jamais "
+            "refaire suivre une culture par une autre de la même famille botanique)."
+        )
+        info.setWordWrap(True)
+        info.setStyleSheet("color:#555; font-style:italic; font-size:9pt;")
+        layout.addWidget(info)
+
+        boutons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        boutons.accepted.connect(self.accept)
+        boutons.rejected.connect(self.reject)
+        layout.addWidget(boutons)
+
+    def mode(self):
+        return "existant" if self.radio_existant.isChecked() else "zero"
+
+
+class DialogueDureeCulture(QDialog):
+    """Pop-up 2 : période sur laquelle générer le planning.
+
+    Contrairement à une simple semaine 1-52, la période est ici ancrée sur
+    de vraies dates calendaires (année comprise) : la date de début part
+    par défaut sur aujourd'hui, donc sur l'année en cours, et la période
+    peut s'étendre sur plusieurs années pour planifier une succession de
+    cultures sur une même planche au fil du temps."""
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Créer un planning cultural — Durée de culture")
+        self.resize(440, 200)
+        layout = QVBoxLayout(self)
+        layout.addWidget(QLabel(
+            "Sur quelle période souhaitez-vous générer le planning ? Choisissez une "
+            "période longue (plusieurs années) si vous voulez que l'assistant enchaîne "
+            "plusieurs cultures successives sur chaque planche."))
+
+        form = QFormLayout()
+        aujourd_hui = datetime.date.today()
+        self.date_debut = QDateEdit(calendarPopup=True)
+        self.date_debut.setDate(aujourd_hui)
+        self.date_fin = QDateEdit(calendarPopup=True)
+        self.date_fin.setDate(aujourd_hui + datetime.timedelta(days=365))
+        form.addRow("Début :", self.date_debut)
+        form.addRow("Fin :", self.date_fin)
+        layout.addLayout(form)
+        layout.addStretch(1)
+
+        info = QLabel(
+            f"La date de début est initialisée sur aujourd'hui (année {aujourd_hui.year}) ; "
+            "modifiez-la si vous planifiez pour une autre année."
+        )
+        info.setWordWrap(True)
+        info.setStyleSheet("color:#555; font-style:italic; font-size:9pt;")
+        layout.addWidget(info)
+
+        boutons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        boutons.accepted.connect(self._valider)
+        boutons.rejected.connect(self.reject)
+        layout.addWidget(boutons)
+
+    def _valider(self):
+        if self.date_fin.date() < self.date_debut.date():
+            QMessageBox.warning(self, "Dates invalides", "La date de fin doit être postérieure à la date de début.")
+            return
+        self.accept()
+
+    @staticmethod
+    def _annee_semaine(qdate):
+        """Année et semaine ISO (cohérent avec meteo_decision.semaine_courante,
+        qui utilise déjà isocalendar()) correspondant à une QDate."""
+        d = datetime.date(qdate.year(), qdate.month(), qdate.day())
+        annee_iso, semaine_iso, _ = d.isocalendar()
+        return annee_iso, semaine_iso
+
+    def periode_annees(self):
+        """Renvoie ((annee_debut, semaine_debut), (annee_fin, semaine_fin))."""
+        return self._annee_semaine(self.date_debut.date()), self._annee_semaine(self.date_fin.date())
+
+
+class DialogueChoixRegion(QDialog):
+    """Pop-up 3 : sélection de la région (climat/sol) sur une carte
+    schématique, en réutilisant les tuiles de carte_france.py."""
+
+    def __init__(self, parent, cf, region_par_defaut=None):
+        super().__init__(parent)
+        self.cf = cf
+        self.setWindowTitle("Créer un planning cultural — Région de la ferme")
+        self.resize(760, 520)
+        layout = QVBoxLayout(self)
+        layout.addWidget(QLabel(
+            "Cliquez sur votre région : le climat et le sol indicatifs de la région "
+            "sont utilisés pour trier les cultures les mieux adaptées."))
+
+        splitter = QSplitter(Qt.Horizontal)
+        layout.addWidget(splitter, 1)
+
+        self.scene = QGraphicsScene()
+        self.vue = cf.VueCarteFrance(self.scene)
+        self.vue.setMinimumWidth(420)
+        splitter.addWidget(self.vue)
+
+        self.texte_info = QTextBrowser()
+        splitter.addWidget(self.texte_info)
+        splitter.setStretchFactor(0, 3)
+        splitter.setStretchFactor(1, 2)
+
+        self.tuiles = {}
+        for nom, d in self.cf.REGIONS.items():
+            cx, cy = self.cf.position_pixel(d["row"], d["col"])
+            tuile = self.cf.TuileRegion(nom, cx, cy, callback_clic=self._selectionner)
+            tuile.definir_couleur(self.cf.couleur_pour(nom, 0))
+            self.scene.addItem(tuile)
+            self.scene.addItem(self.cf.creer_etiquette(nom, cx, cy))
+            self.tuiles[nom] = tuile
+        self.scene.setSceneRect(self.scene.itemsBoundingRect().adjusted(-40, -40, 40, 40))
+
+        self._region_choisie = region_par_defaut if region_par_defaut in self.cf.REGIONS else next(iter(self.cf.REGIONS))
+        self._selectionner(self._region_choisie)
+
+        boutons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        boutons.accepted.connect(self.accept)
+        boutons.rejected.connect(self.reject)
+        layout.addWidget(boutons)
+
+    def showEvent(self, event):
+        super().showEvent(event)
+        self.vue.ajuster_vue()
+
+    def _selectionner(self, nom):
+        self._region_choisie = nom
+        for autre, tuile in self.tuiles.items():
+            tuile.definir_selection(autre == nom)
+        d = self.cf.REGIONS[nom]
+        self.texte_info.setHtml(
+            f"<h3>{nom}</h3>"
+            f"<b>🌦 Climat :</b> {d['climat']}<br>{d['climat_desc']}<br><br>"
+            f"<b>🧪 Sol :</b> {d['sol_type']} "
+            f"<i>({self.cf.SOL_LABELS_NIVEAU[d['sol_niveau']]})</i><br>{d['sol_desc']}"
+        )
+
+    def region_choisie(self):
+        return self._region_choisie
+
+
+class DialogueDispositionFerme(QDialog):
+    """Pop-up 4 : disposition Zones/Chapelles/Planches de la ferme."""
+
+    def __init__(self, parent, mode, fb, pf):
+        super().__init__(parent)
+        self.mode = mode
+        self.fb = fb
+        self.pf = pf
+        self.setWindowTitle("Créer un planning cultural — Disposition de la ferme")
+        self.resize(720, 520)
+        self._planches = []
+
+        layout = QVBoxLayout(self)
+
+        if mode == "zero":
+            layout.addWidget(QLabel(
+                "Disposition par défaut proposée pour un débutant : ajustez les nombres "
+                "puis cliquez sur « Générer », ou modifiez directement les noms dans le tableau."))
+            barre = QHBoxLayout()
+            self.spin_zones = QSpinBox(); self.spin_zones.setRange(1, 20); self.spin_zones.setValue(1)
+            self.spin_chapelles = QSpinBox(); self.spin_chapelles.setRange(1, 20); self.spin_chapelles.setValue(2)
+            self.spin_planches = QSpinBox(); self.spin_planches.setRange(1, 50); self.spin_planches.setValue(4)
+            barre.addWidget(QLabel("Zones :")); barre.addWidget(self.spin_zones)
+            barre.addWidget(QLabel("Chapelles/zone :")); barre.addWidget(self.spin_chapelles)
+            barre.addWidget(QLabel("Planches/chapelle :")); barre.addWidget(self.spin_planches)
+            btn_generer = QPushButton("🔄 Générer la disposition par défaut")
+            btn_generer.clicked.connect(self._generer_defaut)
+            barre.addWidget(btn_generer)
+            barre.addStretch(1)
+            layout.addLayout(barre)
+        else:
+            layout.addWidget(QLabel(
+                "Renseignez vos planches existantes et, pour chacune, la dernière culture "
+                "réalisée (utilisée pour respecter la rotation). Vous pouvez aussi importer "
+                "un plan de ferme déjà enregistré (onglet « Plan de la ferme »)."))
+            barre = QHBoxLayout()
+            btn_ajouter = QPushButton("➕ Ajouter une planche")
+            btn_ajouter.clicked.connect(self._ajouter_ligne_vide)
+            btn_supprimer = QPushButton("🗑 Supprimer la ligne sélectionnée")
+            btn_supprimer.clicked.connect(self._supprimer_ligne)
+            btn_importer = QPushButton("📂 Importer un plan de ferme (.ferme)...")
+            btn_importer.clicked.connect(self._importer_plan)
+            barre.addWidget(btn_ajouter); barre.addWidget(btn_supprimer); barre.addWidget(btn_importer)
+            barre.addStretch(1)
+            layout.addLayout(barre)
+
+        self.table = QTableWidget(0, 4)
+        self.table.setHorizontalHeaderLabels(["Zone", "Chapelle", "Planche", "Dernière culture"])
+        self.table.horizontalHeader().setStretchLastSection(True)
+        self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        layout.addWidget(self.table, 1)
+
+        if mode == "zero":
+            self._generer_defaut()
+
+        boutons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        boutons.accepted.connect(self._valider)
+        boutons.rejected.connect(self.reject)
+        layout.addWidget(boutons)
+
+    # -- mode "zero" ----------------------------------------------------
+    def _generer_defaut(self):
+        planches = generer_disposition_defaut(
+            self.spin_zones.value(), self.spin_chapelles.value(), self.spin_planches.value())
+        self._remplir_table(planches, editable_culture=False)
+
+    # -- mode "existant" -------------------------------------------------
+    def _ajouter_ligne_vide(self):
+        row = self.table.rowCount()
+        self.table.insertRow(row)
+        self.table.setItem(row, 0, QTableWidgetItem("Zone 1"))
+        self.table.setItem(row, 1, QTableWidgetItem("Chapelle 1"))
+        self.table.setItem(row, 2, QTableWidgetItem(f"Planche {row + 1}"))
+        self._poser_combo_culture(row, "")
+
+    def _supprimer_ligne(self):
+        rows = sorted({i.row() for i in self.table.selectedIndexes()}, reverse=True)
+        for r in rows:
+            self.table.removeRow(r)
+
+    def _importer_plan(self):
+        chemin, _ = QFileDialog.getOpenFileName(
+            self, "Importer un plan de ferme", "", "Plans de ferme (*.ferme *.txt);;Tous les fichiers (*.*)")
+        if not chemin:
+            return
+        try:
+            planches = importer_planches_depuis_plan(chemin, self.pf)
+        except Exception as e:
+            QMessageBox.critical(self, "Erreur", f"Impossible de lire le plan de ferme :\n{e}")
+            return
+        if not planches:
+            QMessageBox.information(self, "Info", "Aucune planche trouvée dans ce plan de ferme.")
+            return
+        self._remplir_table(planches, editable_culture=True)
+
+    def _poser_combo_culture(self, row, culture_actuelle):
+        combo = QComboBox()
+        combo.addItem("(aucune)")
+        combo.addItems(sorted(self.fb.FICHES.keys()))
+        if culture_actuelle and culture_actuelle in self.fb.FICHES:
+            combo.setCurrentText(culture_actuelle)
+        else:
+            combo.setCurrentIndex(0)
+        self.table.setCellWidget(row, 3, combo)
+
+    def _remplir_table(self, planches, editable_culture):
+        self.table.setRowCount(0)
+        for p in planches:
+            row = self.table.rowCount()
+            self.table.insertRow(row)
+            self.table.setItem(row, 0, QTableWidgetItem(p["zone"]))
+            self.table.setItem(row, 1, QTableWidgetItem(p["chapelle"]))
+            self.table.setItem(row, 2, QTableWidgetItem(p["planche"]))
+            if self.mode == "zero":
+                item_culture = QTableWidgetItem("—")
+                item_culture.setFlags(item_culture.flags() & ~Qt.ItemIsEditable)
+                self.table.setItem(row, 3, item_culture)
+            else:
+                self._poser_combo_culture(row, p.get("derniere_culture", ""))
+
+    def _valider(self):
+        if self.table.rowCount() == 0:
+            QMessageBox.warning(self, "Disposition vide", "Ajoutez au moins une planche.")
+            return
+        self.accept()
+
+    def planches(self):
+        resultats = []
+        for row in range(self.table.rowCount()):
+            zone = self.table.item(row, 0).text().strip()
+            chapelle = self.table.item(row, 1).text().strip()
+            planche = self.table.item(row, 2).text().strip()
+            if self.mode == "zero":
+                derniere = ""
+            else:
+                combo = self.table.cellWidget(row, 3)
+                texte = combo.currentText() if combo else ""
+                derniere = "" if texte == "(aucune)" else texte
+            resultats.append({"zone": zone, "chapelle": chapelle, "planche": planche,
+                               "derniere_culture": derniere})
+        return resultats
+
+
+class DialogueSelectionCultures(QDialog):
+    """Pop-up 5 : pour chaque planche, choix d'une ou plusieurs cultures
+    successives (chaîne de rotation) parmi celles triées par score
+    d'adéquation décroissant, jusqu'à couvrir la période demandée.
+
+    Contrairement à une simple assignation unique, chaque planche accumule
+    ici une liste ordonnée de cultures dans le temps : après le choix d'une
+    culture, la position (année/semaine) avance automatiquement jusqu'à la
+    fin estimée de son cycle (d'après le planning existant), et la liste de
+    candidats se rafraîchit pour la culture suivante - ce qui permet
+    d'itérer facilement sur de longues périodes (plusieurs années) sans
+    avoir à ressaisir manuellement chaque étape."""
+
+    def __init__(self, parent, planches, nom_region, annee_debut, semaine_debut,
+                 annee_fin, semaine_fin, rows_planning, fb, rc, cf):
+        super().__init__(parent)
+        self.planches = planches
+        self.nom_region = nom_region
+        self.annee_debut, self.semaine_debut = annee_debut, semaine_debut
+        self.annee_fin, self.semaine_fin = annee_fin, semaine_fin
+        self.rows_planning = rows_planning
+        self.fb, self.rc, self.cf = fb, rc, cf
+        self.assignations = {}   # index planche -> [ {annee, semaine_debut, semaine_fin, culture, score}, ... ]
+        self.positions = {i: (annee_debut, semaine_debut) for i in range(len(planches))}  # position courante
+
+        self.setWindowTitle("Créer un planning cultural — Sélection des cultures")
+        self.resize(980, 600)
+        layout = QVBoxLayout(self)
+
+        
+##        layout.addWidget(QLabel(
+##            f"Période demandée : semaine {semaine_debut}/{annee_debut} à semaine {semaine_fin}/{annee_fin}. "
+##            "Sélectionnez une planche à gauche, puis ajoutez-lui une culture à la suite dans la liste "
+##            "de droite (triée par score d'adéquation région + saison + rotation). Une fois la culture "
+##            "choisie, la position avance automatiquement à la fin estimée de son cycle : vous pouvez "
+##            "alors enchaîner une nouvelle culture, jusqu'à couvrir toute la période. Les cultures "
+##            "grisées violent la règle de rotation (même famille botanique que la dernière culture)."))
+
+        info = QLabel(
+            f"Période demandée : semaine {semaine_debut}/{annee_debut} à "
+            f"semaine {semaine_fin}/{annee_fin}. "
+            "Sélectionnez une planche à gauche, puis ajoutez-lui une culture à la suite "
+            "dans la liste de droite (triée par score d'adéquation région + saison + rotation). "
+            "Une fois la culture choisie, la position avance automatiquement à la fin estimée "
+            "de son cycle : vous pouvez alors enchaîner une nouvelle culture, jusqu'à couvrir "
+            "toute la période. Les cultures grisées violent la règle de rotation."
+        )
+        info.setWordWrap(True)
+        layout.addWidget(info)        
+
+        splitter = QSplitter(Qt.Horizontal)
+        layout.addWidget(splitter, 1)
+
+        self.liste_planches = QListWidget()
+        for p in planches:
+            self.liste_planches.addItem(self._libelle_planche(p))
+        self.liste_planches.currentRowChanged.connect(self._changer_planche)
+        splitter.addWidget(self.liste_planches)
+
+        panneau_droit = QWidget()
+        layout_droit = QVBoxLayout(panneau_droit)
+        layout_droit.setContentsMargins(0, 0, 0, 0)
+
+        self.label_position = QLabel("")
+        self.label_position.setStyleSheet("font-weight:bold;")
+        layout_droit.addWidget(self.label_position)
+
+        self.table_cultures = QTableWidget(0, 4)
+        self.table_cultures.setHorizontalHeaderLabels(["Culture", "Score", "Famille", "Fenêtre / motif"])
+        self.table_cultures.horizontalHeader().setStretchLastSection(True)
+        self.table_cultures.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.table_cultures.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.table_cultures.itemDoubleClicked.connect(self._ajouter_depuis_table)
+        layout_droit.addWidget(self.table_cultures, 2)
+
+        layout_droit.addWidget(QLabel("Chaîne de cultures déjà planifiée pour cette planche :"))
+        self.liste_chaine = QListWidget()
+        layout_droit.addWidget(self.liste_chaine, 1)
+
+        splitter.addWidget(panneau_droit)
+        splitter.setStretchFactor(0, 1)
+        splitter.setStretchFactor(1, 2)
+
+        barre = QHBoxLayout()
+        btn_ajouter = QPushButton("✅ Ajouter cette culture à la suite")
+        btn_ajouter.clicked.connect(self._ajouter_depuis_table)
+        barre.addWidget(btn_ajouter)
+        btn_retour = QPushButton("↩ Revenir en arrière (dernière culture)")
+        btn_retour.clicked.connect(self._revenir_en_arriere)
+        barre.addWidget(btn_retour)
+        btn_vider = QPushButton("🗑 Vider cette planche")
+        btn_vider.clicked.connect(self._vider_planche)
+        barre.addWidget(btn_vider)
+        barre.addStretch(1)
+        layout.addLayout(barre)
+
+        boutons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        boutons.accepted.connect(self._valider)
+        boutons.rejected.connect(self.reject)
+        layout.addWidget(boutons)
+
+        if planches:
+            self.liste_planches.setCurrentRow(0)
+
+    def _libelle_planche(self, p):
+        base = f"{p['zone']} / {p['chapelle']} / {p['planche']}"
+        if p["derniere_culture"]:
+            base += f"  (préc. : {p['derniere_culture']})"
+        return base
+
+    def _derniere_culture_chaine(self, idx):
+        """Culture de référence pour la rotation : la dernière étape déjà
+        ajoutée à la chaîne, ou à défaut la dernière culture connue de la
+        planche (mode "j'ai déjà cultivé")."""
+        chaine = self.assignations.get(idx, [])
+        if chaine:
+            return chaine[-1]["culture"]
+        return self.planches[idx]["derniere_culture"]
+
+    def _periode_atteinte(self, idx):
+        annee, semaine = self.positions[idx]
+        return (annee, semaine) >= (self.annee_fin, self.semaine_fin)
+
+    def _rafraichir_libelle(self, idx):
+        item = self.liste_planches.item(idx)
+        p = self.planches[idx]
+        texte = self._libelle_planche(p)
+        nb = len(self.assignations.get(idx, []))
+        if nb:
+            texte += f"  ➜ {nb} culture(s) planifiée(s)"
+            if self._periode_atteinte(idx):
+                texte += "  ✅"
+        item.setText(texte)
+
+    def _rafraichir_chaine(self, idx):
+        self.liste_chaine.clear()
+        for etape in self.assignations.get(idx, []):
+            if etape["annee_fin"] != etape["annee_debut"]:
+                annee_txt = f"{etape['annee_debut']}→{etape['annee_fin']}"
+            else:
+                annee_txt = str(etape["annee_debut"])
+            self.liste_chaine.addItem(
+                f"{annee_txt} · sem. {etape['semaine_debut']}-{etape['semaine_fin']} "
+                f"→ {etape['culture']} ({etape['score']}/100)")
+
+    def _changer_planche(self, idx):
+        if idx < 0:
+            return
+        self._rafraichir_chaine(idx)
+        self._rafraichir_liste_candidats(idx)
+
+    def _rafraichir_liste_candidats(self, idx):
+        annee, semaine = self.positions[idx]
+        self.label_position.setText(
+            f"Prochaine culture pour cette planche : à partir de la semaine {semaine} de l'année {annee}"
+            + ("  (période demandée déjà couverte ✅)" if self._periode_atteinte(idx) else ""))
+
+        derniere_culture = self._derniere_culture_chaine(idx)
+        cultures = lister_cultures_triees(
+            self.nom_region, semaine, derniere_culture,
+            self.rows_planning, self.fb, self.rc, self.cf)
+
+        self.table_cultures.setRowCount(len(cultures))
+        for row, c in enumerate(cultures):
+            item_nom = QTableWidgetItem(c["culture"])
+            item_score = QTableWidgetItem(f"{c['score']}/100")
+            item_famille = QTableWidgetItem(c["famille"])
+            motif = c["motif_rotation"] or c["fenetre"]
+            item_motif = QTableWidgetItem(motif)
+            if c["interdit"]:
+                for it in (item_nom, item_score, item_famille, item_motif):
+                    it.setFlags(it.flags() & ~Qt.ItemIsEnabled)
+                    it.setBackground(QBrush(QColor("#f0f0f0")))
+                    it.setForeground(QBrush(QColor("#a0a0a0")))
+                item_motif.setText(f"❌ interdit : {c['motif_rotation']}")
+            elif c["score"] >= 70:
+                item_score.setForeground(QBrush(QColor("#2e7d32")))
+            self.table_cultures.setItem(row, 0, item_nom)
+            self.table_cultures.setItem(row, 1, item_score)
+            self.table_cultures.setItem(row, 2, item_famille)
+            self.table_cultures.setItem(row, 3, item_motif)
+
+    def _ajouter_depuis_table(self, *_args):
+        idx_planche = self.liste_planches.currentRow()
+        row = self.table_cultures.currentRow()
+        if idx_planche < 0 or row < 0:
+            return
+        item = self.table_cultures.item(row, 0)
+        if not (item.flags() & Qt.ItemIsEnabled):
+            QMessageBox.warning(self, "Rotation non respectée",
+                                 "Cette culture ne respecte pas la règle de rotation pour "
+                                 "cette planche et ne peut pas être sélectionnée.")
+            return
+        culture = item.text()
+        score = int(self.table_cultures.item(row, 1).text().split("/")[0])
+
+        annee, semaine = self.positions[idx_planche]
+        annee_suivante, semaine_suivante = semaine_annee_apres_culture(
+            annee, semaine, culture, self.rows_planning)
+        # Fin réelle du cycle : la semaine juste avant le début du créneau
+        # suivant, en reculant proprement à l'année précédente si besoin
+        # (et non un plafonnage arbitraire à la semaine 52 de l'année de
+        # départ, qui tronquerait les cycles se prolongeant de plusieurs
+        # semaines dans la nouvelle année).
+        annee_fin_etape, semaine_fin_etape = _semaine_precedente(annee_suivante, semaine_suivante)
+
+        etape = {"annee_debut": annee, "semaine_debut": semaine,
+                  "annee_fin": annee_fin_etape, "semaine_fin": semaine_fin_etape,
+                  "culture": culture, "score": score}
+        self.assignations.setdefault(idx_planche, []).append(etape)
+        self.positions[idx_planche] = (annee_suivante, semaine_suivante)
+
+        self._rafraichir_chaine(idx_planche)
+        self._rafraichir_libelle(idx_planche)
+        self._rafraichir_liste_candidats(idx_planche)
+
+    def _revenir_en_arriere(self):
+        idx_planche = self.liste_planches.currentRow()
+        if idx_planche < 0:
+            return
+        chaine = self.assignations.get(idx_planche, [])
+        if not chaine:
+            return
+        derniere = chaine.pop()
+        self.positions[idx_planche] = (derniere["annee_debut"], derniere["semaine_debut"])
+        self._rafraichir_chaine(idx_planche)
+        self._rafraichir_libelle(idx_planche)
+        self._rafraichir_liste_candidats(idx_planche)
+
+    def _vider_planche(self):
+        idx_planche = self.liste_planches.currentRow()
+        if idx_planche < 0:
+            return
+        self.assignations.pop(idx_planche, None)
+        self.positions[idx_planche] = (self.annee_debut, self.semaine_debut)
+        self._rafraichir_chaine(idx_planche)
+        self._rafraichir_libelle(idx_planche)
+        self._rafraichir_liste_candidats(idx_planche)
+
+    def _valider(self):
+        if not self.assignations:
+            QMessageBox.warning(self, "Aucune sélection",
+                                 "Ajoutez au moins une culture à au moins une planche.")
+            return
+        self.accept()
+
+
+class DialogueVueGantt(QDialog):
+    """Vue Gantt reproduisant la disposition du fichier Excel PLAN_CULTURAL :
+    une colonne par semaine, plusieurs années côte à côte, une ligne par
+    planche (regroupées par Zone/Chapelle comme les colonnes A/B de
+    l'Excel), les cultures affichées en cellules fusionnées bordées sur
+    leur période de présence. Les colonnes Zone/Chapelle/Planche sont
+    affichées dans un tableau séparé, à défilement vertical synchronisé
+    avec la grille, pour rester visibles pendant le défilement horizontal
+    (comme les volets figés de l'Excel d'origine)."""
+
+    NB_LIGNES_ENTETE = 3   # Année / Mois / Semaine
+    LARGEUR_COL_SEMAINE = 24
+    HAUTEUR_LIGNE = 22
+
+    def __init__(self, parent, lignes):
+        super().__init__(parent)
+        self.lignes = lignes
+        self.setWindowTitle("Vue Gantt — Planning cultural par planche (comme l'Excel)")
+        self.resize(1100, 650)
+        layout = QVBoxLayout(self)
+
+        info = QLabel(
+            "Reproduit la disposition du fichier Excel : une colonne par semaine, "
+            "plusieurs années côte à côte, une ligne par planche. Cette vue ne "
+            "peut afficher que les lignes rattachées à une planche (issues de "
+            "l'assistant) ; les lignes sans planche assignée sont ignorées.")
+        info.setWordWrap(True)
+        info.setStyleSheet("color:#555; font-style:italic; font-size:9pt;")
+        layout.addWidget(info)
+
+        barre = QHBoxLayout()
+        barre.addWidget(QLabel("Année de départ :"))
+        self.spin_annee = QSpinBox()
+        self.spin_annee.setRange(2000, 2100)
+        self.spin_annee.setValue(datetime.date.today().year)
+        barre.addWidget(self.spin_annee)
+        barre.addWidget(QLabel("Nombre d'années affichées :"))
+        self.spin_nb_annees = QSpinBox()
+        self.spin_nb_annees.setRange(1, 8)
+        self.spin_nb_annees.setValue(3)
+        barre.addWidget(self.spin_nb_annees)
+        btn_regenerer = QPushButton("🔄 Régénérer")
+        btn_regenerer.clicked.connect(self._construire)
+        barre.addWidget(btn_regenerer)
+        barre.addStretch(1)
+        layout.addLayout(barre)
+
+        self.table_labels = QTableWidget()
+        self.table_labels.setColumnCount(3)
+        self.table_labels.setHorizontalHeaderLabels(["Zone", "Chapelle", "Planche"])
+        self.table_labels.verticalHeader().setVisible(False)
+        self.table_labels.setFixedWidth(360)
+        self.table_labels.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.table_labels.setSelectionMode(QAbstractItemView.NoSelection)
+        self.table_labels.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.table_labels.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+        self.table_grille = QTableWidget()
+        self.table_grille.verticalHeader().setVisible(False)
+        self.table_grille.horizontalHeader().setVisible(False)
+        self.table_grille.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.table_grille.setSelectionMode(QAbstractItemView.NoSelection)
+
+        # défilement vertical synchronisé entre les deux tableaux (volet
+        # Zone/Chapelle/Planche toujours visible, comme les volets figés
+        # de l'Excel d'origine).
+        self.table_grille.verticalScrollBar().valueChanged.connect(
+            self.table_labels.verticalScrollBar().setValue)
+
+        conteneur = QHBoxLayout()
+        conteneur.addWidget(self.table_labels)
+        conteneur.addWidget(self.table_grille, 1)
+        layout.addLayout(conteneur, 1)
+
+        boutons = QDialogButtonBox(QDialogButtonBox.Close)
+        boutons.rejected.connect(self.accept)
+        btn_export = QPushButton("📥 Exporter en Excel (ce qui est affiché)...")
+        btn_export.setToolTip(
+            "Exporte exactement la vue actuelle (années et disposition affichées "
+            "ci-dessus) dans un fichier Excel, au même format que le fichier "
+            "PLAN_CULTURAL d'origine : une colonne par semaine, cultures en "
+            "cellules fusionnées bordées.")
+        btn_export.clicked.connect(self._exporter_excel)
+        boutons.addButton(btn_export, QDialogButtonBox.ActionRole)
+        layout.addWidget(boutons)
+
+        self._construire()
+
+    def _exporter_excel(self):
+        chemin, _ = QFileDialog.getSaveFileName(
+            self, "Exporter la vue Gantt en Excel", "plan_cultural_gantt.xlsx",
+            "Classeurs Excel (*.xlsx)")
+        if not chemin:
+            return
+        if not chemin.lower().endswith(".xlsx"):
+            chemin += ".xlsx"
+        try:
+            _, _, conflits = exporter_gantt_vers_excel(
+                chemin, self.lignes,
+                annee_depart=self.spin_annee.value(), nb_annees=self.spin_nb_annees.value())
+        except ImportError:
+            QMessageBox.critical(self, "Erreur",
+                                  "Le paquet 'openpyxl' est requis.\nInstallez-le avec : pip install openpyxl")
+            return
+        except Exception as e:
+            QMessageBox.critical(self, "Erreur", f"Impossible d'exporter vers Excel :\n{e}")
+            return
+        message = f"La vue Gantt a été exportée vers :\n{chemin}"
+        if conflits:
+            exemples = "\n".join(
+                f"  • {c[0][0]} / {c[0][1]} / {c[0][2]} - {c[1]} ({c[2]}, sem. {c[3]}-{c[4]})"
+                for c in conflits[:8])
+            suffixe = "\n  …" if len(conflits) > 8 else ""
+            message += (
+                f"\n\n⚠ {len(conflits)} culture(s) n'ont pas pu être affichées car elles se "
+                f"chevauchent avec une autre culture déjà présente sur la même planche/année "
+                f"(vérifiez le tableau récapitulatif) :\n{exemples}{suffixe}"
+            )
+        QMessageBox.information(self, "Export réussi", message)
+
+    def _construire(self):
+        planches_ordre, blocs = construire_gabarit_gantt(self.lignes)
+        nb_annees = self.spin_nb_annees.value()
+        annee_depart = self.spin_annee.value()
+        nb_lignes = self.NB_LIGNES_ENTETE + len(planches_ordre)
+        nb_col_semaines = nb_annees * 52
+
+        for table in (self.table_labels, self.table_grille):
+            table.clearContents()
+            table.clearSpans()
+            table.setRowCount(nb_lignes)
+        self.table_grille.setColumnCount(nb_col_semaines)
+
+        for r in range(nb_lignes):
+            self.table_labels.setRowHeight(r, self.HAUTEUR_LIGNE)
+            self.table_grille.setRowHeight(r, self.HAUTEUR_LIGNE)
+        for c in range(nb_col_semaines):
+            self.table_grille.setColumnWidth(c, self.LARGEUR_COL_SEMAINE)
+
+        if not planches_ordre:
+            QMessageBox.information(
+                self, "Aucune planche",
+                "Aucune ligne du tableau n'est rattachée à une planche : "
+                "utilisez l'assistant (mode zéro ou déjà cultivé) pour "
+                "obtenir un planning affecté à des planches.")
+
+        # -- en-têtes Année / Mois / Semaine, répétés pour chaque année --
+        police_entete = None
+        for a in range(nb_annees):
+            offset = a * 52
+            item_annee = QTableWidgetItem(str(annee_depart + a))
+            item_annee.setTextAlignment(Qt.AlignCenter)
+            item_annee.setBackground(QBrush(QColor("#e8eef5")))
+            f = item_annee.font(); f.setBold(True); item_annee.setFont(f)
+            self.table_grille.setItem(0, offset, item_annee)
+            self.table_grille.setSpan(0, offset, 1, 52)
+
+            semaine = 1
+            while semaine <= 52:
+                mois = _mois_pour_semaine_gantt(semaine)
+                debut = semaine
+                while semaine <= 52 and _mois_pour_semaine_gantt(semaine) == mois:
+                    semaine += 1
+                fin = semaine - 1
+                item_mois = QTableWidgetItem(mois)
+                item_mois.setTextAlignment(Qt.AlignCenter)
+                item_mois.setBackground(QBrush(QColor("#f2f2f2")))
+                self.table_grille.setItem(1, offset + debut - 1, item_mois)
+                if fin > debut:
+                    self.table_grille.setSpan(1, offset + debut - 1, 1, fin - debut + 1)
+
+            for s in range(1, 53):
+                item_s = QTableWidgetItem(str(s))
+                item_s.setTextAlignment(Qt.AlignCenter)
+                fs = item_s.font(); fs.setPointSize(7); item_s.setFont(fs)
+                item_s.setBackground(QBrush(QColor("#fafafa")))
+                self.table_grille.setItem(2, offset + s - 1, item_s)
+
+        for r in range(self.NB_LIGNES_ENTETE):
+            for col_lbl, texte in enumerate(["", "", ""]):
+                item = QTableWidgetItem(texte)
+                item.setBackground(QBrush(QColor("#e8eef5" if r == 0 else "#f2f2f2")))
+                self.table_labels.setItem(r, col_lbl, item)
+
+        # -- une ligne par planche --
+        for idx, cle in enumerate(planches_ordre):
+            row = self.NB_LIGNES_ENTETE + idx
+            zone, chapelle, planche = cle
+            self.table_labels.setItem(row, 0, QTableWidgetItem(zone))
+            self.table_labels.setItem(row, 1, QTableWidgetItem(chapelle))
+            self.table_labels.setItem(row, 2, QTableWidgetItem(planche))
+            for a in range(nb_annees):
+                offset = a * 52
+                annee_colonne = annee_depart + a
+                colonnes_occupees = set()
+                for texte, annee_bloc, d, f in blocs.get(cle, []):
+                    # annee_bloc=None (ligne sans année, ex. CSV simple
+                    # importé) : affiché sur toutes les colonnes, comme
+                    # avant. Sinon, uniquement sur l'année qui correspond
+                    # réellement à cette étape de la rotation.
+                    if annee_bloc is not None and annee_bloc != annee_colonne:
+                        continue
+                    plage = range(offset + d - 1, offset + f)
+                    if colonnes_occupees.intersection(plage):
+                        # Chevauche un bloc déjà placé sur cette même ligne
+                        # (ex. données importées ou modifiées à la main) :
+                        # l'ignorer plutôt que de fusionner par-dessus une
+                        # cellule déjà occupée, ce qui masquerait l'une des
+                        # deux cultures sans prévenir.
+                        continue
+                    colonnes_occupees.update(plage)
+                    item = QTableWidgetItem(texte)
+                    item.setTextAlignment(Qt.AlignCenter)
+                    item.setToolTip(texte)
+                    self.table_grille.setItem(row, offset + d - 1, item)
+                    if f > d:
+                        self.table_grille.setSpan(row, offset + d - 1, 1, f - d + 1)
+
+        # -- fusion verticale des colonnes Zone / Chapelle (comme les
+        #    colonnes A/B de l'Excel, qui regroupent les planches d'un
+        #    même jardin/chapelle) --
+        self._fusionner_colonne_verticale(0, planches_ordre, lambda c: c[0])
+        self._fusionner_colonne_verticale(1, planches_ordre, lambda c: (c[0], c[1]))
+
+    def _fusionner_colonne_verticale(self, col, planches_ordre, cle_fn):
+        debut = 0
+        n = len(planches_ordre)
+        for i in range(1, n + 1):
+            fin_groupe = (i == n or cle_fn(planches_ordre[i]) != cle_fn(planches_ordre[debut]))
+            if fin_groupe:
+                if i - debut > 1:
+                    self.table_labels.setSpan(self.NB_LIGNES_ENTETE + debut, col, i - debut, 1)
+                debut = i
+
+
+# ------------------------------------------------------------------
+# Orchestration de l'assistant
+# ------------------------------------------------------------------
+def lancer_assistant(app, fb, rc, pf, cf):
+    """Lance les pop-ups de l'assistant dans l'ordre. Renvoie
+    (planches, assignations) ou None si l'utilisateur a annulé à une étape.
+    `assignations` est un dict {index_planche: [etape, ...]} - une chaîne
+    de cultures successives par planche, chacune rattachée à son année."""
+
+    dlg1 = DialoguePointDepart(app)
+    if dlg1.exec_() != QDialog.Accepted:
+        return None
+    mode = dlg1.mode()
+
+    dlg2 = DialogueDureeCulture(app)
+    if dlg2.exec_() != QDialog.Accepted:
+        return None
+    (annee_debut, semaine_debut), (annee_fin, semaine_fin) = dlg2.periode_annees()
+
+    dlg3 = DialogueChoixRegion(app, cf)
+    if dlg3.exec_() != QDialog.Accepted:
+        return None
+    region = dlg3.region_choisie()
+
+    dlg4 = DialogueDispositionFerme(app, mode, fb, pf)
+    if dlg4.exec_() != QDialog.Accepted:
+        return None
+    planches = dlg4.planches()
+
+    dlg5 = DialogueSelectionCultures(app, planches, region, annee_debut, semaine_debut,
+                                      annee_fin, semaine_fin, app.rows, fb, rc, cf)
+    if dlg5.exec_() != QDialog.Accepted:
+        return None
+
+    return planches, dlg5.assignations
+
+
+# ====================================================================
+# Construction de l'onglet
+# ====================================================================
+def construire_onglet_creation_planning(app, parent, fb, rc, pf, cf):
+    """Construit l'onglet « Création planning cultural » et attache les
+    gestionnaires d'évènements sur `app` (préfixe _ocp_)."""
+    layout = QVBoxLayout(parent)
+
+    intro = QLabel(
+        "Cet assistant vous guide pas à pas pour construire un planning cultural : "
+        "point de départ, période (avec année réelle, à partir d'aujourd'hui), région, "
+        "disposition de la ferme, puis sélection des cultures les mieux adaptées (triées "
+        "par score) - en enchaînant plusieurs cultures successives par planche si la "
+        "période demandée s'étend sur plusieurs années. Le résultat est rassemblé dans "
+        "le tableau ci-dessous (avec l'année de chaque étape), que vous pouvez ajouter au "
+        "planning cultural, visualiser en Gantt ou exporter vers le fichier Excel."
+    )
+    intro.setWordWrap(True)
+    intro.setStyleSheet("color:#555; font-style:italic; font-size:9pt;")
+    layout.addWidget(intro)
+
+    barre_haut = QHBoxLayout()
+    app._ocp_btn_lancer = QPushButton("🌱 Créer un planning cultural")
+    app._ocp_btn_lancer.setStyleSheet("font-weight:bold; padding:8px; font-size:11pt;")
+    app._ocp_btn_lancer.clicked.connect(lambda: _lancer(app, fb, rc, pf, cf))
+    barre_haut.addWidget(app._ocp_btn_lancer)
+
+    app._ocp_btn_importer_csv = QPushButton("📂 Afficher un planning cultural (CSV)...")
+    app._ocp_btn_importer_csv.setToolTip(
+        "Charger un fichier CSV de planning cultural (généré par cet assistant "
+        "ou au format simple culture/conduite/action/semaines) pour l'afficher "
+        "ici sous forme de tableau, sans repasser par l'assistant.")
+    app._ocp_btn_importer_csv.clicked.connect(lambda: _importer_csv(app))
+    barre_haut.addWidget(app._ocp_btn_importer_csv)
+    barre_haut.addStretch(1)
+    layout.addLayout(barre_haut)
+
+    app._ocp_resume = QLabel("")
+    app._ocp_resume.setWordWrap(True)
+    layout.addWidget(app._ocp_resume)
+
+    app._ocp_table = QTableWidget(0, len(ENTETES_FINALES))
+    app._ocp_table.setHorizontalHeaderLabels(ENTETES_FINALES)
+    app._ocp_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
+    app._ocp_table.setAlternatingRowColors(True)
+    app._ocp_table.horizontalHeader().setStretchLastSection(True)
+    app._ocp_table.verticalHeader().setVisible(False)
+    layout.addWidget(app._ocp_table, 1)
+
+    barre_bas = QHBoxLayout()
+    app._ocp_btn_ajouter = QPushButton("➕ Ajouter ces lignes au planning cultural")
+    app._ocp_btn_ajouter.clicked.connect(lambda: _ajouter_au_planning(app))
+    app._ocp_btn_ajouter.setEnabled(False)
+    barre_bas.addWidget(app._ocp_btn_ajouter)
+
+    app._ocp_btn_gantt = QPushButton("📅 Voir en vue Gantt (comme l'Excel)")
+    app._ocp_btn_gantt.setToolTip(
+        "Affiche le tableau ci-dessus sous forme de calendrier hebdomadaire par "
+        "planche, plusieurs années côte à côte - comme la disposition du fichier "
+        "Excel PLAN_CULTURAL. Nécessite des lignes rattachées à une planche.")
+    app._ocp_btn_gantt.clicked.connect(lambda: _ouvrir_vue_gantt(app))
+    app._ocp_btn_gantt.setEnabled(False)
+    barre_bas.addWidget(app._ocp_btn_gantt)
+
+    app._ocp_btn_excel = QPushButton("📊 Exporter vers le fichier Excel...")
+    app._ocp_btn_excel.clicked.connect(lambda: _exporter_excel(app))
+    app._ocp_btn_excel.setEnabled(False)
+    barre_bas.addWidget(app._ocp_btn_excel)
+    barre_bas.addStretch(1)
+    layout.addLayout(barre_bas)
+
+    app._ocp_lignes = []
+
+
+def _afficher_lignes(app, lignes, texte_resume):
+    """Peuple le tableau récapitulatif de l'onglet avec `lignes` (mêmes clés
+    que COLONNES_FINALES) et active les boutons Ajouter/Gantt/Exporter."""
+    app._ocp_lignes = lignes
+    app._ocp_table.setRowCount(len(lignes))
+    for row, ligne in enumerate(lignes):
+        for col, champ in enumerate(COLONNES_FINALES):
+            app._ocp_table.setItem(row, col, QTableWidgetItem(str(ligne.get(champ, ""))))
+    app._ocp_resume.setText(texte_resume)
+    app._ocp_btn_ajouter.setEnabled(bool(lignes))
+    app._ocp_btn_excel.setEnabled(bool(lignes))
+    app._ocp_btn_gantt.setEnabled(bool(lignes))
+
+
+def _lancer(app, fb, rc, pf, cf):
+    resultat = lancer_assistant(app, fb, rc, pf, cf)
+    if resultat is None:
+        return
+    planches, assignations = resultat
+    lignes = construire_lignes_finales(planches, assignations, app.rows)
+
+    nb_planches_assignees = len(assignations)
+    nb_cultures = sum(len(chaine) for chaine in assignations.values())
+    annees = sorted({a for chaine in assignations.values() for etape in chaine
+                      for a in (etape["annee_debut"], etape["annee_fin"])})
+    periode_txt = f"{annees[0]} à {annees[-1]}" if len(annees) > 1 else (str(annees[0]) if annees else "?")
+    texte_resume = (
+        f"{nb_planches_assignees} planche(s) sur {len(planches)} assignée(s) — "
+        f"{nb_cultures} culture(s) planifiée(s) au total (chaîne de rotation), "
+        f"{len(lignes)} ligne(s) générée(s), années {periode_txt}."
+    )
+    _afficher_lignes(app, lignes, texte_resume)
+    app._set_status(f"Planning créé : {len(lignes)} ligne(s).")
+
+
+
+def _importer_csv(app):
+    chemin, _ = QFileDialog.getOpenFileName(
+        app, "Afficher un planning cultural (CSV)", "",
+        "Fichiers CSV (*.csv);;Tous les fichiers (*.*)")
+    if not chemin:
+        return
+    try:
+        lignes = importer_lignes_csv(chemin)
+    except Exception as e:
+        QMessageBox.critical(app, "Erreur", f"Impossible de lire ce fichier CSV :\n{e}")
+        return
+    if not lignes:
+        QMessageBox.information(app, "Fichier vide",
+                                 "Aucune ligne exploitable n'a été trouvée dans ce fichier.")
+        return
+    texte_resume = f"{len(lignes)} ligne(s) importée(s) depuis « {os.path.basename(chemin)} »."
+    _afficher_lignes(app, lignes, texte_resume)
+    app._set_status(f"Planning affiché : {len(lignes)} ligne(s) depuis {chemin}.")
+
+
+def _ajouter_au_planning(app):
+    if not app._ocp_lignes:
+        return
+    ajoutees = 0
+    for ligne in app._ocp_lignes:
+        if not ligne.get("action") or ligne["action"] == "(aucune donnée de planning)":
+            continue
+        commentaire = ligne.get("commentaire", "")
+        annee = ligne.get("annee", "")
+        prefixe_annee = f"[{annee}]" if annee not in ("", None) else ""
+        prefixe = f"{prefixe_annee}[{ligne['zone']} / {ligne['chapelle']} / {ligne['planche']}]"
+        commentaire = f"{prefixe} {commentaire}".strip()
+        app.rows.append({
+            "culture": ligne["culture"], "conduite": ligne.get("conduite", ""),
+            "variete_n": ligne.get("variete_n", "") or "1", "action": ligne["action"],
+            "semaine_debut": str(ligne.get("semaine_debut", "")),
+            "semaine_fin": str(ligne.get("semaine_fin", "")),
+            "mois_debut": ligne.get("mois_debut", ""), "mois_fin": ligne.get("mois_fin", ""),
+            "commentaire": commentaire,
+        })
+        ajoutees += 1
+    app._rafraichir_tableau()
+    if hasattr(app, "table_semaine"):
+        app._rafraichir_actions_semaine()
+    if hasattr(app, "cb_dec_culture"):
+        app._maj_liste_cultures()
+    if hasattr(app, "liste_fiches"):
+        app._maj_liste_fiches()
+    QMessageBox.information(app, "Ajouté", f"{ajoutees} ligne(s) ajoutée(s) au planning cultural.\n"
+                             "L'année de chaque étape est conservée entre crochets en début de "
+                             "commentaire (le planning cultural de base n'a pas de colonne Année). "
+                             "Pensez à enregistrer (Fichier → Enregistrer) pour conserver le CSV.")
+
+
+
+def _ouvrir_vue_gantt(app):
+    if not app._ocp_lignes:
+        return
+    lignes_avec_planche = [l for l in app._ocp_lignes if any(
+        (l.get("zone"), l.get("chapelle"), l.get("planche")))]
+    if not lignes_avec_planche:
+        QMessageBox.information(
+            app, "Aucune planche",
+            "Ce tableau ne contient aucune ligne rattachée à une planche : "
+            "la vue Gantt ne peut donc rien afficher. Utilisez l'assistant "
+            "(mode zéro ou déjà cultivé) pour générer un planning affecté "
+            "à des planches, ou importez un CSV qui en contient.")
+        return
+    dlg = DialogueVueGantt(app, app._ocp_lignes)
+    dlg.exec_()
+
+
+def _exporter_excel(app):
+    if not app._ocp_lignes:
+        return
+    chemin_defaut = getattr(app, "csv_path", "") or ""
+    chemin_defaut = os.path.splitext(chemin_defaut)[0] + ".xlsx" if chemin_defaut else "planning_cultural.xlsx"
+    chemin, _ = QFileDialog.getSaveFileName(
+        app, "Exporter vers le fichier Excel", chemin_defaut, "Classeurs Excel (*.xlsx)")
+    if not chemin:
+        return
+    if not chemin.lower().endswith(".xlsx"):
+        chemin += ".xlsx"
+    try:
+        exporter_vers_excel(chemin, app._ocp_lignes)
+    except ImportError:
+        QMessageBox.critical(app, "Erreur", "Le paquet 'openpyxl' est requis.\nInstallez-le avec : pip install openpyxl")
+        return
+    except Exception as e:
+        QMessageBox.critical(app, "Erreur", f"Impossible d'exporter vers Excel :\n{e}")
+        return
+    app._set_status(f"Tableau exporté vers {chemin} (feuille « Planning créé (assistant) »).")
+    QMessageBox.information(app, "Export réussi", f"Le tableau a été ajouté au fichier :\n{chemin}")

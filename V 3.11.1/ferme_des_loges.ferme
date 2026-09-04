@@ -1,0 +1,1633 @@
+PLAN_FERME 1
+ECHELLE 1.0
+
+RECT id=1 parent=0
+  nom=Plein champ
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0
+  y=0
+  largeur=26.2
+  hauteur=204.8
+
+RECT id=2 parent=1
+  nom=Jardin 1
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=0.3
+  largeur=25.6
+  hauteur=17.2
+
+RECT id=3 parent=2
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Betterave de conservation
+  x=0.3
+  y=0.3
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=4 parent=2
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Salade
+  x=0.3
+  y=2.0
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=5 parent=2
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Betterave de conservation
+  x=0.3
+  y=3.7
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=6 parent=2
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Céleri rave
+  x=0.3
+  y=5.4
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=7 parent=2
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Céleri branche
+  x=0.3
+  y=7.1
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=8 parent=2
+  nom=P6
+  type=Planche
+  etat=Terre travaillée
+  culture=Ciboulette
+  x=0.3
+  y=8.8
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=9 parent=2
+  nom=P7
+  type=Planche
+  etat=Terre travaillée
+  culture=Betterave de conservation
+  x=0.3
+  y=10.5
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=10 parent=2
+  nom=P8
+  type=Planche
+  etat=Terre travaillée
+  culture=Blette
+  x=0.3
+  y=12.2
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=11 parent=2
+  nom=P9
+  type=Planche
+  etat=Terre travaillée
+  culture=Betterave de conservation
+  x=0.3
+  y=13.9
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=12 parent=2
+  nom=P10
+  type=Planche
+  etat=Terre travaillée
+  culture=Fenouil
+  x=0.3
+  y=15.6
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=13 parent=1
+  nom=Jardin 2
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=19.0
+  largeur=25.6
+  hauteur=17.2
+
+RECT id=14 parent=13
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=0.3
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=15 parent=13
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Betterave de conservation
+  x=0.3
+  y=2.0
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=16 parent=13
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Radis botte
+  x=0.3
+  y=3.7
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=17 parent=13
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Radis botte
+  x=0.3
+  y=5.4
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=18 parent=13
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Radis botte
+  x=0.3
+  y=7.1
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=19 parent=13
+  nom=P6
+  type=Planche
+  etat=Terre travaillée
+  culture=Chou chinois pak choi
+  x=0.3
+  y=8.8
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=20 parent=13
+  nom=P7
+  type=Planche
+  etat=Terre travaillée
+  culture=Radis botte
+  x=0.3
+  y=10.5
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=21 parent=13
+  nom=P8
+  type=Planche
+  etat=Terre travaillée
+  culture=Radis botte
+  x=0.3
+  y=12.2
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=22 parent=13
+  nom=P9
+  type=Planche
+  etat=Terre travaillée
+  culture=Epinard
+  x=0.3
+  y=13.9
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=23 parent=13
+  nom=P10
+  type=Planche
+  etat=Terre travaillée
+  culture=Epinard
+  x=0.3
+  y=15.6
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=24 parent=1
+  nom=Jardin 3
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=37.7
+  largeur=25.6
+  hauteur=17.2
+
+RECT id=25 parent=24
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Chou chinois pak choi
+  x=0.3
+  y=0.3
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=26 parent=24
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Navet botte
+  x=0.3
+  y=2.0
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=27 parent=24
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Mâche
+  x=0.3
+  y=3.7
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=28 parent=24
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Salade
+  x=0.3
+  y=5.4
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=29 parent=24
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Salade
+  x=0.3
+  y=7.1
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=30 parent=24
+  nom=P6
+  type=Planche
+  etat=Terre travaillée
+  culture=Oignon conservation
+  x=0.3
+  y=8.8
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=31 parent=24
+  nom=P7
+  type=Planche
+  etat=Terre travaillée
+  culture=Haricot vert nain
+  x=0.3
+  y=10.5
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=32 parent=24
+  nom=P8
+  type=Planche
+  etat=Terre travaillée
+  culture=Haricot vert nain
+  x=0.3
+  y=12.2
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=33 parent=24
+  nom=P9
+  type=Planche
+  etat=Terre travaillée
+  culture=Haricot vert nain
+  x=0.3
+  y=13.9
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=34 parent=24
+  nom=P10
+  type=Planche
+  etat=Terre travaillée
+  culture=Haricot vert nain
+  x=0.3
+  y=15.6
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=35 parent=1
+  nom=Jardin 4
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=56.4
+  largeur=25.6
+  hauteur=17.2
+
+RECT id=36 parent=35
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Fève
+  x=0.3
+  y=0.3
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=37 parent=35
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Fève
+  x=0.3
+  y=2.0
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=38 parent=35
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Fève
+  x=0.3
+  y=3.7
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=39 parent=35
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Céleri rave
+  x=0.3
+  y=5.4
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=40 parent=35
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Céleri rave
+  x=0.3
+  y=7.1
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=41 parent=35
+  nom=P6
+  type=Planche
+  etat=Terre travaillée
+  culture=Céleri rave
+  x=0.3
+  y=8.8
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=42 parent=35
+  nom=P7
+  type=Planche
+  etat=Terre travaillée
+  culture=Chou cabus
+  x=0.3
+  y=10.5
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=43 parent=35
+  nom=P8
+  type=Planche
+  etat=Terre travaillée
+  culture=Chou cabus
+  x=0.3
+  y=12.2
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=44 parent=35
+  nom=P9
+  type=Planche
+  etat=Terre travaillée
+  culture=Chou cabus
+  x=0.3
+  y=13.9
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=45 parent=35
+  nom=P10
+  type=Planche
+  etat=Terre travaillée
+  culture=Chou cabus
+  x=0.3
+  y=15.6
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=46 parent=1
+  nom=Jardin 5
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=75.1
+  largeur=25.6
+  hauteur=17.2
+
+RECT id=47 parent=46
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Chou cabus
+  x=0.3
+  y=0.3
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=48 parent=46
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Navet botte
+  x=0.3
+  y=2.0
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=49 parent=46
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Navet botte
+  x=0.3
+  y=3.7
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=50 parent=46
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=5.4
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=51 parent=46
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Blette
+  x=0.3
+  y=7.1
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=52 parent=46
+  nom=P6
+  type=Planche
+  etat=Terre travaillée
+  culture=Fenouil
+  x=0.3
+  y=8.8
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=53 parent=46
+  nom=P7
+  type=Planche
+  etat=Terre travaillée
+  culture=Fenouil
+  x=0.3
+  y=10.5
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=54 parent=46
+  nom=P8
+  type=Planche
+  etat=Terre travaillée
+  culture=Blette
+  x=0.3
+  y=12.2
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=55 parent=46
+  nom=P9
+  type=Planche
+  etat=Terre travaillée
+  culture=Artichauts
+  x=0.3
+  y=13.9
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=56 parent=46
+  nom=P10
+  type=Planche
+  etat=Terre travaillée
+  culture=Topinambour
+  x=0.3
+  y=15.6
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=57 parent=1
+  nom=Jardin 6
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=93.8
+  largeur=25.6
+  hauteur=17.2
+
+RECT id=58 parent=57
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Courgette
+  x=0.3
+  y=0.3
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=59 parent=57
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Courgette
+  x=0.3
+  y=2.0
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=60 parent=57
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Courgette
+  x=0.3
+  y=3.7
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=61 parent=57
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Courgette
+  x=0.3
+  y=5.4
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=62 parent=57
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=7.1
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=63 parent=57
+  nom=P6
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=8.8
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=64 parent=57
+  nom=P7
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=10.5
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=65 parent=57
+  nom=P8
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=12.2
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=66 parent=57
+  nom=P9
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=13.9
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=67 parent=57
+  nom=P10
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=15.6
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=68 parent=1
+  nom=Jardin 7
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=112.5
+  largeur=25.6
+  hauteur=17.2
+
+RECT id=69 parent=68
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=0.3
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=70 parent=68
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Panais
+  x=0.3
+  y=2.0
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=71 parent=68
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=3.7
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=72 parent=68
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=5.4
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=73 parent=68
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=7.1
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=74 parent=68
+  nom=P6
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=8.8
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=75 parent=68
+  nom=P7
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=10.5
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=76 parent=68
+  nom=P8
+  type=Planche
+  etat=Terre travaillée
+  culture=Courge 100-110 jours
+  x=0.3
+  y=12.2
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=77 parent=68
+  nom=P9
+  type=Planche
+  etat=Terre travaillée
+  culture=Courge 100-110 jours
+  x=0.3
+  y=13.9
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=78 parent=68
+  nom=P10
+  type=Planche
+  etat=Terre travaillée
+  culture=Courge 100-110 jours
+  x=0.3
+  y=15.6
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=79 parent=1
+  nom=Jardin 8
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=131.2
+  largeur=25.6
+  hauteur=17.2
+
+RECT id=80 parent=79
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Courge 100-110 jours
+  x=0.3
+  y=0.3
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=81 parent=79
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Courge 100-110 jours
+  x=0.3
+  y=2.0
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=82 parent=79
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Courge 100-110 jours
+  x=0.3
+  y=3.7
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=83 parent=79
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Courge 100-110 jours
+  x=0.3
+  y=5.4
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=84 parent=79
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Courge 100-110 jours
+  x=0.3
+  y=7.1
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=85 parent=79
+  nom=P6
+  type=Planche
+  etat=Terre travaillée
+  culture=Courge 100-110 jours
+  x=0.3
+  y=8.8
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=86 parent=79
+  nom=P7
+  type=Planche
+  etat=Terre travaillée
+  culture=Courge 100-110 jours
+  x=0.3
+  y=10.5
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=87 parent=79
+  nom=P8
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=12.2
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=88 parent=79
+  nom=P9
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=13.9
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=89 parent=79
+  nom=P10
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=15.6
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=90 parent=1
+  nom=Jardin 9
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=149.9
+  largeur=25.6
+  hauteur=17.2
+
+RECT id=91 parent=90
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=0.3
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=92 parent=90
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=2.0
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=93 parent=90
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=3.7
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=94 parent=90
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=5.4
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=95 parent=90
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=7.1
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=96 parent=90
+  nom=P6
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=8.8
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=97 parent=90
+  nom=P7
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=10.5
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=98 parent=90
+  nom=P8
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=12.2
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=99 parent=90
+  nom=P9
+  type=Planche
+  etat=Terre travaillée
+  culture=fraise charlotte
+  x=0.3
+  y=13.9
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=100 parent=90
+  nom=P10
+  type=Planche
+  etat=Terre travaillée
+  culture=Maras des bois
+  x=0.3
+  y=15.6
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=101 parent=1
+  nom=Jardin 10
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=168.6
+  largeur=25.6
+  hauteur=17.2
+
+RECT id=102 parent=101
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Maras des bois
+  x=0.3
+  y=0.3
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=103 parent=101
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=2.0
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=104 parent=101
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=3.7
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=105 parent=101
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=5.4
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=106 parent=101
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=7.1
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=107 parent=101
+  nom=P6
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=8.8
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=108 parent=101
+  nom=P7
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=10.5
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=109 parent=101
+  nom=P8
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=12.2
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=110 parent=101
+  nom=P9
+  type=Planche
+  etat=Terre travaillée
+  culture=Poireau
+  x=0.3
+  y=13.9
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=111 parent=101
+  nom=P10
+  type=Planche
+  etat=Terre travaillée
+  culture=Artichauts
+  x=0.3
+  y=15.6
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=112 parent=1
+  nom=Jardin 11
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=187.3
+  largeur=25.6
+  hauteur=17.2
+
+RECT id=113 parent=112
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=0.3
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=114 parent=112
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=2.0
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=115 parent=112
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=3.7
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=116 parent=112
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=5.4
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=117 parent=112
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=7.1
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=118 parent=112
+  nom=P6
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=8.8
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=119 parent=112
+  nom=P7
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=10.5
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=120 parent=112
+  nom=P8
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=12.2
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=121 parent=112
+  nom=P9
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=13.9
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=122 parent=112
+  nom=P10
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=15.6
+  largeur=25.0
+  hauteur=1.3
+
+RECT id=123 parent=0
+  nom=Sous abri
+  type=Zone
+  etat=Non défini
+  culture=
+  x=31.2
+  y=0
+  largeur=96.0
+  hauteur=30.3
+
+RECT id=124 parent=123
+  nom=Tri-chapelle 40m
+  type=Zone
+  etat=Non défini
+  culture=
+  x=0.3
+  y=0.3
+  largeur=41.2
+  hauteur=29.7
+
+RECT id=125 parent=124
+  nom=Chapelle 1
+  type=Chapelle
+  etat=Serre
+  culture=
+  x=0.3
+  y=0.3
+  largeur=40.6
+  hauteur=8.7
+
+RECT id=126 parent=125
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Courgette
+  x=0.3
+  y=0.3
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=127 parent=125
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Concombre
+  x=0.3
+  y=2.0
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=128 parent=125
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Patate douce
+  x=0.3
+  y=3.7
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=129 parent=125
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Patate douce
+  x=0.3
+  y=5.4
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=130 parent=125
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Patate douce
+  x=0.3
+  y=7.1
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=131 parent=124
+  nom=Chapelle 2
+  type=Chapelle
+  etat=Serre
+  culture=
+  x=0.3
+  y=10.5
+  largeur=40.6
+  hauteur=8.7
+
+RECT id=132 parent=131
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Oignon botte
+  x=0.3
+  y=0.3
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=133 parent=131
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Haricot vert nain
+  x=0.3
+  y=2.0
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=134 parent=131
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Courgette
+  x=0.3
+  y=3.7
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=135 parent=131
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Carotte de conservation
+  x=0.3
+  y=5.4
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=136 parent=131
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Concombre
+  x=0.3
+  y=7.1
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=137 parent=124
+  nom=Chapelle 3
+  type=Chapelle
+  etat=Serre
+  culture=
+  x=0.3
+  y=20.7
+  largeur=40.6
+  hauteur=8.7
+
+RECT id=138 parent=137
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Salade
+  x=0.3
+  y=0.3
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=139 parent=137
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Coriandre
+  x=0.3
+  y=2.0
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=140 parent=137
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=physalis
+  x=0.3
+  y=3.7
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=141 parent=137
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Salade
+  x=0.3
+  y=5.4
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=142 parent=137
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Persil
+  x=0.3
+  y=7.1
+  largeur=40.0
+  hauteur=1.3
+
+RECT id=143 parent=123
+  nom=Tri-chapelle 50m
+  type=Zone
+  etat=Non défini
+  culture=
+  x=44.5
+  y=0.3
+  largeur=51.2
+  hauteur=29.7
+
+RECT id=144 parent=143
+  nom=Chapelle 4
+  type=Chapelle
+  etat=Serre
+  culture=
+  x=0.3
+  y=0.3
+  largeur=50.6
+  hauteur=8.7
+
+RECT id=145 parent=144
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Pastèque
+  x=0.3
+  y=0.3
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=146 parent=144
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Melon
+  x=0.3
+  y=2.0
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=147 parent=144
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Pastèque
+  x=0.3
+  y=3.7
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=148 parent=144
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Melon
+  x=0.3
+  y=5.4
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=149 parent=144
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Mais doux
+  x=0.3
+  y=7.1
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=150 parent=143
+  nom=Chapelle 5
+  type=Chapelle
+  etat=Serre
+  culture=
+  x=0.3
+  y=10.5
+  largeur=50.6
+  hauteur=8.7
+
+RECT id=151 parent=150
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=0.3
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=152 parent=150
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=2.0
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=153 parent=150
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=3.7
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=154 parent=150
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=5.4
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=155 parent=150
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Tomate
+  x=0.3
+  y=7.1
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=156 parent=143
+  nom=Chapelle 6
+  type=Chapelle
+  etat=Serre
+  culture=
+  x=0.3
+  y=20.7
+  largeur=50.6
+  hauteur=8.7
+
+RECT id=157 parent=156
+  nom=P1
+  type=Planche
+  etat=Terre travaillée
+  culture=Patate douce
+  x=0.3
+  y=0.3
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=158 parent=156
+  nom=P2
+  type=Planche
+  etat=Terre travaillée
+  culture=Patate douce
+  x=0.3
+  y=2.0
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=159 parent=156
+  nom=P3
+  type=Planche
+  etat=Terre travaillée
+  culture=Patate douce
+  x=0.3
+  y=3.7
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=160 parent=156
+  nom=P4
+  type=Planche
+  etat=Terre travaillée
+  culture=Poivron
+  x=0.3
+  y=5.4
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=161 parent=156
+  nom=P5
+  type=Planche
+  etat=Terre travaillée
+  culture=Poivron
+  x=0.3
+  y=7.1
+  largeur=50.0
+  hauteur=1.3
+
+RECT id=162 parent=0
+  nom=Inter-serre
+  type=Zone
+  etat=Non défini
+  culture=
+  x=31.2
+  y=35.3
+  largeur=3.6
+  hauteur=1.9
+
+RECT id=163 parent=162
+  nom=Rhubarbe
+  type=Planche
+  etat=Terre travaillée
+  culture=Rhubarbe (semis mars 2023)
+  x=0.3
+  y=0.3
+  largeur=3.0
+  hauteur=1.3
+
